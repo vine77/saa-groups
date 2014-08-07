@@ -1,0 +1,56 @@
+<div {{bind-attr class=":box :box-solid :box-primary :component collapsedBox"}}>
+  <div class="box-header">
+    <div class="box-tools pull-right">
+      <div class="dropdown inline-block">
+        <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+          Actions
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a>Action 1</a></li>
+          <li><a>Action 2</a></li>
+          <li><a>Action 3</a></li>
+        </ul>
+      </div>
+      {{#if collapsedBox}}
+        <button class="btn btn-default btn-sm" {{action toggleCollapsed}}><i class="fa fa-plus"></i></button>
+      {{else}}
+        <button class="btn btn-default btn-sm" {{action toggleCollapsed}}><i class="fa fa-minus"></i></button>
+      {{/if}}
+    </div>
+    <h3 class="box-title">
+      <i class="fa fa-hdd-o"></i>
+      {{name}}
+    </h3>
+  </div>
+  <div class="box-subheader clearfix">
+    <div class="component-status">
+      <div class="component-status-state">
+        <i class="fa fa-fw fa-check-circle success"></i>
+        <i class="fa fa-fw fa-bolt on"></i>
+      </div>
+      <div class="component-status-other">
+        <i class="fa fa-fw fa-trophy assured"></i>
+        <i class="fa fa-fw fa-lock unregistered"></i>
+        <i class="fa fa-fw fa-bullhorn error" style="color:#9d261d"></i>
+      </div>
+    </div><div class="component-capacity">
+      <div>2 CPUs &times; 8 cores @ 2.3 GHz</div>
+      <div class="clearfix">
+        <small class="pull-left">Memory (GiB)</small>
+        <small class="pull-right">31%</small>
+      </div>
+      <div class="progress xs">
+        <div class="progress-bar progress-bar-green" style="width: 31%;"></div>
+      </div>
+      <div class="clearfix">
+        <small class="pull-left">15</small><small class="pull-right">48</small>
+      </div>
+    </div><div class="component-charts">
+      <img src="/assets/images/dials.png">
+    </div>
+  </div>
+  <div class="box-body">
+    {{partial "cgroups"}}
+  </div>
+</div>

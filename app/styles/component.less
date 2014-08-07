@@ -1,0 +1,86 @@
+.component.box.box-solid {
+  margin-bottom: 10px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  transition-property: box-shadow;
+  transition-duration: .5s;
+  &:not(.collapsed-box) {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  > .box-header {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    > .box-title {
+      float: none !important;
+      font-size: 18px;
+    }
+    > .box-tools {
+      padding: 5px;
+      .btn {
+        border: 1px solid transparent;
+        box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
+        &.btn-default {
+          background-color: #fafafa;
+        }
+      }
+    }
+  }
+  > .box-subheader {
+    padding: 10px;
+    border-bottom: 1px solid #f4f4f4;
+    background-color: white;
+    > .component-status {
+      display: inline-block;
+      padding: 0 5px 0 0;
+      border-right: 1px solid #f4f4f4;
+      > .component-status-state {
+        padding-bottom:5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #f4f4f4;
+        > i {
+          color: green;
+        }
+      }
+      .component-status-other {
+        > i {
+          color: @teal;
+        }
+      }
+    }
+    > .component-capacity {
+      display: inline-block;
+      padding: 0 10px;
+      border-right: 1px solid #f4f4f4;
+      vertical-align: top;
+      font-size: 12px;
+      > .progress {
+        margin-bottom: 0;
+      }
+    }
+    > .component-charts {
+      float: right;
+    }
+  }
+  &.collapsed-box > .box-subheader {
+    border-bottom: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  > .box-body {
+    transition-property: max-height, padding-top, padding-bottom;
+    transition-duration: .5s;
+    max-height: 1000px;
+    box-shadow: inset 0px 1px 6px 1px rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.14);
+    .box-body {
+      box-shadow: none;
+      background-color: white;
+    }
+  }
+  &.collapsed-box > .box-body {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

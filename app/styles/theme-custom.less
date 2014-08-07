@@ -1,0 +1,26 @@
+.content {
+  overflow: visible;
+}
+.content, .right-side {
+  background-color: transparent;
+}
+.box-body {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.box.box-solid.box-primary > .box-header {
+  .dropdown-menu > li > a:hover {
+    color: #f9f9f9;
+  }
+}
+// Box color variations
+.box {
+  &.box-teal {
+    border-top-color: @teal;
+  }
+  &.box-solid {
+    &.box-teal {
+      .box-solid-variant(#39CCCC);
+    }
+  }
+}

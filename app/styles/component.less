@@ -7,21 +7,36 @@
   transition-duration: .5s;
   &:not(.collapsed-box) {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    .component.box.box-solid {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1)
+    }
   }
   > .box-header {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    cursor: pointer;
     > .box-title {
       float: none !important;
       font-size: 18px;
+      cursor: pointer;
     }
     > .box-tools {
       padding: 5px;
       .btn {
-        border: 1px solid transparent;
-        box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
         &.btn-default {
           background-color: #fafafa;
+        }
+      }
+    }
+  }
+  &.box-primary {
+    > .box-header {
+      > .box-tools {
+        .btn {
+          &:not(.btn-primary) {
+            border: 1px solid transparent;
+            box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
+          }
         }
       }
     }

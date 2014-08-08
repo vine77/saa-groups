@@ -1,6 +1,10 @@
 <div {{bind-attr class=":box :box-solid :box-primary :component collapsedBox"}}>
-  <div class="box-header">
+  <div class="box-header" {{action toggleCollapsed}}>
     <div class="box-tools pull-right">
+      <button class="btn btn-primary btn-sm" type="button">
+        Details
+        <i class="fa fa-toggle-right"></i>
+      </button>
       <div class="dropdown inline-block">
         <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
           Actions
@@ -13,9 +17,9 @@
         </ul>
       </div>
       {{#if collapsedBox}}
-        <button class="btn btn-default btn-sm" {{action toggleCollapsed}}><i class="fa fa-plus"></i></button>
+        <button class="btn btn-default btn-sm"><i class="fa fa-plus"></i></button>
       {{else}}
-        <button class="btn btn-default btn-sm" {{action toggleCollapsed}}><i class="fa fa-minus"></i></button>
+        <button class="btn btn-default btn-sm"><i class="fa fa-minus"></i></button>
       {{/if}}
     </div>
     <h3 class="box-title">

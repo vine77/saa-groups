@@ -12,32 +12,41 @@
     </section>
     <section class="content">
       <div class="row space-bottom">
-        <div class="col-md-6"></div>
-        <div class="col-md-6 text-right">
-          <form class="form-inline" role="form">
-            <div class="dropdown inline-block">
-              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                <i class="fa fa-sort-amount-desc"></i> Sort by
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a>Sort 1</a></li>
-                <li><a>Sort 2</a></li>
-                <li><a>Sort 3</a></li>
-              </ul>
-            </div>
-            <div class="input-group">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i> Filter by <span class="fa fa-caret-down"></span></button>
+        <div class="col-md-6">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default"><i class="fa fa-table"></i></button>
+            <button type="button" class="btn btn-default"><i class="fa fa-th-large"></i></button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-xs-5 text-right">
+              <div class="dropdown inline-block">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                  <i class="fa fa-sort-amount-desc"></i> Sort by
+                  <span class="caret"></span>
+                </button>
                 <ul class="dropdown-menu">
-                  <li><a>Filter 1</a></li>
-                  <li><a>Filter 2</a></li>
-                  <li><a>Filter 3</a></li>
+                  <li><a>Sort 1</a></li>
+                  <li><a>Sort 2</a></li>
+                  <li><a>Sort 3</a></li>
                 </ul>
               </div>
-              <input type="text" class="form-control">
             </div>
-          </form>
+            <div class="col-xs-7">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i> Filter by <span class="fa fa-caret-down"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a>Filter 1</a></li>
+                    <li><a>Filter 2</a></li>
+                    <li><a>Filter 3</a></li>
+                  </ul>
+                </div>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">

@@ -49,8 +49,13 @@
       > .box-expand > .btn.btn-primary {
         > i {
           transition-property: transform;
-          transition-duration: 0.8s;
           transform: rotate(0deg);
+          &.fa-caret-right {
+            transition-duration: 0.4s;
+          }
+          &.fa-caret-down {
+            transition-duration: 0.8s;
+          }
         }
       }
       &:hover {
@@ -82,13 +87,34 @@
           box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
         }
       }
-      // Darken expand button when header is hovered
+      // Darken and rotate expand button when header is hovered
+      > .box-expand > .btn.btn-success {
+        > i {
+          transition-property: transform;
+          transform: rotate(0deg);
+          &.fa-caret-right {
+            transition-duration: 0.4s;
+          }
+          &.fa-caret-down {
+            transition-duration: 0.8s;
+          }
+        }
+      }
       &:hover {
         > .box-expand > .btn.btn-success {
           background-color: #008d4c;
+          > .fa-caret-right {
+            transform: rotate(90deg);
+          }
+          > .fa-caret-down {
+            transform: rotate(-180deg);
+          }
         }
         > .exclude:hover + .box-expand > .btn.btn-success {
           background-color: #00a65a;
+          > i {
+            transform: rotate(0deg);
+          }
         }
       }
     }

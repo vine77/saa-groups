@@ -20,3 +20,13 @@
 .space-bottom {
   margin-bottom: 20px;
 }
+.rotate-parent {
+  .rotate-hover {
+    transition-property: transform;
+    transition-duration: 0.8s;
+    transform: rotateY(0deg);
+  }
+  &:hover .rotate-hover {
+    transform: rotateY(360deg);
+  }
+}

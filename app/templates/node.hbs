@@ -1,5 +1,5 @@
 <div {{bind-attr class=":box :box-solid :box-primary :component collapsedBox"}}>
-  <div class="box-header" {{action toggleCollapsed}}>
+  <div class="box-header rotate-parent" {{action toggleCollapsed}}>
     <div class="box-tools pull-right">
       <button class="btn btn-primary btn-sm" type="button">
         Details
@@ -16,14 +16,16 @@
           <li><a>Action 3</a></li>
         </ul>
       </div>
+    </div>
+    <div class="box-tools box-expand pull-left">
       {{#if collapsedBox}}
-        <button class="btn btn-default btn-sm"><i class="fa fa-plus"></i></button>
+        <button class="btn btn-primary btn-sm"><i class="fa fa-caret-right rotate-hover"></i></button>
       {{else}}
-        <button class="btn btn-default btn-sm"><i class="fa fa-minus"></i></button>
+        <button class="btn btn-primary btn-sm"><i class="fa fa-caret-down rotate-hover"></i></button>
       {{/if}}
     </div>
     <h3 class="box-title">
-      <i class="fa fa-hdd-o"></i>
+      {{!-- <i class="fa fa-hdd-o"></i> --}}
       {{name}}
     </h3>
   </div>
@@ -51,7 +53,7 @@
         <small class="pull-left">15</small><small class="pull-right">48</small>
       </div>
     </div><div class="component-charts">
-      <img src="/assets/images/dials.png">
+      <img src="/assets/images/dials-node.png">
     </div>
   </div>
   <div class="box-body">

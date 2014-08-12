@@ -20,23 +20,51 @@
       font-size: 18px;
       cursor: pointer;
     }
+    > .box-expand + .box-title {
+      padding: 9px 9px 9px 0;
+    }
     > .box-tools {
       padding: 5px;
-      .btn {
-        &.btn-default {
-          background-color: #fafafa;
+    }
+    > .box-expand {
+      > .btn {
+        > i {
+          min-width: 8px;
+          text-align: center;
         }
       }
     }
   }
   &.box-primary {
     > .box-header {
-      > .box-tools {
-        .btn {
-          &:not(.btn-primary) {
-            border: 1px solid transparent;
-            box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
-          }
+      .btn {
+        &.btn-default {
+          background-color: #fafafa;
+        }
+        &:not(.btn-primary) {
+          box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
+        }
+      }
+      &:hover {
+        > .box-expand > .btn.btn-primary {
+          background-color: #0062ac;
+        }
+      }
+    }
+  }
+  &.box-success {
+    > .box-header {
+      .btn {
+        &.btn-default {
+          background-color: #fafafa;
+        }
+        &:not(.btn-success) {
+          box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
+        }
+      }
+      &:hover {
+        > .box-expand > .btn.btn-success {
+          background-color: #008d4c;
         }
       }
     }

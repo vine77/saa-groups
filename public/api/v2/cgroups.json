@@ -1,0 +1,260 @@
+{
+  "cgroups": [
+    {
+      "status": {
+        "sla_status": 0,
+        "aggressor": 4,
+        "operational": 2,
+        "health": 0,
+        "victim": 4,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.4
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 1.64,
+        "scu_max": 3.28,
+        "memory": 4194304
+      },
+      "capabilities": {
+        "cores": 4,
+        "scu_allocated_max": null,
+        "memory_size": 4194304,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-211.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "type": "node",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 0,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 0,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.6
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 2.05,
+        "scu_max": 4.1,
+        "memory": 6242880
+      },
+      "capabilities": {
+        "cores": 5,
+        "scu_allocated_max": null,
+        "memory_size": 7242880,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-212.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "type": "node",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 4,
+        "operational": 2,
+        "health": 1,
+        "victim": 4,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 12.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 0.41,
+        "scu_max": 0.82,
+        "memory": 1048576
+      },
+      "capabilities": {
+        "cores": 1,
+        "scu_allocated_max": null,
+        "memory_size": 1048576,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-211.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "type": "6wind",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 4,
+        "operational": 2,
+        "health": 1,
+        "victim": 4,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 10.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 0.41,
+        "scu_max": 0.82,
+        "memory": 1048576
+      },
+      "capabilities": {
+        "cores": 1,
+        "scu_allocated_max": null,
+        "memory_size": 1048576,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-211.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "type": "os",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 0,
+        "aggressor": 4,
+        "operational": 0,
+        "health": 0,
+        "victim": 4,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 11.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 0.82,
+        "scu_max": 1.64,
+        "memory": 2097152
+      },
+      "capabilities": {
+        "cores": 2,
+        "scu_allocated_max": null,
+        "memory_size": 2097152,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-211.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "type": "vm",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 22.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 0.41,
+        "scu_max": 0.82,
+        "memory": 1048576
+      },
+      "capabilities": {
+        "cores": 1,
+        "scu_allocated_max": null,
+        "memory_size": 1048576,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-212.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "type": "6wind",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 20.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 0.41,
+        "scu_max": 0.82,
+        "memory": 1048576
+      },
+      "capabilities": {
+        "cores": 1,
+        "scu_allocated_max": null,
+        "memory_size": 1048576,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-212.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "type": "os",
+      "id": null
+    },
+    {
+      "status": {
+        "sla_status": 0,
+        "aggressor": 1,
+        "operational": 0,
+        "health": 0,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 21.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_current": 1.23,
+        "scu_max": 2.46,
+        "memory": 4145728
+      },
+      "capabilities": {
+        "cores": 3,
+        "scu_allocated_max": null,
+        "memory_size": 5145728,
+        "scu_allocated_min": null
+      },
+      "node_name": "gklab-044-212.igk.intel.com",
+      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "type": "vm",
+      "id": null
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 <div {{bind-attr class=":box :box-solid :box-success :component isVmsExpanded::collapsed-box"}}>
-  <div class="box-header rotate-parent" {{action toggleVmsCollapsed}}>
+  <div class="box-header" {{action toggleVmsCollapsed}}>
     <div class="box-tools box-expand pull-left">
       {{#unless isVmsExpanded}}
-        <button class="btn btn-success btn-sm"><i class="fa fa-caret-right rotate-hover"></i></button>
+        <button class="btn btn-success btn-sm"><i class="fa fa-caret-right"></i></button>
       {{else}}
-        <button class="btn btn-success btn-sm"><i class="fa fa-caret-down rotate-hover"></i></button>
+        <button class="btn btn-success btn-sm"><i class="fa fa-caret-down"></i></button>
       {{/unless}}
     </div>
     <h3 class="box-title">

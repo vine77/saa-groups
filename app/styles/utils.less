@@ -24,9 +24,12 @@
   .rotate-hover {
     transition-property: transform;
     transition-duration: 0.8s;
-    transform: rotateY(0deg);
+    transform: rotate(0deg);
   }
   &:hover .rotate-hover {
-    transform: rotateY(360deg);
+    transform: rotate(360deg);
+  }
+  &:hover .exclude:hover + div .rotate-hover {
+    transform: rotate(0deg);
   }
 }

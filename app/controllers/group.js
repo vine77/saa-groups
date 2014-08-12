@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
   collapsedBox: true,
   isVmsExpanded: false,
+  isActionsVisible: false,
   actions: {
     toggleCollapsed: function() {
       this.set('collapsedBox', !this.get('collapsedBox'));
@@ -10,5 +11,8 @@ export default Ember.ObjectController.extend({
     toggleVmsCollapsed: function() {
       this.set('isVmsExpanded', !this.get('isVmsExpanded'));
     },
+    toggleActions: function() {
+      this.set('isActionsVisible', !this.get('isActionsVisible'));
+    }
   }
 });

@@ -2,7 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return [{
+    return this.store.find('cgroup');
+    /*
+    [{
       name: 'clientnode1.hpr.com',
       vms: [{
         name: 'test2-5bf08381-4c24-43e7-a28f-a21519f1d2f4'
@@ -57,5 +59,6 @@ export default Ember.Route.extend({
         name: 'test2-cd1079b6-bf38-4660-8459-de6d57022357'
       }]
     }];
+    */
   }
 });

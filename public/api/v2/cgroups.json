@@ -30,7 +30,7 @@
       "node_name": "gklab-044-211.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
       "type": "node",
-      "id": null
+      "id": 0
     },
     {
       "status": {
@@ -62,7 +62,7 @@
       "node_name": "gklab-044-212.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
       "type": "node",
-      "id": null
+      "id": 1
     },
     {
       "status": {
@@ -94,7 +94,7 @@
       "node_name": "gklab-044-211.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
       "type": "6wind",
-      "id": null
+      "id": 2
     },
     {
       "status": {
@@ -126,7 +126,7 @@
       "node_name": "gklab-044-211.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
       "type": "os",
-      "id": null
+      "id": 3
     },
     {
       "status": {
@@ -158,7 +158,7 @@
       "node_name": "gklab-044-211.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
       "type": "vm",
-      "id": null
+      "id": 4
     },
     {
       "status": {
@@ -190,7 +190,7 @@
       "node_name": "gklab-044-212.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
       "type": "6wind",
-      "id": null
+      "id": 5
     },
     {
       "status": {
@@ -222,7 +222,7 @@
       "node_name": "gklab-044-212.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
       "type": "os",
-      "id": null
+      "id": 6
     },
     {
       "status": {
@@ -254,7 +254,7 @@
       "node_name": "gklab-044-212.igk.intel.com",
       "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
       "type": "vm",
-      "id": null
+      "id": 7
     }
   ]
 }

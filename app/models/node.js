@@ -42,7 +42,9 @@ export default DS.Model.extend({
   }.property('capabilities.cpu_frequency', 'capabilities.cores_per_socket', 'capabilities.sockets'),
 
   // Relationships
-  nodeTrustReport: DS.belongsTo('nodeTrustReport'),
-  trustNode: DS.belongsTo('trustNode'),
-  vms: DS.hasMany('vm', {async: true})
+  //nodeTrustReport: DS.belongsTo('nodeTrustReport'),
+  //trustNode: DS.belongsTo('trustNode'),
+  vms: DS.hasMany('vm', {async: true}),
+  cgroups: DS.hasMany('cgroup')
+
 });

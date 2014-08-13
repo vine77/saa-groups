@@ -5,7 +5,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('groups');
+  this.resource('components', function() {
+    this.resource('component', {path: '/:component_id'});
+  });
 });
 
 export default Router;

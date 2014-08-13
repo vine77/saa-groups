@@ -1,5 +1,5 @@
-<div {{bind-attr class=":box :box-solid :box-primary :component collapsedBox"}}>
-  <div class="box-header" {{action toggleCollapsed}}>
+<div {{bind-attr class=":box :box-solid :box-primary :component isExpanded::collapsed-box"}}>
+  <div class="box-header" {{action "toggleCollapsed" this}}>
     <div class="box-tools exclude pull-right">
       <button class="btn btn-primary btn-sm" type="button" {{action "details" bubbles=false}}>
         Details
@@ -18,10 +18,10 @@
       </div>
     </div>
     <div class="box-tools box-expand pull-left">
-      {{#if collapsedBox}}
-        <button class="btn btn-primary btn-sm"><i class="fa fa-caret-right"></i></button>
-      {{else}}
+      {{#if isExpanded}}
         <button class="btn btn-primary btn-sm"><i class="fa fa-caret-down"></i></button>
+      {{else}}
+        <button class="btn btn-primary btn-sm"><i class="fa fa-caret-right"></i></button>
       {{/if}}
     </div>
     <h3 class="box-title">

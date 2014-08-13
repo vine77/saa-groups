@@ -4,9 +4,9 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   capabilities: DS.attr(),
   contention: DS.attr(),
-  floatingIps: DS.attr('array'),
-  fixedIps: DS.attr('array'),
-  macs: DS.attr('array'),
+  floatingIps: DS.attr(),
+  fixedIps: DS.attr(),
+  macs: DS.attr(),
   name: DS.attr('string'),
   nodeName: DS.attr('string'),
   slaName: DS.attr('string'),
@@ -67,8 +67,8 @@ export default DS.Model.extend({
 
   // Relationships
   node: DS.belongsTo('node'),
-  sla: DS.belongsTo('sla'),
-  vmInstantiationDetailed: DS.belongsTo('vmInstantiationDetailed'),
-  vmInstantiationSimple: DS.belongsTo('vmInstantiationSimple'),
-  vmTrustReport: DS.belongsTo('vmTrustReport')
+  //sla: DS.belongsTo('sla'),
+  //vmInstantiationDetailed: DS.belongsTo('vmInstantiationDetailed'),
+  //vmInstantiationSimple: DS.belongsTo('vmInstantiationSimple'),
+  //vmTrustReport: DS.belongsTo('vmTrustReport')
 });

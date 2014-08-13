@@ -28,7 +28,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "type": "node",
       "id": 0
     },
@@ -60,7 +60,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "type": "node",
       "id": 1
     },
@@ -92,7 +92,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "type": "6wind",
       "id": 2
     },
@@ -124,7 +124,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "type": "os",
       "id": 3
     },
@@ -156,7 +156,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a66",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "type": "vm",
       "id": 4
     },
@@ -188,7 +188,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "type": "6wind",
       "id": 5
     },
@@ -220,7 +220,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "type": "os",
       "id": 6
     },
@@ -252,7 +252,7 @@
         "scu_allocated_min": null
       },
       "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "31b801c0-1333-11e4-9191-0800200c9a67",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "type": "vm",
       "id": 7
     }

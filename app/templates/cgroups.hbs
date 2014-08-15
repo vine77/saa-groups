@@ -1,3 +1,9 @@
-{{partial "cgroups/os"}}
-{{partial "cgroups/cgroups"}}
-{{partial "cgroups/vms"}}
+{{#each oses}}
+  {{partial "cgroups/os"}}
+{{/each}}
+{{#each cgroups}}
+  {{partial "cgroups/cgroup"}}
+{{/each}}
+{{#each aggregateVms}}
+  {{partial "cgroups/vms"}}
+{{/each}}

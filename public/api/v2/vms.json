@@ -91,7 +91,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "0349a53c-b062-4a5a-a1ce-3b384f43528a",
-      "node_id": "33B2F58C-8C94-E111-BD1D-001E6747F3DE",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "node_name": "novamgmt33",
       "aggressor_ids": [],
       "flavor_id": "3"
@@ -189,7 +189,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "071effaa-90bd-4ef3-ac52-65031970c422",
-      "node_id": "EACD2671-A095-E111-BD1D-001E6747F68E",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "node_name": "novamgmt36",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -287,7 +287,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "1c1232b3-92ed-484c-ba45-1dba530ed60f",
-      "node_id": "8077AAA4-BB46-E211-BD64-001E673931BC",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "node_name": "novamgmt95",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -384,7 +384,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": null,
-      "node_id": "B275FD0E-83EE-5BB0-A505-9C7C70B3DAE8",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "node_name": "novamgmt51",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -483,7 +483,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "375addd5-2e88-43ad-8bae-590e9bf9ffbd",
-      "node_id": "EACD2671-A095-E111-BD1D-001E6747F68E",
+      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
       "node_name": "novamgmt36",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -578,7 +578,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": null,
-      "node_id": "344531E6-BDF0-5973-854C-55E71BDDB850",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt116",
       "aggressor_ids": [],
       "flavor_id": "7e67b45b-2eff-4406-bd28-9000a68645e4"
@@ -674,7 +674,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "49d6e6ac-c3e0-4949-ba48-fa94aa049298",
-      "node_id": "8077AAA4-BB46-E211-BD64-001E673931BC",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt95",
       "aggressor_ids": [],
       "flavor_id": "3"
@@ -772,7 +772,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "4ece722e-9bf3-4e22-9565-79c7dd69e8a4",
-      "node_id": "5385D478-D295-E111-BD1D-001E6747F6F2",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt32",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -865,7 +865,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": null,
-      "node_id": "344531E6-BDF0-5973-854C-55E71BDDB850",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt116",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -962,7 +962,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": null,
-      "node_id": "4E253E76-66FE-5183-8C80-0C09D5066C46",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt73",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -1060,7 +1060,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "77b73ec5-fade-4e80-9946-34a5ded214ea",
-      "node_id": "EACD2671-A095-E111-BD1D-001E6747F68E",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt36",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"
@@ -1156,7 +1156,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "77c2be08-07ff-4a28-a3d0-d773cf5340e2",
-      "node_id": "5385D478-D295-E111-BD1D-001E6747F6F2",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt32",
       "aggressor_ids": [],
       "flavor_id": "3"
@@ -1254,7 +1254,7 @@
       },
       "sla_name": null,
       "vm_trust_report_id": "ab143ca5-ab79-4372-b41e-45a12c6911a2",
-      "node_id": "EACD2671-A095-E111-BD1D-001E6747F68E",
+      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
       "node_name": "novamgmt36",
       "aggressor_ids": [],
       "flavor_id": "44553e7a-0da1-4520-815c-63b01bd9ab98"

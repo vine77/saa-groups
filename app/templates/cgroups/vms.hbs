@@ -1,6 +1,6 @@
 <div {{bind-attr class=":box :box-solid :box-success :component isVmsExpanded::collapsed-box"}}>
-  <div class="box-header" {{action toggleVmsCollapsed}}>
-    <div class="box-tools box-expand pull-left">
+  <div class="box-header" {{action toggleVmsCollapsed this}}>
+    <div class="box-expand pull-left">
       {{#if isVmsExpanded}}
         <button class="btn btn-success btn-sm"><i class="fa fa-caret-down"></i></button>
       {{else}}

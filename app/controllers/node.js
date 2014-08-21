@@ -1,9 +1,5 @@
 import Ember from 'ember';
 import ComponentMixin from '../mixins/component';
-import healthToString from '../utils/convert/health-to-string';
-import healthToIconClass from '../utils/convert/health-to-icon-class';
-import operationalToString from '../utils/convert/operational-to-string';
-import operationalToIconClass from '../utils/convert/operational-to-icon-class';
 
 export default Ember.ObjectController.extend(ComponentMixin, {
   needs: ['nodes'],

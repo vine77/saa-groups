@@ -5,8 +5,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('components', function() {
-    this.resource('component', {path: '/:component_id'});
+  this.resource('nodes', function() {
+    this.resource('node', {path: '/:node_id'});
   });
 });
 

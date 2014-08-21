@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  itemController: 'component',
+  itemController: 'node',
   nodeCgroups: Ember.computed.filterBy('@this', 'type', 'node'),
   osCgroups: Ember.computed.filterBy('@this', 'type', 'os'),
   vmsCgroups: Ember.computed.filterBy('@this', 'type', 'vm'),

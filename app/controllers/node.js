@@ -19,16 +19,6 @@ export default Ember.ObjectController.extend(ComponentMixin, {
     return vm.get('node.id') === this.get('node.id');
   }),
   actions: {
-    toggleCollapsed: function(model) {
-      if (this.get('isExpanded')) {
-        this.transitionToRoute('nodes');
-      } else {
-        this.transitionToRoute('node', model);
-      }
-    },
-    toggleVmsCollapsed: function() {
-      this.set('isVmsExpanded', !this.get('isVmsExpanded'));
-    },
     toggleActions: function() {
       this.set('isActionsVisible', !this.get('isActionsVisible'));
     }

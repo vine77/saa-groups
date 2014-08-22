@@ -1,9 +1,9 @@
-{{#each oses itemController="cgroups/os"}}
+{{#each os in oses itemController="cgroups/os"}}
   {{partial "cgroups/os"}}
 {{/each}}
-{{#each cgroups itemController="cgroups/cgroup"}}
+{{#each cgroup in cgroups itemController="cgroups/cgroup"}}
   {{partial "cgroups/cgroup"}}
 {{/each}}
-{{#each aggregateVms itemController="cgroups/vms"}}
+{{#each vm in aggregateVms itemController="cgroups/vms"}}
   {{partial "cgroups/vms"}}
 {{/each}}

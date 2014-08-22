@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('nodes', function() {
-    this.resource('node', {path: '/:node_id'});
+    this.resource('node', {path: '/:node_id'}, function() {
+      this.route('vms');
+    });
   });
 });
 

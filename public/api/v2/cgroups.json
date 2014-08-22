@@ -36,8 +36,8 @@
       "status": {
         "sla_status": 0,
         "aggressor": 1,
-        "operational": 2,
-        "health": 0,
+        "operational": 1,
+        "health": 2,
         "victim": 1,
         "trust": 3
       },

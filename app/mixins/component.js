@@ -16,5 +16,19 @@ export default Ember.Mixin.create({
   }.property('status.operational'),
   operationalIconClass: function() {
     return operationalToIconClass(this.get('status.operational'));
-  }.property('status.operational')
+  }.property('status.operational'),
+  memoryCurrent: function() {
+    var memory = this.get('utilization.memory');
+    if (!Number.isInteger(memory)) return null;
+    return (memory / Math.pow(1024, 2)).toFixed(2);
+  }.property('utilization.memory'),
+  memoryMax: function() {
+    var memory = this.get('capabilities.memory_size');
+    if (!Number.isInteger(memory)) return null;
+    return (memory / Math.pow(1024, 2)).toFixed(2);
+  }.property('capabilities.memory_size'),
+  memoryPercent: function() {
+    if (!Number.isInteger(this.get('utilization.memory')) || !this.get('capabilities.memory_size')) return null;
+    return ((this.get('utilization.memory') / this.get('capabilities.memory_size')) * 100).toFixed(0) + '%';
+  }.property('utilization.memory', 'capabilities.memory_size')
 });

@@ -36,14 +36,14 @@ export default Ember.Mixin.create({
     return trustToIconClass(this.get('status.trust'));
   }.property('status.trust'),
   memoryCurrent: function() {
-    var memory = this.get('utilization.memory');
+    var memory = parseInt(this.get('utilization.memory'));
     if (!Number.isInteger(memory)) return null;
-    return (memory / Math.pow(1024, 2)).toFixed(2);
+    return (memory / Math.pow(1024, 2)).toFixed(2);  // Assume KiB
   }.property('utilization.memory'),
   memoryMax: function() {
     var memory = this.get('capabilities.memory_size');
     if (!Number.isInteger(memory)) return null;
-    return (memory / Math.pow(1024, 2)).toFixed(2);
+    return (memory / Math.pow(1024, 2)).toFixed(2);  // Assume KiB
   }.property('capabilities.memory_size'),
   memoryPercent: function() {
     if (!Number.isInteger(this.get('utilization.memory')) || !this.get('capabilities.memory_size')) return null;
@@ -55,17 +55,17 @@ export default Ember.Mixin.create({
   utilizationCurrent: function() {
     var utilization = this.get('utilization.scu_current');
     if (!utilization || !(utilization >= 0)) return null;
-    return utilization.toFixed(2);
+    return utilization;
   }.property('utilization.scu_current'),
   utilizationMax: function() {
-    var utilizationMax = this.get('utilization.scu_max');
-    if (!utilizationMax || !(utilizationMax >= 0)) return null;
-    return utilizationMax.toFixed(2);
-  }.property('utilization.scu_max'),
+    var scuMax = this.get('utilization.scu_max') || this.get('capabilities.scu_allocated_max');
+    if (!scuMax || !(scuMax >= 0)) return null;
+    return scuMax;
+  }.property('utilization.scu_max', 'capabilities.scu_allocated_max'),
   utilizationPercent: function() {
-    if (!this.get('utilization.scu_current') || !(this.get('utilization.scu_current') >= 0) || !this.get('utilization.scu_max') || !(this.get('utilization.scu_max') >= 0)) return null;
-    return ((this.get('utilization.scu_current') / this.get('utilization.scu_max')) * 100).toFixed(0) + '%';
-  }.property('utilization.scu_current', 'utilization.scu_max'),
+    if (!this.get('utilizationCurrent') || !this.get('utilizationMax')) return null;
+    return ((this.get('utilizationCurrent') / this.get('utilizationMax')) * 100).toFixed(0) + '%';
+  }.property('utilizationCurrent', 'utilizationMax'),
   utilizationStyle: function() {
     return 'width:' + this.get('utilizationPercent');
   }.property('utilizationPercent'),
@@ -75,8 +75,9 @@ export default Ember.Mixin.create({
     return contention.toFixed(2);
   }.property('contention.system.llc.value'),
   contentionPercent: function() {
+    var contentionMax = 50;
     if (!this.get('contention.system.llc.value') || !(this.get('contention.system.llc.value') >= 0)) return null;
-    var percent = (this.get('contention.system.llc.value') / 50) * 100;
+    var percent = (this.get('contention.system.llc.value') / contentionMax) * 100;
     if (percent > 0 && percent < 2) percent = 2;  // If any contention exists, show at least a small bar
     return percent.toFixed(0) + '%';
   }.property('contention.system.llc.value'),

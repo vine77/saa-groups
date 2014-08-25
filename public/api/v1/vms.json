@@ -3,21 +3,21 @@
     {
       "status": {
         "sla_messages": [
-          "SLA status: Unknown"
+          "SLA status: Not violated (for 96h 17m)"
         ],
         "locked": false,
-        "sla_status": 0,
+        "sla_status": 1,
         "aggressor": 1,
-        "operational": 1,
+        "operational": 2,
         "trust_details": {
           "bios": 3,
           "vmm": 3
         },
-        "long_message": "VM's health is unknown. VM is powered off. ",
-        "health": 0,
+        "long_message": "VM is healthy. VM is powered on. ",
+        "health": 1,
         "victim": 1,
         "trust": 3,
-        "short_message": "VM's health is unknown."
+        "short_message": "VM is healthy."
       },
       "links": {
         "flavors": "/api/v1/configuration/flavors/3",
@@ -32,8 +32,8 @@
       "victim_ids": [],
       "cloud_id": "0349a53c-b062-4a5a-a1ce-3b384f43528a",
       "utilization": {
-        "ipc": 0.0,
-        "uptime": null,
+        "ipc": 0.33,
+        "uptime": 346650,
         "scu_total": 0.0,
         "cores": {
           "system": {
@@ -45,46 +45,50 @@
             ]
           }
         },
+        "scu_overload": 0.0,
+        "scu_current": 0.01,
         "threads": [
           {
-            "scu_current": null,
-            "id": null
+            "scu_current": 0.0,
+            "id": 109070
           }
         ],
         "io": null,
-        "memory": null,
+        "memory": "524288 KB",
         "scu_burst": 0.0,
-        "cpu": 0.0,
+        "cpu": 2.466635093737467,
         "network": null
       },
-      "fixed_ips": null,
+      "fixed_ips": [
+        "192.168.111.3"
+      ],
       "graphite_url": "/render?target=stats.SAM",
       "floating_ips": null,
       "capabilities": {
-        "scu_allocated": null,
-        "cores": 2,
-        "scu_allocated_max": null,
-        "memory_size": "4096 MB",
-        "scu_allocated_min": null
+        "scu_allocated": 1.0,
+        "cores": 1,
+        "scu_allocated_max": 1.0,
+        "memory_size": "524288 KB",
+        "scu_allocated_min": 1.0
       },
-      "sla_id": null,
-      "vm_name": "svest3noisy-0349a53c-b062-4a5a-a1ce-3b384f43528a",
+      "sla_id": "42440ebf-8622-4df8-9cc1-2526681c997d",
+      "vm_name": "test-mswynnex1-b6e9bc32-e1c6-4d70-a9c8-78f6e3f1b66c",
       "macs": [
-        "fa:16:3e:11:ad:e8"
+        "fa:16:3e:13:f1:b1"
       ],
       "contention": {
         "threads": [
           {
             "llc": {
-              "value": null,
-              "label": null
+              "value": 2.75,
+              "label": "LOW"
             },
-            "id": null
+            "id": 109070
           }
         ],
         "system": {
           "llc": {
-            "value": 0.0,
+            "value": 2.75,
             "label": "LOW"
           }
         }
@@ -128,8 +132,8 @@
       "victim_ids": [],
       "cloud_id": "071effaa-90bd-4ef3-ac52-65031970c422",
       "utilization": {
-        "ipc": 0.0,
-        "uptime": null,
+        "ipc": 0.36,
+        "uptime": 346651,
         "scu_total": 0.0,
         "cores": {
           "system": {
@@ -141,48 +145,50 @@
             ]
           }
         },
+        "scu_overload": 0.0,
+        "scu_current": 0.01,
         "threads": [
           {
-            "scu_current": null,
-            "id": null
+            "scu_current": 0.0,
+            "id": 108907
           }
         ],
         "io": null,
-        "memory": null,
+        "memory": "524288 KB",
         "scu_burst": 0.0,
-        "cpu": 0.0,
+        "cpu": 2.7999362547845994,
         "network": null
       },
       "fixed_ips": [
-        "192.168.122.17"
+        "192.168.111.5"
       ],
       "graphite_url": "/render?target=stats.SAM",
       "floating_ips": null,
       "capabilities": {
-        "scu_allocated": null,
+        "scu_allocated": 1.0,
         "cores": 1,
-        "scu_allocated_max": null,
-        "memory_size": "1024 MB",
-        "scu_allocated_min": null
+        "scu_allocated_max": 1.0,
+        "memory_size": "524288 KB",
+        "scu_allocated_min": 1.0
       },
-      "sla_id": null,
-      "vm_name": "michael-pac-071effaa-90bd-4ef3-ac52-65031970c422",
+      "sla_id": "42440ebf-8622-4df8-9cc1-2526681c997d",
+      "vm_name": "test-mswynnex1-9eb45cfb-8a08-4886-84c2-aeabdfc55a0b",
       "macs": [
-        "fa:16:3e:c2:02:86"
+        "fa:16:3e:17:8c:ae"
       ],
       "contention": {
         "threads": [
           {
             "llc": {
-              "value": null,
-              "label": null
+              "value": 2.8,
+              "label": "LOW"
             },
-            "id": null
+            "id": 108907
           }
         ],
         "system": {
           "llc": {
-            "value": 0.0,
+            "value": 2.8,
             "label": "LOW"
           }
         }

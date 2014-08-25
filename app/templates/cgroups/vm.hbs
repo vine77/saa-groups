@@ -4,38 +4,70 @@
       <i class="fa fa-cube"></i>
       {{name}}
     </h3>
+    {{!--
     <div class="box-tools pull-right">
       <button class="btn btn-success btn-sm" type="button">
         Details
         <i class="fa fa-toggle-right"></i>
       </button>
     </div>
+    --}}
   </div>
   <div class="box-subheader clearfix">
     <div class="component-status">
       <div class="component-status-state">
-        <i class="fa fa-fw fa-check-circle success"></i>
-        <i class="fa fa-fw fa-bolt on"></i>
+        <span class="hint--top" {{bind-attr data-hint="healthMessage"}}>
+          <i {{bind-attr class=":fa :fa-fw healthIconClass"}}></i>
+        </span>
+        <span class="hint--top" {{bind-attr data-hint="operationalMessage"}}>
+          <i {{bind-attr class=":fa :fa-fw operationalIconClass"}}></i>
+        </span>
+        {{#if isAggressor}}
+          <span class="hint--top" data-hint="Contention: Aggressor">
+            <i class="fa fa-fw fa-bullhorn error"></i>
+          </span>
+        {{/if}}
       </div>
       <div class="component-status-other">
-        <i class="fa fa-fw fa-trophy assured"></i>
-        <i class="fa fa-fw fa-lock unregistered"></i>
-        <i class="fa fa-fw fa-bullhorn error" style="color:#9d261d"></i>
+        <span class="hint--top" {{bind-attr data-hint="slaMessage"}}>
+          <i {{bind-attr class=":fa :fa-fw slaIconClass"}}></i>
+        </span>
+        <span class="hint--top" {{bind-attr data-hint="trustMessage"}}>
+          <i {{bind-attr class=":fa :fa-fw trustIconClass"}}></i>
+        </span>
+        {{#if isVictim}}
+          <span class="hint--top" data-hint="Contention: Victim">
+            <i class="fa fa-fw fa-headphones warning"></i>
+          </span>
+        {{/if}}
       </div>
     </div><div class="component-capacity">
-      <div>2 vCPUs &times; 0.5-1.0 SCU = 1.0-2.0 SCUs</div>
-      <div class="clearfix">
-        <small class="pull-left">Memory (GiB)</small>
-        <small class="pull-right">31%</small>
-      </div>
-      <div class="progress xs">
-        <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
-      </div>
-      <div class="clearfix">
-        <small class="pull-left">15</small><small class="pull-right">48</small>
-      </div>
+      <div>{{cores}} @ {{cpuFrequency}}</div>
+      <hr>
+      <div>{{#if memoryCurrent}}{{memoryCurrent}} GiB memory{{/if}}</div>
     </div><div class="component-charts">
-      {{!-- <img src="/assets/images/dials.png"> --}}
+      <div class="chart-bar-horizontal">
+        <div class="clearfix">
+          <small class="pull-left">Utilization (SCUs)</small>
+          <small class="pull-right">{{utilizationPercent}}</small>
+        </div>
+        <div class="progress xs">
+          <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
+        </div>
+        <div class="clearfix">
+          <small class="pull-left">{{utilizationCurrent}}</small>
+          <small class="pull-right">{{utilizationMax}}</small>
+        </div>
+      </div>
+      <div class="chart-bar-horizontal">
+        <div class="clearfix">
+          <small class="pull-left">Cache Contention</small>
+          <small class="pull-right">{{contentionCurrent}}</small>
+        </div>
+        <div class="progress xs">
+          <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

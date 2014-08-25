@@ -5,10 +5,10 @@ import loadInitializers from 'ember/load-initializers';
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
-  modulePrefix: 'co-ui', // TODO: loaded via config
+  modulePrefix: 'saa-groups', // TODO: loaded via config
   Resolver: Resolver
 });
 
-loadInitializers(App, 'co-ui');
+loadInitializers(App, 'saa-groups');
 
 export default App;

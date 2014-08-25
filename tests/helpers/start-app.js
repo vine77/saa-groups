@@ -1,7 +1,7 @@
 /* global require */
 
-var Application = require('co-ui/app')['default'];
-var Router = require('co-ui/router')['default'];
+var Application = require('saa-groups/app')['default'];
+var Router = require('saa-groups/router')['default'];
 import Ember from 'ember';
 
 export default function startApp(attrs) {

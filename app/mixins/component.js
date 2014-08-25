@@ -3,6 +3,7 @@ import healthToString from '../utils/convert/health-to-string';
 import healthToIconClass from '../utils/convert/health-to-icon-class';
 import operationalToString from '../utils/convert/operational-to-string';
 import operationalToIconClass from '../utils/convert/operational-to-icon-class';
+import Strings from '../utils/mappings/strings';
 
 export default Ember.Mixin.create({
   healthMessage: function() {
@@ -30,5 +31,15 @@ export default Ember.Mixin.create({
   memoryPercent: function() {
     if (!Number.isInteger(this.get('utilization.memory')) || !this.get('capabilities.memory_size')) return null;
     return ((this.get('utilization.memory') / this.get('capabilities.memory_size')) * 100).toFixed(0) + '%';
-  }.property('utilization.memory', 'capabilities.memory_size')
+  }.property('utilization.memory', 'capabilities.memory_size'),
+  cpuFrequency: function() {
+    var cpuFrequency = parseInt(this.get('node.capabilities.cpu_frequency')) / 1000;
+    if (isNaN(cpuFrequency)) return Strings.NA;
+    return cpuFrequency.toFixed(2) + ' GHz';
+  }.property('node.capabilities.cpu_frequency'),
+  cores: function() {
+    var cores = this.get('capabilities.cores');
+    if (!Number.isInteger(cores)) return Strings.NA;
+    return cores + ((cores === 1) ? ' core' : ' cores');
+  }.property('capabilities.cores')
 });

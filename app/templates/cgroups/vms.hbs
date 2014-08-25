@@ -12,37 +12,40 @@
       Virtual Machines
     </h3>
   </div>
-  <div class="box-subheader clearfix">
-    <div class="component-status">
-      <div class="component-status-state">
-        <span class="hint--top" {{bind-attr data-hint="healthMessage"}}>
-          <i {{bind-attr class=":fa :fa-fw healthIconClass"}}></i>
-        </span>
-        <span class="hint--top" {{bind-attr data-hint="operationalMessage"}}>
-          <i {{bind-attr class=":fa :fa-fw operationalIconClass"}}></i>
-        </span>
+  {{#with aggregateVm}}
+    <div class="box-subheader clearfix">
+      <div class="component-status">
+        <div class="component-status-state">
+          <span class="hint--top" {{bind-attr data-hint="healthMessage"}}>
+            <i {{bind-attr class=":fa :fa-fw healthIconClass"}}></i>
+          </span>
+          <span class="hint--top" {{bind-attr data-hint="operationalMessage"}}>
+            <i {{bind-attr class=":fa :fa-fw operationalIconClass"}}></i>
+          </span>
+        </div>
+        <div class="component-status-other">
+          <i class="fa fa-fw fa-trophy assured"></i>
+          <i class="fa fa-fw fa-lock unregistered"></i>
+          <i class="fa fa-fw fa-bullhorn error" style="color:#9d261d"></i>
+        </div>
+      </div><div class="component-capacity">
+        {{!-- <div>2 vCPUs &times; 0.5-1.0 SCU = 1.0-2.0 SCUs</div> --}}
+        <div>{{cores}} @ {{cpuFrequency}}</div>
+        <div class="clearfix">
+          <small class="pull-left">Memory (GiB)</small>
+          <small class="pull-right">31%</small>
+        </div>
+        <div class="progress xs">
+          <div class="progress-bar progress-bar-green" style="width: 31%;"></div>
+        </div>
+        <div class="clearfix">
+          <small class="pull-left">15</small><small class="pull-right">48</small>
+        </div>
+      </div><div class="component-charts">
+        <img src="/assets/images/dials.png">
       </div>
-      <div class="component-status-other">
-        <i class="fa fa-fw fa-trophy assured"></i>
-        <i class="fa fa-fw fa-lock unregistered"></i>
-        <i class="fa fa-fw fa-bullhorn error" style="color:#9d261d"></i>
-      </div>
-    </div><div class="component-capacity">
-      <div>2 vCPUs &times; 0.5-1.0 SCU = 1.0-2.0 SCUs</div>
-      <div class="clearfix">
-        <small class="pull-left">Memory (GiB)</small>
-        <small class="pull-right">31%</small>
-      </div>
-      <div class="progress xs">
-        <div class="progress-bar progress-bar-green" style="width: 31%;"></div>
-      </div>
-      <div class="clearfix">
-        <small class="pull-left">15</small><small class="pull-right">48</small>
-      </div>
-    </div><div class="component-charts">
-      <img src="/assets/images/dials.png">
     </div>
-  </div>
+  {{/with}}
   <div class="box-body">
     {{#each vms}}
       {{partial "cgroups/vm"}}

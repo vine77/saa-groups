@@ -63,7 +63,7 @@
         <small class="pull-right">{{memoryPercent}}</small>
       </div>
       <div class="progress xs">
-        <div class="progress-bar progress-bar-green" style="width: 31%;"></div>
+        <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
       </div>
       <div class="clearfix">
         <small class="pull-left">{{memoryCurrent}}</small>

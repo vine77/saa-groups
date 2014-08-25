@@ -49,6 +49,9 @@ export default Ember.Mixin.create({
     if (!Number.isInteger(this.get('utilization.memory')) || !this.get('capabilities.memory_size')) return null;
     return ((this.get('utilization.memory') / this.get('capabilities.memory_size')) * 100).toFixed(0) + '%';
   }.property('utilization.memory', 'capabilities.memory_size'),
+  memoryStyle: function() {
+    return 'width:' + this.get('memoryPercent');
+  }.property('memoryPercent'),
   cpuFrequency: function() {
     var cpuFrequency = parseInt(this.get('node.capabilities.cpu_frequency')) / 1000;
     if (isNaN(cpuFrequency)) return Strings.NA;

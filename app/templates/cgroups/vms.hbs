@@ -24,7 +24,9 @@
           </span>
         </div>
         <div class="component-status-other">
-          <i class="fa fa-fw fa-trophy assured"></i>
+          <span class="hint--top" {{bind-attr data-hint="slaMessage"}}>
+            <i {{bind-attr class=":fa :fa-fw slaIconClass"}}></i>
+          </span>
           <i class="fa fa-fw fa-lock unregistered"></i>
           <i class="fa fa-fw fa-bullhorn error" style="color:#9d261d"></i>
         </div>

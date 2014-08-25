@@ -1,9 +1,11 @@
 import Ember from 'ember';
+import Strings from '../utils/mappings/strings';
 import healthToString from '../utils/convert/health-to-string';
 import healthToIconClass from '../utils/convert/health-to-icon-class';
 import operationalToString from '../utils/convert/operational-to-string';
 import operationalToIconClass from '../utils/convert/operational-to-icon-class';
-import Strings from '../utils/mappings/strings';
+import slaToString from '../utils/convert/sla-to-string';
+import slaToIconClass from '../utils/convert/sla-to-icon-class';
 
 export default Ember.Mixin.create({
   healthMessage: function() {
@@ -13,11 +15,17 @@ export default Ember.Mixin.create({
     return healthToIconClass(this.get('status.health'));
   }.property('status.health'),
   operationalMessage: function() {
-    return 'State: ' + operationalToString(this.get('status.operational')).capitalize();
+    return 'Operational State: ' + operationalToString(this.get('status.operational')).capitalize();
   }.property('status.operational'),
   operationalIconClass: function() {
     return operationalToIconClass(this.get('status.operational'));
   }.property('status.operational'),
+  slaMessage: function() {
+    return 'SLA Status: ' + slaToString(this.get('status.sla_status')).capitalize();
+  }.property('status.sla_status'),
+  slaIconClass: function() {
+    return slaToIconClass(this.get('status.sla_status'));
+  }.property('status.sla_status'),
   memoryCurrent: function() {
     var memory = this.get('utilization.memory');
     if (!Number.isInteger(memory)) return null;

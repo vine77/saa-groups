@@ -14,6 +14,11 @@
         <span class="hint--top" {{bind-attr data-hint="operationalMessage"}}>
           <i {{bind-attr class=":fa :fa-fw operationalIconClass"}}></i>
         </span>
+        {{#if isAggressor}}
+          <span class="hint--top" data-hint="Contention: Aggressor">
+            <i class="fa fa-fw fa-bullhorn error"></i>
+          </span>
+        {{/if}}
       </div>
       <div class="component-status-other">
         <span class="hint--top" {{bind-attr data-hint="slaMessage"}}>
@@ -22,6 +27,11 @@
         <span class="hint--top" {{bind-attr data-hint="trustMessage"}}>
           <i {{bind-attr class=":fa :fa-fw trustIconClass"}}></i>
         </span>
+        {{#if isVictim}}
+          <span class="hint--top" data-hint="Contention: Victim">
+            <i class="fa fa-fw fa-headphones warning"></i>
+          </span>
+        {{/if}}
       </div>
     </div><div class="component-capacity">
       <div>{{cores}} @ {{cpuFrequency}}</div>

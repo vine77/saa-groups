@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import Strings from '../utils/mappings/strings';
+import Health from '../utils/mappings/health';
 import healthToString from '../utils/convert/health-to-string';
 import healthToIconClass from '../utils/convert/health-to-icon-class';
 import operationalToString from '../utils/convert/operational-to-string';
@@ -57,5 +58,7 @@ export default Ember.Mixin.create({
     var cores = this.get('capabilities.cores');
     if (!Number.isInteger(cores)) return Strings.NA;
     return cores + ((cores === 1) ? ' core' : ' cores');
-  }.property('capabilities.cores')
+  }.property('capabilities.cores'),
+  isAggressor: Ember.computed.gte('status.aggressor', Health.INFO),
+  isVictim: Ember.computed.gte('status.victim', Health.INFO)
 });

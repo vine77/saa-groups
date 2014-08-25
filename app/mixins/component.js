@@ -52,6 +52,37 @@ export default Ember.Mixin.create({
   memoryStyle: function() {
     return 'width:' + this.get('memoryPercent');
   }.property('memoryPercent'),
+  utilizationCurrent: function() {
+    var utilization = this.get('utilization.scu_current');
+    if (!(utilization >= 0)) return null;
+    return utilization.toFixed(2);
+  }.property('utilization.scu_current'),
+  utilizationMax: function() {
+    var utilizationMax = this.get('utilization.scu_max');
+    if (!(utilizationMax >= 0)) return null;
+    return utilizationMax.toFixed(2);
+  }.property('utilization.scu_max'),
+  utilizationPercent: function() {
+    if (!(this.get('utilization.scu_current') >= 0) || !(this.get('utilization.scu_max') >= 0)) return null;
+    return ((this.get('utilization.scu_current') / this.get('utilization.scu_max')) * 100).toFixed(0) + '%';
+  }.property('utilization.scu_current', 'utilization.scu_max'),
+  utilizationStyle: function() {
+    return 'width:' + this.get('utilizationPercent');
+  }.property('utilizationPercent'),
+  contentionCurrent: function() {
+    var contention = this.get('contention.system.llc.value');
+    if (!(contention >= 0)) return null;
+    return contention.toFixed(2);
+  }.property('contention.system.llc.value'),
+  contentionPercent: function() {
+    if (!(this.get('contention.system.llc.value') >= 0)) return null;
+    var percent = (this.get('contention.system.llc.value') / 50) * 100;
+    if (percent > 0 && percent < 2) percent = 2;  // If any contention exists, show at least a small bar
+    return percent.toFixed(0) + '%';
+  }.property('contention.system.llc.value'),
+  contentionStyle: function() {
+    return 'width:' + this.get('contentionPercent');
+  }.property('contentionPercent'),
   cpuFrequency: function() {
     var cpuFrequency = parseInt(this.get('node.capabilities.cpu_frequency')) / 1000;
     if (isNaN(cpuFrequency)) return Strings.NA;

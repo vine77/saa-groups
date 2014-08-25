@@ -65,13 +65,36 @@
           <small class="pull-right">{{memoryMax}}</small>
         </div>
       </div><div class="component-charts">
-        {{!-- <img src="/assets/images/dials.png"> --}}
+        <div class="chart-bar-horizontal">
+          <div class="clearfix">
+            <small class="pull-left">Utilization (SCUs)</small>
+            <small class="pull-right">{{utilizationPercent}}</small>
+          </div>
+          <div class="progress xs">
+            <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
+          </div>
+          <div class="clearfix">
+            <small class="pull-left">{{utilizationCurrent}}</small>
+            <small class="pull-right">{{utilizationMax}}</small>
+          </div>
+        </div>
+        <div class="chart-bar-horizontal">
+          <div class="clearfix">
+            <small class="pull-left">Cache Contention</small>
+            <small class="pull-right">{{contentionCurrent}}</small>
+          </div>
+          <div class="progress xs">
+            <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>
+          </div>
+        </div>
       </div>
     </div>
   {{/with}}
+  {{!--
   <div class="box-body">
     {{#each vms}}
       {{partial "cgroups/vm"}}
     {{/each}}
   </div>
+  --}}
 </div>

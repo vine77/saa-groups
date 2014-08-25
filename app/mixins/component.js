@@ -6,6 +6,8 @@ import operationalToString from '../utils/convert/operational-to-string';
 import operationalToIconClass from '../utils/convert/operational-to-icon-class';
 import slaToString from '../utils/convert/sla-to-string';
 import slaToIconClass from '../utils/convert/sla-to-icon-class';
+import trustToString from '../utils/convert/trust-to-string';
+import trustToIconClass from '../utils/convert/trust-to-icon-class';
 
 export default Ember.Mixin.create({
   healthMessage: function() {
@@ -26,6 +28,12 @@ export default Ember.Mixin.create({
   slaIconClass: function() {
     return slaToIconClass(this.get('status.sla_status'));
   }.property('status.sla_status'),
+  trustMessage: function() {
+    return 'Trust Status: ' + trustToString(this.get('status.trust')).capitalize();
+  }.property('status.trust'),
+  trustIconClass: function() {
+    return trustToIconClass(this.get('status.trust'));
+  }.property('status.trust'),
   memoryCurrent: function() {
     var memory = this.get('utilization.memory');
     if (!Number.isInteger(memory)) return null;

@@ -7,7 +7,7 @@
         "operational": 2,
         "health": 3,
         "victim": 4,
-        "trust": 3
+        "trust": 2
       },
       "contention": {
         "system": {

@@ -1,4 +1,13 @@
 <div {{bind-attr class=":box :box-solid :box-success :component isVmsExpanded::collapsed-box"}}>
+  <div class="box-header">
+    <div class="box-expand pull-left">
+    </div>
+    <h3 class="box-title">
+      <i class="fa fa-cube"></i>
+      Virtual Machines
+    </h3>
+  </div>
+  {{!--
   <div class="box-header" {{action toggleVmsCollapsed this}}>
     <div class="box-expand pull-left">
       {{#if isVmsExpanded}}
@@ -8,10 +17,10 @@
       {{/if}}
     </div>
     <h3 class="box-title">
-      {{!-- <i class="fa fa-cube"></i> --}}
       Virtual Machines
     </h3>
   </div>
+  --}}
   {{#with aggregateVm}}
     <div class="box-subheader clearfix">
       <div class="component-status">
@@ -56,7 +65,7 @@
           <small class="pull-right">{{memoryMax}}</small>
         </div>
       </div><div class="component-charts">
-        <img src="/assets/images/dials.png">
+        {{!-- <img src="/assets/images/dials.png"> --}}
       </div>
     </div>
   {{/with}}

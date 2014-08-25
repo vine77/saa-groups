@@ -1,5 +1,6 @@
 <div {{bind-attr class=":box :box-solid :box-primary :component isExpanded::collapsed-box"}}>
   <div class="box-header" {{action "toggleCollapsed" this}}>
+    {{!--
     <div class="box-tools exclude pull-right">
       <button class="btn btn-primary btn-sm" type="button" {{action "details" bubbles=false}}>
         Details
@@ -17,6 +18,7 @@
         </ul>
       </div>
     </div>
+    --}}
     <div class="box-expand pull-left">
       {{#if isExpanded}}
         <button class="btn btn-primary btn-sm"><i class="fa fa-caret-down"></i></button>
@@ -70,7 +72,7 @@
         <small class="pull-right">{{memoryMax}}</small>
       </div>
     </div><div class="component-charts">
-      <img src="/assets/images/dials-node.png">
+      {{!-- <img src="/assets/images/dials-node.png"> --}}
     </div>
   </div>
   <div class="box-body">

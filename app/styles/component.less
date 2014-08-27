@@ -50,6 +50,26 @@
       }
     }
   }
+  > .box-header {
+    // Darken and rotate expand button when header is hovered
+    > .box-expand {
+      > .btn {
+        > i {
+          transition-property: transform;
+          transform: rotate(0deg);
+          font-size: 20px;
+          line-height: 16px;
+          vertical-align: middle;
+          &.fa-caret-right {
+            transition-duration: 0.4s;
+          }
+          &.fa-caret-down {
+            transition-duration: 0.8s;
+          }
+        }
+      }
+    }
+  }
   &.box-primary {
     > .box-header {
       .btn {
@@ -58,19 +78,6 @@
         }
         &:not(.btn-primary) {
           box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
-        }
-      }
-      // Darken and rotate expand button when header is hovered
-      > .box-expand > .btn.btn-primary {
-        > i {
-          transition-property: transform;
-          transform: rotate(0deg);
-          &.fa-caret-right {
-            transition-duration: 0.4s;
-          }
-          &.fa-caret-down {
-            transition-duration: 0.8s;
-          }
         }
       }
       &:hover {
@@ -100,19 +107,6 @@
         }
         &:not(.btn-success) {
           box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
-        }
-      }
-      // Darken and rotate expand button when header is hovered
-      > .box-expand > .btn.btn-success {
-        > i {
-          transition-property: transform;
-          transform: rotate(0deg);
-          &.fa-caret-right {
-            transition-duration: 0.4s;
-          }
-          &.fa-caret-down {
-            transition-duration: 0.8s;
-          }
         }
       }
       &:hover {

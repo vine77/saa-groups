@@ -59,7 +59,10 @@
         {{/if}}
       </div>
     </div><div class="component-capacity">
-      <div>{{cores}} @ {{cpuFrequency}}</div>
+      <div>
+        {{#if hasCores}}{{cores}}{{/if}}
+        {{#if hasVcpus}}{{vcpus}}{{/if}}
+      </div>
       <div class="chart-bar-horizontal">
         <div class="clearfix">
           <small class="pull-left">Memory (GiB)</small>

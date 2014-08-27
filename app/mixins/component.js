@@ -89,11 +89,18 @@ export default Ember.Mixin.create({
     if (isNaN(cpuFrequency)) return Strings.NA;
     return cpuFrequency.toFixed(2) + ' GHz';
   }.property('node.capabilities.cpu_frequency'),
+  hasCores: Ember.computed.notEmpty('capabilities.cores'),
   cores: function() {
     var cores = this.get('capabilities.cores');
-    if (!Number.isInteger(cores)) return Strings.NA;
+    if (Ember.isEmpty(cores)) return Strings.NA;
     return cores + ((cores === 1) ? ' core' : ' cores');
   }.property('capabilities.cores'),
+  hasVcpus: Ember.computed.notEmpty('capabilities.vcpus'),
+  vcpus: function() {
+    var vcpus = this.get('capabilities.vcpus');
+    if (Ember.isEmpty(vcpus)) return Strings.NA;
+    return vcpus + ((vcpus === 1) ? ' vCPU' : ' vCPUs');
+  }.property('capabilities.vcpus'),
   isAggressor: Ember.computed.gte('status.aggressor', Health.INFO),
   isVictim: Ember.computed.gte('status.victim', Health.INFO)
 });

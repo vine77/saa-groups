@@ -42,7 +42,10 @@
         </div>
       </div><div class="component-capacity">
         {{!-- <div>2 vCPUs &times; 0.5-1.0 SCU = 1.0-2.0 SCUs</div> --}}
-        <div>{{cores}} @ {{cpuFrequency}}</div>
+        <div>
+          {{#if hasCores}}{{cores}}{{/if}}
+          {{#if hasVcpus}}{{vcpus}}{{/if}}
+        </div>
         <div class="clearfix">
           <small class="pull-left">Memory (GiB)</small>
           <small class="pull-right">{{memoryPercent}}</small>

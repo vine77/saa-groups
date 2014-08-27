@@ -42,7 +42,10 @@
         {{/if}}
       </div>
     </div><div class="component-capacity">
-      <div>{{cores}} @ {{cpuFrequency}}</div>
+      <div>
+        {{#if hasCores}}{{cores}}{{/if}}
+        {{#if hasVcpus}}{{vcpus}}{{/if}}
+      </div>
       <hr>
       <div>{{#if memoryCurrent}}{{memoryCurrent}} GiB memory{{/if}}</div>
     </div><div class="component-charts">

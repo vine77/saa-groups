@@ -47,25 +47,30 @@
         {{#if hasVcpus}}{{vcpus}}{{/if}}
       </div>
       <hr>
-      <div>{{#if memoryCurrent}}{{memoryCurrent}} GiB memory{{/if}}</div>
-    </div><div class="component-charts">
+      <div>{{#if memoryCurrent}}{{to-fixed memoryCurrent 2}} GiB memory{{/if}}</div>
+    </div>
+    <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>
       <div class="chart-bar-horizontal">
-        <div class="clearfix">
-          <small class="pull-left">Utilization (SCUs)</small>
-          <small class="pull-right">{{utilizationPercent}}</small>
-        </div>
-        <div class="progress xs">
-          <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
-        </div>
-        <div class="clearfix">
-          <small class="pull-left">{{utilizationCurrent}}</small>
-          <small class="pull-right">{{utilizationMax}}</small>
-        </div>
+        {{#if utilizationMax}}
+          <div class="clearfix">
+            <small class="pull-left">Utilization (SCUs)</small>
+            <small class="pull-right">{{utilizationPercent}}</small>
+          </div>
+          <div class="progress xs">
+            <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
+          </div>
+          <div class="clearfix">
+            <small class="pull-left">{{utilizationCurrent}}</small>
+            <small class="pull-right">{{utilizationMax}}</small>
+          </div>
+        {{else}}
+          Utilization: {{utilizationCurrent}} SCUs
+        {{/if}}
       </div>
       <div class="chart-bar-horizontal">
         <div class="clearfix">
           <small class="pull-left">Cache Contention</small>
-          <small class="pull-right">{{contentionCurrent}}</small>
+          <small class="pull-right">{{to-fixed contentionCurrent 2}}</small>
         </div>
         <div class="progress xs">
           <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>

@@ -34,7 +34,7 @@
       "utilization": {
         "ipc": 0.33,
         "uptime": 346650,
-        "scu_total": 0.0,
+        "scu_total": 1.3,
         "cores": {
           "system": {
             "used": [
@@ -69,7 +69,7 @@
         "cores": 1,
         "scu_allocated_max": 1.0,
         "memory_size": "524288 KB",
-        "scu_allocated_min": 1.0
+        "scu_allocated_min": 2.0
       },
       "sla_id": "42440ebf-8622-4df8-9cc1-2526681c997d",
       "vm_name": "test-mswynnex1-b6e9bc32-e1c6-4d70-a9c8-78f6e3f1b66c",

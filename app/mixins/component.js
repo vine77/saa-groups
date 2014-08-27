@@ -36,34 +36,35 @@ export default Ember.Mixin.create({
     return trustToIconClass(this.get('status.trust'));
   }.property('status.trust'),
   memoryCurrent: function() {
-    var memory = parseInt(this.get('utilization.memory'));
-    if (!Number.isInteger(memory)) return null;
-    return (memory / Math.pow(1024, 2)).toFixed(2);  // Assume KiB
+    var memoryCurrent = parseInt(this.get('utilization.memory'));
+    if (!Number.isInteger(memoryCurrent)) return null;
+    return (memoryCurrent / Math.pow(1024, 2));  // To GiB, assuming KiB
   }.property('utilization.memory'),
   memoryMax: function() {
-    var memory = this.get('capabilities.memory_size');
-    if (!Number.isInteger(memory)) return null;
-    return (memory / Math.pow(1024, 2)).toFixed(2);  // Assume KiB
+    var memoryMax = parseInt(this.get('capabilities.memory_size'));
+    if (!Number.isInteger(memoryMax)) return null;
+    return (memoryMax / Math.pow(1024, 2));  // To GiB, assuming KiB
   }.property('capabilities.memory_size'),
   memoryPercent: function() {
-    if (!Number.isInteger(this.get('utilization.memory')) || !this.get('capabilities.memory_size')) return null;
-    return ((this.get('utilization.memory') / this.get('capabilities.memory_size')) * 100).toFixed(0) + '%';
-  }.property('utilization.memory', 'capabilities.memory_size'),
+    if (Ember.isEmpty(this.get('memoryCurrent')) || Ember.isEmpty(this.get('memoryMax'))) return null;
+    return ((this.get('memoryCurrent') / this.get('memoryMax')) * 100).toFixed(0) + '%';
+  }.property('memoryCurrent', 'memoryMax'),
   memoryStyle: function() {
     return 'width:' + this.get('memoryPercent');
   }.property('memoryPercent'),
   utilizationCurrent: function() {
-    var utilization = this.get('utilization.scu_current');
-    if (!utilization || !(utilization >= 0)) return null;
+    var utilization = this.get('utilization.scu_total');
+    if (Ember.isEmpty(utilization)) utilization = this.get('utilization.scu_max');
+    if (Ember.isEmpty(utilization) || !(utilization >= 0)) return null;
     return utilization;
-  }.property('utilization.scu_current'),
+  }.property('utilization.scu_max', 'utilization.scu_total'),
   utilizationMax: function() {
-    var scuMax = this.get('utilization.scu_max') || this.get('capabilities.scu_allocated_max');
-    if (!scuMax || !(scuMax >= 0)) return null;
-    return scuMax;
-  }.property('utilization.scu_max', 'capabilities.scu_allocated_max'),
+    var scuAllocated = this.get('capabilities.scu_allocated_min');
+    if (Ember.isEmpty(scuAllocated) || !(scuAllocated >= 0)) return null;
+    return scuAllocated;
+  }.property('capabilities.scu_allocated_min'),
   utilizationPercent: function() {
-    if (!this.get('utilizationCurrent') || !this.get('utilizationMax')) return null;
+    if (Ember.isEmpty(this.get('utilizationCurrent')) || Ember.isEmpty(this.get('utilizationMax'))) return null;
     return ((this.get('utilizationCurrent') / this.get('utilizationMax')) * 100).toFixed(0) + '%';
   }.property('utilizationCurrent', 'utilizationMax'),
   utilizationStyle: function() {
@@ -71,16 +72,16 @@ export default Ember.Mixin.create({
   }.property('utilizationPercent'),
   contentionCurrent: function() {
     var contention = this.get('contention.system.llc.value');
-    if (!contention || !(contention >= 0)) return null;
-    return contention.toFixed(2);
+    if (Ember.isEmpty(contention) || !(contention >= 0)) return null;
+    return contention;
   }.property('contention.system.llc.value'),
   contentionPercent: function() {
     var contentionMax = 50;
-    if (!this.get('contention.system.llc.value') || !(this.get('contention.system.llc.value') >= 0)) return null;
-    var percent = (this.get('contention.system.llc.value') / contentionMax) * 100;
+    if (Ember.isEmpty(this.get('contentionCurrent'))) return null;
+    var percent = (this.get('contentionCurrent') / contentionMax) * 100;
     if (percent > 0 && percent < 2) percent = 2;  // If any contention exists, show at least a small bar
     return percent.toFixed(0) + '%';
-  }.property('contention.system.llc.value'),
+  }.property('contentionCurrent'),
   contentionStyle: function() {
     return 'width:' + this.get('contentionPercent');
   }.property('contentionPercent'),

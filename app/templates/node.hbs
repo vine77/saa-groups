@@ -76,23 +76,28 @@
           <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
         </div>
         <div class="clearfix">
-          <small class="pull-left">{{memoryCurrent}}</small>
-          <small class="pull-right">{{memoryMax}}</small>
+          <small class="pull-left">{{to-fixed memoryCurrent 2}}</small>
+          <small class="pull-right">{{to-fixed memoryMax 2}}</small>
         </div>
       </div>
-    </div><div class="component-charts">
+    </div>
+    <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>
       <div class="chart-bar-horizontal">
-        <div class="clearfix">
-          <small class="pull-left">Utilization (SCUs)</small>
-          <small class="pull-right">{{utilizationPercent}}</small>
-        </div>
-        <div class="progress xs">
-          <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
-        </div>
-        <div class="clearfix">
-          <small class="pull-left">{{utilizationCurrent}}</small>
-          <small class="pull-right">{{utilizationMax}}</small>
-        </div>
+        {{#if utilizationMax}}
+          <div class="clearfix">
+            <small class="pull-left">Utilization (SCUs)</small>
+            <small class="pull-right">{{utilizationPercent}}</small>
+          </div>
+          <div class="progress xs">
+            <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
+          </div>
+          <div class="clearfix">
+            <small class="pull-left">{{utilizationCurrent}}</small>
+            <small class="pull-right">{{utilizationMax}}</small>
+          </div>
+        {{else}}
+          Utilization: {{utilizationCurrent}} SCUs
+        {{/if}}
       </div>
       <div class="chart-bar-horizontal">
         <div class="clearfix">

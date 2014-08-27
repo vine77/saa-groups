@@ -60,8 +60,12 @@
       </div>
     </div><div class="component-capacity">
       <div>
-        {{#if hasCores}}{{cores}}{{/if}}
-        {{#if hasVcpus}}{{vcpus}}{{/if}}
+        {{#if isAssuredCoresPhysical}}
+          {{#if hasCores}}{{cores}}{{/if}}
+          {{#if hasVcpus}}{{vcpus}}{{/if}}
+        {{else}}
+          {{n-a capabilities.scu_allocated_min}} allocated SCUs
+        {{/if}}
       </div>
       <div class="chart-bar-horizontal">
         <div class="clearfix">

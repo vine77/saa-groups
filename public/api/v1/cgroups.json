@@ -23,9 +23,9 @@
       },
       "capabilities": {
         "cores": 4,
-        "scu_allocated_max": null,
+        "scu_allocated_max": 3.72,
         "memory_size": 4194304,
-        "scu_allocated_min": null
+        "scu_allocated_min": 3.72
       },
       "node_name": "gklab-044-211.igk.intel.com",
       "node_id": "395E28C3-9144-11DF-B949-001517F23968",

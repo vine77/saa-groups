@@ -52,24 +52,6 @@ export default Ember.Mixin.create({
   memoryStyle: function() {
     return 'width:' + this.get('memoryPercent');
   }.property('memoryPercent'),
-  utilizationCurrent: function() {
-    var utilization = this.get('utilization.scu_total');
-    if (Ember.isEmpty(utilization)) utilization = this.get('utilization.scu_max');
-    if (Ember.isEmpty(utilization) || !(utilization >= 0)) return null;
-    return utilization;
-  }.property('utilization.scu_max', 'utilization.scu_total'),
-  utilizationMax: function() {
-    var scuAllocated = this.get('capabilities.scu_allocated_min');
-    if (Ember.isEmpty(scuAllocated) || !(scuAllocated >= 0)) return null;
-    return scuAllocated;
-  }.property('capabilities.scu_allocated_min'),
-  utilizationPercent: function() {
-    if (Ember.isEmpty(this.get('utilizationCurrent')) || Ember.isEmpty(this.get('utilizationMax'))) return null;
-    return ((this.get('utilizationCurrent') / this.get('utilizationMax')) * 100).toFixed(0) + '%';
-  }.property('utilizationCurrent', 'utilizationMax'),
-  utilizationStyle: function() {
-    return 'width:' + this.get('utilizationPercent');
-  }.property('utilizationPercent'),
   contentionCurrent: function() {
     var contention = this.get('contention.system.llc.value');
     if (Ember.isEmpty(contention) || !(contention >= 0)) return null;
@@ -103,5 +85,90 @@ export default Ember.Mixin.create({
     return vcpus + ((vcpus === 1) ? ' vCPU' : ' vCPUs');
   }.property('capabilities.vcpus'),
   isAggressor: Ember.computed.gte('status.aggressor', Health.INFO),
-  isVictim: Ember.computed.gte('status.victim', Health.INFO)
+  isVictim: Ember.computed.gte('status.victim', Health.INFO),
+
+  // Compute SCU allocation floor/ceiling computed properties
+  hasCompute: function() {
+    return !Ember.isEmpty(this.get('utilizationTotal')) && !Ember.isEmpty(this.get('suFloor'));
+  }.property('utilization.scu_total', 'suFloor'),
+  suFloor: Ember.computed.alias('capabilities.scu_allocated_min'),
+  suCeiling: Ember.computed.alias('capabilities.scu_allocated_max'),
+  isRange: function() {
+    if (Ember.isEmpty(this.get('suFloor'))) return false;
+    if (this.get('suFloor') > this.get('suCeiling')) return false;
+    return this.get('suFloor') !== this.get('suCeiling');
+  }.property('suFloor', 'suCeiling'),
+  allocationMin: function() {
+    if (Ember.isEmpty(this.get('capabilities.scu_allocated_min'))) return 0;
+    if (!this.get('isRange')) return 100;
+    return 100 * parseFloat(this.get('capabilities.scu_allocated_min')) / parseFloat(this.get('capabilities.scu_allocated_max'));
+  }.property('isRange', 'capabilities.scu_allocated_min', 'capabilities.scu_allocated_max'),
+  allocationMinWidth: function() {
+    return 'width:' + this.get('allocationMin') + 'px;';
+  }.property('allocationMin'),
+  allocationMessage: function() {
+    var message = '';
+    if (this.get('isRange')) {
+      message += 'Total: ' + this.get('utilizationTotal') + '\n';
+      if (this.get('utilizationBurst')) {
+        message += 'Non-bursting: ' + this.get('utilizationCurrent') + '\n';
+        message += 'Bursting: ' + this.get('utilizationBurst') + '\n';
+      }
+      message += 'Min Allocated: ' + this.get('capabilities.scu_allocated_min') + '\n';
+      message += 'Burst Allocated: ' + this.get('capabilities.scu_allocated_max');
+    } else {
+      message += 'Total: ' + this.get('utilizationTotal') + '\n';
+      if (this.get('utilizationBurst')) {
+        message += 'Non-bursting: ' + this.get('utilizationCurrent') + '\n';
+        message += 'Bursting: ' + this.get('utilizationBurst') + '\n';
+      }
+      message += 'Allocated: ' + this.get('capabilities.scu_allocated_min');
+    }
+    return message;
+  }.property('isRange', 'utilizationTotal', 'utilizationCurrent', 'utilizationBurst', 'capabilities.scu_allocated_min', 'capabilities.scu_allocated_max'),
+  utilizationBurst: function() {
+    var burst = this.get('utilization.scu_burst');
+    if (Ember.isEmpty(burst)) burst = 0;
+    return burst;
+  }.property('utilization.scu_burst'),
+  utilizationTotal: function() {
+    var utilization = this.get('utilization.scu_total');
+    if (Ember.isEmpty(utilization)) utilization = this.get('utilization.scu_max');
+    if (Ember.isEmpty(utilization) || !(utilization >= 0)) return null;
+    return utilization;
+  }.property('utilization.scu_max', 'utilization.scu_total'),
+  utilizationCurrent: function() {
+    var total = this.get('utilizationTotal');
+    if (Ember.isEmpty(total)) total = 0;
+    return Math.max(0, total - this.get('utilizationBurst'));
+  }.property('utilizationTotal', 'utilizationBurst'),
+  utilizationBurstWidth: function() {
+    if (Ember.isEmpty(this.get('capabilities.scu_allocated_max'))) return null;
+    var percent = 100 * parseFloat(this.get('utilizationBurst')) / parseFloat(this.get('capabilities.scu_allocated_max'));
+    return 'width:' + percent.toFixed(0) + 'px;';
+  }.property('utilizationBurst', 'capabilities.scu_allocated_max'),
+  utilizationCurrentWidth: function() {
+    if (Ember.isEmpty(this.get('capabilities.scu_allocated_max'))) return null;
+    var percent = 100 * parseFloat(this.get('utilizationCurrent')) / parseFloat(this.get('capabilities.scu_allocated_max'));
+    return 'width:' + percent.toFixed(0) + 'px;';
+  }.property('utilizationCurrent', 'capabilities.scu_allocated_max'),
+  utilizationBurstLeft: function() {
+    var percent;
+    if (Ember.isEmpty(this.get('capabilities.scu_allocated_max'))) return null;
+    if (!this.get('isRange')) {
+      // Current
+      percent = 100 * parseFloat(this.get('utilizationCurrent')) / parseFloat(this.get('capabilities.scu_allocated_max'));
+      return 'left:' + percent.toFixed(0) + 'px;';
+    } else {
+      // Max of current and scu_allocated_min
+      var left = Math.max(this.get('utilizationCurrent'), this.get('capabilities.scu_allocated_min'));
+      percent = (100 * left / parseFloat(this.get('capabilities.scu_allocated_max'))) + 1;
+      return 'left:' + percent.toFixed(0) + 'px;';
+    }
+  }.property('isRange', 'capabilities.scu_allocated_max', 'utilizationCurrent'),
+  utilizationBurstStyle: function() {
+    return this.get('utilizationBurstWidth') + this.get('utilizationBurstLeft');
+  }.property('utilizationBurstWidth', 'utilizationBurstLeft'),
+
+
 });

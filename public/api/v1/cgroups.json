@@ -19,6 +19,7 @@
       "utilization": {
         "scu_current": 1.64,
         "scu_max": 3.28,
+        "scu_burst": 0.4,
         "memory": 4194304
       },
       "capabilities": {

@@ -83,21 +83,23 @@
     </div>
     <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>
       <div class="chart-bar-horizontal">
-        {{#if utilizationMax}}
-          <div class="clearfix">
-            <small class="pull-left">Utilization (SCUs)</small>
-            <small class="pull-right">{{utilizationPercent}}</small>
-          </div>
-          <div class="progress xs">
-            <div class="progress-bar progress-bar-green" {{bind-attr style="utilizationStyle"}}></div>
-          </div>
-          <div class="clearfix">
-            <small class="pull-left">{{utilizationCurrent}}</small>
-            <small class="pull-right">{{utilizationMax}}</small>
-          </div>
-        {{else}}
-          Utilization: {{utilizationCurrent}} SCUs
-        {{/if}}
+        <div class="allocation">
+          {{#if hasCompute}}
+            <span class="hint--top" {{bind-attr data-hint="allocationMessage"}}>
+              <div {{bind-attr class=":allocation-bar isRange"}}>
+                <div class="allocation-range"></div> {{! light orange dashed }}
+                <div class="allocation-min" {{bind-attr style="allocationMinWidth"}}></div> {{! light green solid }}
+                <div class="allocation-current">
+                  <div class="allocation-current-warning" {{bind-attr style="utilizationBurstStyle"}}></div> {{! orange }}
+                  <div class="allocation-current-success" {{bind-attr style="utilizationCurrentWidth"}}></div> {{! green }}
+                </div>
+              </div>
+              {{n-a utilizationTotal}}
+            </span>
+          {{else}}
+            Utilization: {{n-a utilizationTotal}} SCUs
+          {{/if}}
+        </div>
       </div>
       <div class="chart-bar-horizontal">
         <div class="clearfix">

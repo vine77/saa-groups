@@ -39,8 +39,8 @@
           "system": {
             "used": [
               {
-                "core": null,
-                "socket": null
+                "core": "1",
+                "socket": "2"
               }
             ]
           }
@@ -139,8 +139,8 @@
           "system": {
             "used": [
               {
-                "core": null,
-                "socket": null
+                "core": "1",
+                "socket": "2"
               }
             ]
           }
@@ -239,8 +239,8 @@
           "system": {
             "used": [
               {
-                "core": null,
-                "socket": null
+                "core": "1",
+                "socket": "2"
               }
             ]
           }
@@ -336,8 +336,8 @@
           "system": {
             "used": [
               {
-                "core": null,
-                "socket": null
+                "core": "1",
+                "socket": "2"
               }
             ]
           }
@@ -434,8 +434,12 @@
           "system": {
             "used": [
               {
-                "core": null,
-                "socket": null
+                "core": "-1",
+                "socket": "-2"
+              },
+              {
+                "core": "-2",
+                "socket": "-1"
               }
             ]
           }
@@ -532,8 +536,12 @@
           "system": {
             "used": [
               {
-                "core": null,
-                "socket": null
+                "core": "1",
+                "socket": "2"
+              },
+              {
+                "core": "2",
+                "socket": "1"
               }
             ]
           }

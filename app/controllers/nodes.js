@@ -2,6 +2,25 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
   itemController: 'node',
+  sortableProperties: [{
+    property: 'name',
+    title: 'Name'
+  }, {
+    property: 'status.operational',
+    title: 'Operational status'
+  }, {
+    property: 'status.health',
+    title: 'Health status'
+  }, {
+    property: 'utilization.scu_current',
+    title: 'SCUs'
+  }, {
+    property: 'contention.system.llc.value',
+    title: 'LLC cache contention'
+  }, {
+    property: 'capabilities.memory_size',
+    title: 'Memory'
+  }],
   nodeCgroups: Ember.computed.filterBy('@this', 'type', 'node'),
   osCgroups: Ember.computed.filterBy('@this', 'type', 'os'),
   vmsCgroups: Ember.computed.filterBy('@this', 'type', 'vm'),

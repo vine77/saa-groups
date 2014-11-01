@@ -45,10 +45,10 @@
                   <i class="fa fa-sort-amount-desc"></i> Sort by
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a>Sort 1</a></li>
-                  <li><a>Sort 2</a></li>
-                  <li><a>Sort 3</a></li>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  {{#each sortableProperties}}
+                    <li><a>{{title}}</a></li>
+                  {{/each}}
                 </ul>
               </div>
             </div>

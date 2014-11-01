@@ -12,7 +12,9 @@
       </ol>
       --}}
       <div class="btn-group pull-right">
-        <button type="button" class="btn btn-default"><i class="fa fa-sort-amount-desc"></i></button>
+        <button type="button" class="btn btn-default" {{action "toggleAscending"}}>
+          <i {{bind-attr class=":fa sortAscending:fa-sort-amount-asc:fa-sort-amount-desc"}}></i>
+        </button>
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
           Sort by:
           {{sortedProperty.title}}

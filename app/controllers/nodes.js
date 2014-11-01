@@ -43,5 +43,10 @@ export default Ember.ArrayController.extend({
       //return index >= (enumerable.get('length') / 2);
       return index % 2 !== 0;
     });
-  }.property('nodeCgroups.@each')
+  }.property('nodeCgroups.@each'),
+  actions: {
+    toggleAscending: function() {
+      this.set('sortAscending', !this.get('sortAscending'));
+    }
+  }
 });

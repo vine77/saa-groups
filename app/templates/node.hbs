@@ -86,18 +86,19 @@
         <div class="allocation">
           {{#if hasCompute}}
             <span class="hint--top" {{bind-attr data-hint="allocationMessage"}}>
+              <small>SCU Allocation</small>
               <div {{bind-attr class=":allocation-bar isRange"}}>
                 <div class="allocation-range"></div> {{! light orange dashed }}
                 <div class="allocation-min" {{bind-attr style="allocationMinWidth"}}></div> {{! light green solid }}
                 <div class="allocation-current">
                   <div class="allocation-current-warning" {{bind-attr style="utilizationBurstStyle"}}></div> {{! orange }}
-                  <div class="allocation-current-success" {{bind-attr style="utilizationCurrentWidth"}}></div> {{! green }}
+                  <div class="allocation-current-success" {{bind-attr style=" "}}></div> {{! green }}
                 </div>
               </div>
               {{n-a utilizationTotal}}
             </span>
           {{else}}
-            Utilization: {{n-a utilizationTotal}} SCUs
+            SCU Utilization: {{n-a utilizationTotal}} SCUs
           {{/if}}
         </div>
       </div>

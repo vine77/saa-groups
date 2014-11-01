@@ -25,6 +25,9 @@ export default Ember.ArrayController.extend({
     property: 'name',
     title: 'Name'
   },
+  sortProperties: function() {
+    return [this.get('sortedProperty.property')];
+  }.property('sortedProperty'),
   nodeCgroups: Ember.computed.filterBy('@this', 'type', 'node'),
   osCgroups: Ember.computed.filterBy('@this', 'type', 'os'),
   vmsCgroups: Ember.computed.filterBy('@this', 'type', 'vm'),
@@ -47,6 +50,9 @@ export default Ember.ArrayController.extend({
   actions: {
     toggleAscending: function() {
       this.set('sortAscending', !this.get('sortAscending'));
+    },
+    setSortedProperty: function(property) {
+      this.set('sortedProperty', property);
     }
   }
 });

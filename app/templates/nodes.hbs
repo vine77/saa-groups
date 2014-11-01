@@ -22,7 +22,7 @@
         </button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
           {{#each sortableProperties}}
-            <li><a>{{title}}</a></li>
+            <li><a {{action "setSortedProperty" this}}>{{title}}</a></li>
           {{/each}}
         </ul>
       </div>

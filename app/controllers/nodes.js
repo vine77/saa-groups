@@ -21,6 +21,10 @@ export default Ember.ArrayController.extend({
     property: 'capabilities.memory_size',
     title: 'Memory'
   }],
+  sortedProperty: {
+    property: 'name',
+    title: 'Name'
+  },
   nodeCgroups: Ember.computed.filterBy('@this', 'type', 'node'),
   osCgroups: Ember.computed.filterBy('@this', 'type', 'os'),
   vmsCgroups: Ember.computed.filterBy('@this', 'type', 'vm'),

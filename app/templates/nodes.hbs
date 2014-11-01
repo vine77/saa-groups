@@ -11,12 +11,14 @@
         <li class="active">Control Groups</li>
       </ol>
       --}}
-      <div class="dropdown pull-right">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-          <i class="fa fa-sort-amount-desc"></i> Sort by
+      <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default"><i class="fa fa-sort-amount-desc"></i></button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Sort by:
+          {{sortedProperty.title}}
           <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu dropdown-menu-right">
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
           {{#each sortableProperties}}
             <li><a>{{title}}</a></li>
           {{/each}}

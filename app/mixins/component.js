@@ -37,12 +37,12 @@ export default Ember.Mixin.create({
   }.property('status.trust'),
   memoryCurrent: function() {
     var memoryCurrent = parseInt(this.get('utilization.memory'));
-    if (!Number.isInteger(memoryCurrent)) return null;
+    if (typeof memoryCurrent !== 'number') return null;
     return (memoryCurrent / Math.pow(1024, 2));  // To GiB, assuming KiB
   }.property('utilization.memory'),
   memoryMax: function() {
     var memoryMax = parseInt(this.get('capabilities.memory_size'));
-    if (!Number.isInteger(memoryMax)) return null;
+    if (typeof memoryMax !== 'number') return null;
     return (memoryMax / Math.pow(1024, 2));  // To GiB, assuming KiB
   }.property('capabilities.memory_size'),
   memoryPercent: function() {

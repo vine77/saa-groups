@@ -43,6 +43,7 @@
       </div><div class="component-capacity">
         {{!-- <div>2 vCPUs &times; 0.5-1.0 SCU = 1.0-2.0 SCUs</div> --}}
         <div>
+          <span class="label label-success">{{vms.length}} VMs</span>
           {{#if hasCores}}{{cores}}{{/if}}
           {{#if hasVcpus}}{{vcpus}}{{/if}}
         </div>

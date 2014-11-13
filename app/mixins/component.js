@@ -109,7 +109,7 @@ export default Ember.Mixin.create({
   allocationMessage: function() {
     var message = '';
     if (this.get('isRange')) {
-      message += 'Total: ' + this.get('utilizationTotal').toFixed(2) + '\n';
+      message += 'Utilization: ' + this.get('utilizationTotal').toFixed(2) + '\n';
       if (this.get('utilizationBurst')) {
         message += 'Non-bursting: ' + this.get('utilizationCurrent').toFixed(2) + '\n';
         message += 'Bursting: ' + this.get('utilizationBurst').toFixed(2) + '\n';
@@ -117,7 +117,7 @@ export default Ember.Mixin.create({
       message += 'Min Allocated: ' + this.get('capabilities.scu_allocated_min').toFixed(2) + '\n';
       message += 'Burst Allocated: ' + this.get('capabilities.scu_allocated_max').toFixed(2);
     } else {
-      message += 'Total: ' + this.get('utilizationTotal').toFixed(2) + '\n';
+      message += 'Utilization: ' + this.get('utilizationTotal').toFixed(2) + '\n';
       if (this.get('utilizationBurst')) {
         message += 'Non-bursting: ' + this.get('utilizationCurrent').toFixed(2) + '\n';
         message += 'Bursting: ' + this.get('utilizationBurst').toFixed(2) + '\n';

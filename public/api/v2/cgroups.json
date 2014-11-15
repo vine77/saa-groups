@@ -3,259 +3,1402 @@
     {
       "status": {
         "sla_status": 1,
-        "aggressor": 4,
+        "aggressor": 1,
         "operational": 2,
-        "health": 3,
-        "victim": 4,
-        "trust": 2
+        "health": 1,
+        "victim": 1,
+        "trust": 3
       },
       "contention": {
         "system": {
           "llc": {
-            "value": 0.4
+            "value": 0.62
           }
         }
       },
       "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.41,
+        "scu_max": 0.41,
+        "memory": 1638328
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 1.0,
+        "vcpus": 0,
+        "scu_allocated_max": 6.39,
+        "memory_size": 24661388,
+        "scu_allocated_min": 6.39
+      },
+      "node_name": "node-23",
+      "node_id": "00000000-0000-0000-0000-002590A349CE",
+      "type": "os",
+      "id": "bedaf473-c613-59ad-8ff2-2b613a457283"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.29
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.65,
+        "scu_max": 0.65,
+        "memory": 5328108
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.13,
+        "vcpus": 0,
+        "scu_allocated_max": 5.15,
+        "memory_size": 32903396,
+        "scu_allocated_min": 5.15
+      },
+      "node_name": "node-33",
+      "node_id": "30343536-3138-584D-5134-313530304E50",
+      "type": "os",
+      "id": "a610d863-582b-5f56-953f-1fe02fde6649"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.56
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.29,
+        "scu_max": 0.0,
+        "memory": 28835840
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.06,
+        "vcpus": 110,
+        "scu_allocated_max": 110.0,
+        "memory_size": 28835840,
+        "scu_allocated_min": 55.0
+      },
+      "node_name": "node-33",
+      "node_id": "30343536-3138-584D-5134-313530304E50",
+      "type": "vm",
+      "id": "385533e5-c81b-578b-9786-6265d5212c03"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 5.12
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.29,
+        "scu_max": 0.0,
+        "memory": 24641536
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.04,
+        "vcpus": 94,
+        "scu_allocated_max": 94.0,
+        "memory_size": 24641536,
+        "scu_allocated_min": 47.0
+      },
+      "node_name": "node-31",
+      "node_id": "00000000-0000-0000-0000-002590C98BCC",
+      "type": "vm",
+      "id": "6444d0ae-2ef5-56ca-97bd-08b7b50018c8"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.06
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.52,
+        "scu_max": 0.52,
+        "memory": 4262892
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.08,
+        "vcpus": 0,
+        "scu_allocated_max": 6.78,
+        "memory_size": 32912968,
+        "scu_allocated_min": 6.78
+      },
+      "node_name": "node-31",
+      "node_id": "00000000-0000-0000-0000-002590C98BCC",
+      "type": "os",
+      "id": "14ccdeaa-1631-59db-bc5b-5bab30ab1fc6"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.78
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
         "scu_current": 1.64,
-        "scu_max": 3.28,
-        "scu_burst": 0.4,
-        "memory": 4194304
-      },
-      "capabilities": {
-        "cores": 4,
-        "scu_allocated_max": 3.72,
-        "memory_size": 4194304,
-        "scu_allocated_min": 3.72
-      },
-      "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
-      "type": "node",
-      "id": "c3e6f2f6-326e-3d74-af58-79f2850ea3af"
-    },
-    {
-      "status": {
-        "sla_status": 0,
-        "aggressor": 1,
-        "operational": 1,
-        "health": 2,
-        "victim": 1,
-        "trust": 3
-      },
-      "contention": {
-        "system": {
-          "llc": {
-            "value": 0.6
-          }
-        }
-      },
-      "utilization": {
-        "scu_current": 2.05,
-        "scu_max": 4.1,
-        "memory": 6242880
-      },
-      "capabilities": {
-        "cores": 5,
-        "scu_allocated_max": null,
-        "memory_size": 7242880,
-        "scu_allocated_min": null
-      },
-      "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
-      "type": "node",
-      "id": "20f9eb74-baaf-34c6-9e74-54f7c34a6067"
-    },
-    {
-      "status": {
-        "sla_status": 1,
-        "aggressor": 4,
-        "operational": 2,
-        "health": 1,
-        "victim": 4,
-        "trust": 3
-      },
-      "contention": {
-        "system": {
-          "llc": {
-            "value": 12.0
-          }
-        }
-      },
-      "utilization": {
-        "scu_current": 0.41,
-        "scu_max": 0.82,
-        "memory": 1048576
-      },
-      "capabilities": {
-        "cores": 1,
-        "scu_allocated_max": null,
-        "memory_size": 1048576,
-        "scu_allocated_min": null
-      },
-      "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
-      "type": "6WIND",
-      "id": "5e3a8a17-81d5-35c0-ba3c-e6edacca48b2"
-    },
-    {
-      "status": {
-        "sla_status": 1,
-        "aggressor": 4,
-        "operational": 2,
-        "health": 1,
-        "victim": 4,
-        "trust": 3
-      },
-      "contention": {
-        "system": {
-          "llc": {
-            "value": 10.0
-          }
-        }
-      },
-      "utilization": {
-        "scu_current": 0.41,
-        "scu_max": 0.82,
-        "memory": 1048576
-      },
-      "capabilities": {
-        "cores": 1,
-        "scu_allocated_max": null,
-        "memory_size": 1048576,
-        "scu_allocated_min": null
-      },
-      "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
-      "type": "os",
-      "id": "c81e778d-9d01-34fd-9dd7-3ab945d31539"
-    },
-    {
-      "status": {
-        "sla_status": 0,
-        "aggressor": 4,
-        "operational": 0,
-        "health": 0,
-        "victim": 4,
-        "trust": 3
-      },
-      "contention": {
-        "system": {
-          "llc": {
-            "value": 11.0
-          }
-        }
-      },
-      "utilization": {
-        "scu_current": 0.82,
         "scu_max": 1.64,
-        "memory": 2097152
+        "memory": 3420772
       },
+      "cgroups_data": null,
       "capabilities": {
-        "cores": 2,
-        "scu_allocated_max": null,
-        "memory_size": 2097152,
-        "scu_allocated_min": null
+        "cores": 0.3,
+        "vcpus": 0,
+        "scu_allocated_max": 5.47,
+        "memory_size": 32812388,
+        "scu_allocated_min": 5.47
       },
-      "node_name": "gklab-044-211.igk.intel.com",
-      "node_id": "395E28C3-9144-11DF-B949-001517F23968",
-      "type": "vm",
-      "id": "51c00f43-f92c-331d-99d3-5cfed6f0779f"
-    },
-    {
-      "status": {
-        "sla_status": 1,
-        "aggressor": 1,
-        "operational": 2,
-        "health": 1,
-        "victim": 1,
-        "trust": 3
-      },
-      "contention": {
-        "system": {
-          "llc": {
-            "value": 22.0
-          }
-        }
-      },
-      "utilization": {
-        "scu_current": 0.41,
-        "scu_max": 0.82,
-        "memory": 1048576
-      },
-      "capabilities": {
-        "cores": 1,
-        "scu_allocated_max": null,
-        "memory_size": 1048576,
-        "scu_allocated_min": null
-      },
-      "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
-      "type": "6WIND",
-      "id": "16cfb8f5-abcf-3296-9194-6917a31482e2"
-    },
-    {
-      "status": {
-        "sla_status": 1,
-        "aggressor": 1,
-        "operational": 2,
-        "health": 1,
-        "victim": 1,
-        "trust": 3
-      },
-      "contention": {
-        "system": {
-          "llc": {
-            "value": 20.0
-          }
-        }
-      },
-      "utilization": {
-        "scu_current": 0.41,
-        "scu_max": 0.82,
-        "memory": 1048576
-      },
-      "capabilities": {
-        "cores": 1,
-        "scu_allocated_max": null,
-        "memory_size": 1048576,
-        "scu_allocated_min": null
-      },
-      "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
+      "node_name": "node-27",
+      "node_id": "88888888-8887-8888-8888-878888888888",
       "type": "os",
-      "id": "cd5187ee-c1c2-324d-b360-af6aa9002b73"
+      "id": "2117be5f-54f9-5d13-867e-55af27de8b3b"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.59
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.84,
+        "scu_max": 0.0,
+        "memory": 26738688
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.15,
+        "vcpus": 102,
+        "scu_allocated_max": 102.0,
+        "memory_size": 26738688,
+        "scu_allocated_min": 51.0
+      },
+      "node_name": "node-27",
+      "node_id": "88888888-8887-8888-8888-878888888888",
+      "type": "vm",
+      "id": "096093e9-3e52-5d9b-80a1-ba6038d0ff30"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.45
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.56,
+        "scu_max": 0.56,
+        "memory": 5036992
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.11,
+        "vcpus": 0,
+        "scu_allocated_max": 5.32,
+        "memory_size": 16395996,
+        "scu_allocated_min": 5.32
+      },
+      "node_name": "node-25",
+      "node_id": "00000000-0000-0000-0000-00259088290A",
+      "type": "os",
+      "id": "dc919924-ed2f-53ad-aff7-4d4c0e5ea56a"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.5
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.28,
+        "scu_max": 0.0,
+        "memory": 16777216
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.05,
+        "vcpus": 64,
+        "scu_allocated_max": 64.0,
+        "memory_size": 16777216,
+        "scu_allocated_min": 32.0
+      },
+      "node_name": "node-25",
+      "node_id": "00000000-0000-0000-0000-00259088290A",
+      "type": "vm",
+      "id": "0013c211-cca8-5fbf-8146-eb8008fec41d"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.79
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 1.66,
+        "scu_max": 1.66,
+        "memory": 2807484
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.29,
+        "vcpus": 0,
+        "scu_allocated_max": 5.81,
+        "memory_size": 32897336,
+        "scu_allocated_min": 5.81
+      },
+      "node_name": "node-32",
+      "node_id": "4C4C4544-0035-4210-8030-C3C04F465A31",
+      "type": "os",
+      "id": "060afa1a-d26d-5082-8250-cc5cdc838b09"
     },
     {
       "status": {
         "sla_status": 0,
         "aggressor": 1,
-        "operational": 0,
-        "health": 0,
+        "operational": 2,
+        "health": 4,
         "victim": 1,
         "trust": 3
       },
       "contention": {
         "system": {
           "llc": {
-            "value": 21.0
+            "value": 4.62
           }
         }
       },
       "utilization": {
-        "scu_current": 1.23,
-        "scu_max": 2.46,
-        "memory": 4145728
+        "scu_burst": 0.0,
+        "scu_current": 0.71,
+        "scu_max": 0.0,
+        "memory": 25165824
       },
+      "cgroups_data": null,
       "capabilities": {
-        "cores": 3,
-        "scu_allocated_max": null,
-        "memory_size": 5145728,
-        "scu_allocated_min": null
+        "cores": 0.12,
+        "vcpus": 96,
+        "scu_allocated_max": 96.0,
+        "memory_size": 25165824,
+        "scu_allocated_min": 48.0
       },
-      "node_name": "gklab-044-212.igk.intel.com",
-      "node_id": "D1D0B1BE-A394-E111-BD1D-001E6747F502",
+      "node_name": "node-32",
+      "node_id": "4C4C4544-0035-4210-8030-C3C04F465A31",
       "type": "vm",
-      "id": "4a03bdb5-009a-3258-8378-4b43f35c3682"
+      "id": "8c6c12d1-dd07-54ad-a967-9868f5022f78"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.71
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.46,
+        "scu_max": 0.46,
+        "memory": 2608544
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.08,
+        "vcpus": 0,
+        "scu_allocated_max": 5.36,
+        "memory_size": 16397028,
+        "scu_allocated_min": 5.36
+      },
+      "node_name": "node-26",
+      "node_id": "00000000-0000-0000-0000-00259088BDE2",
+      "type": "os",
+      "id": "d3fe4354-9883-52bf-b7c0-f3a58b9f09ac"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.07
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.27,
+        "scu_max": 0.0,
+        "memory": 16777216
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.05,
+        "vcpus": 64,
+        "scu_allocated_max": 64.0,
+        "memory_size": 16777216,
+        "scu_allocated_min": 32.0
+      },
+      "node_name": "node-26",
+      "node_id": "00000000-0000-0000-0000-00259088BDE2",
+      "type": "vm",
+      "id": "7c3ece9c-ed11-5975-be70-b0d683b422a7"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.21
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.27,
+        "scu_max": 0.27,
+        "memory": 4855736
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.05,
+        "vcpus": 0,
+        "scu_allocated_max": 5.32,
+        "memory_size": 16401660,
+        "scu_allocated_min": 5.32
+      },
+      "node_name": "node-30",
+      "node_id": "00000000-0000-0000-0000-002590A15FE6",
+      "type": "os",
+      "id": "0e8d98d0-fb8f-5927-8cad-ad8f68cb2a3c"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.32
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.23,
+        "scu_max": 0.0,
+        "memory": 12058624
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.04,
+        "vcpus": 46,
+        "scu_allocated_max": 46.0,
+        "memory_size": 12058624,
+        "scu_allocated_min": 23.0
+      },
+      "node_name": "node-30",
+      "node_id": "00000000-0000-0000-0000-002590A15FE6",
+      "type": "vm",
+      "id": "c48708bf-8a29-5cdc-a769-b10b9aef053c"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.94
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.29,
+        "scu_max": 0.0,
+        "memory": 30408704
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.06,
+        "vcpus": 116,
+        "scu_allocated_max": 116.0,
+        "memory_size": 30408704,
+        "scu_allocated_min": 58.0
+      },
+      "node_name": "node-38",
+      "node_id": "46C88255-2DD7-E111-A174-001E673AF5EC",
+      "type": "vm",
+      "id": "d8a6bf59-eb80-546f-837b-9f68a51ee343"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.0
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.84,
+        "scu_max": 0.84,
+        "memory": 3236268
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.18,
+        "vcpus": 0,
+        "scu_allocated_max": 4.74,
+        "memory_size": 32841136,
+        "scu_allocated_min": 4.74
+      },
+      "node_name": "node-38",
+      "node_id": "46C88255-2DD7-E111-A174-001E673AF5EC",
+      "type": "os",
+      "id": "3beb21ef-738c-5e77-8d74-3c042edf0831"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.12
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.27,
+        "scu_max": 0.0,
+        "memory": 27787264
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.06,
+        "vcpus": 106,
+        "scu_allocated_max": 106.0,
+        "memory_size": 27787264,
+        "scu_allocated_min": 53.0
+      },
+      "node_name": "node-37",
+      "node_id": "91FC966D-2CD7-E111-A174-001E673AF878",
+      "type": "vm",
+      "id": "41357462-8fc6-51ed-8c32-f60c83914b4a"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.17
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.6,
+        "scu_max": 0.6,
+        "memory": 3133260
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.13,
+        "vcpus": 0,
+        "scu_allocated_max": 4.74,
+        "memory_size": 32852324,
+        "scu_allocated_min": 4.74
+      },
+      "node_name": "node-37",
+      "node_id": "91FC966D-2CD7-E111-A174-001E673AF878",
+      "type": "os",
+      "id": "a274f656-0227-5f25-8aba-e10cbbd68582"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.85
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.16,
+        "scu_max": 0.16,
+        "memory": 4476004
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 1.0,
+        "vcpus": 0,
+        "scu_allocated_max": 4.74,
+        "memory_size": 32888176,
+        "scu_allocated_min": 4.74
+      },
+      "node_name": "node-39",
+      "node_id": "1E2822B0-8BD7-E111-A174-001E673AF544",
+      "type": "os",
+      "id": "9a5be46b-e51e-5e54-bca8-b560d4c74893"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.68
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.54,
+        "scu_max": 0.54,
+        "memory": 2784788
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.1,
+        "vcpus": 0,
+        "scu_allocated_max": 5.32,
+        "memory_size": 16388444,
+        "scu_allocated_min": 5.32
+      },
+      "node_name": "node-24",
+      "node_id": "00000000-0000-0000-0000-0025908828FE",
+      "type": "os",
+      "id": "58e9265e-097e-528a-b83c-e98f5dc44df6"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.9
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.31,
+        "scu_max": 0.0,
+        "memory": 18874368
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.06,
+        "vcpus": 72,
+        "scu_allocated_max": 72.0,
+        "memory_size": 18874368,
+        "scu_allocated_min": 36.0
+      },
+      "node_name": "node-24",
+      "node_id": "00000000-0000-0000-0000-0025908828FE",
+      "type": "vm",
+      "id": "39f997b8-0270-585b-9119-9c7a99b7fd5f"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.69
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.8,
+        "scu_max": 0.8,
+        "memory": 5854316
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.17,
+        "vcpus": 0,
+        "scu_allocated_max": 4.68,
+        "memory_size": 32852388,
+        "scu_allocated_min": 4.68
+      },
+      "node_name": "node-29",
+      "node_id": "1B2822B0-8BD7-E111-A174-001E673AF928",
+      "type": "os",
+      "id": "2a2c0b5f-793c-5539-bc77-1fcf17901255"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.38
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.28,
+        "scu_max": 0.0,
+        "memory": 29360128
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.06,
+        "vcpus": 112,
+        "scu_allocated_max": 112.0,
+        "memory_size": 29360128,
+        "scu_allocated_min": 56.0
+      },
+      "node_name": "node-29",
+      "node_id": "1B2822B0-8BD7-E111-A174-001E673AF928",
+      "type": "vm",
+      "id": "432e10c2-4f37-5e97-8928-0e25aa5f2563"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.59
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 1.37,
+        "scu_max": 1.37,
+        "memory": 2056756
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.28,
+        "vcpus": 0,
+        "scu_allocated_max": 4.91,
+        "memory_size": 65904396,
+        "scu_allocated_min": 4.91
+      },
+      "node_name": "node-28",
+      "node_id": "8068D1D5-FE5A-E211-80A2-001E6734460C",
+      "type": "os",
+      "id": "6ce17d23-0235-5c52-a760-7f8da6c3f161"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 4,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.87
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.58,
+        "scu_max": 0.0,
+        "memory": 28835840
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.12,
+        "vcpus": 110,
+        "scu_allocated_max": 106.0,
+        "memory_size": 28835840,
+        "scu_allocated_min": 53.0
+      },
+      "node_name": "node-28",
+      "node_id": "8068D1D5-FE5A-E211-80A2-001E6734460C",
+      "type": "vm",
+      "id": "1ac46953-2c51-5206-a51a-dbc5a69db69a"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.62
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.41,
+        "scu_max": 0.41,
+        "memory": 1638328
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 1.0,
+        "vcpus": 0,
+        "scu_allocated_max": 6.39,
+        "memory_size": 24661388,
+        "scu_allocated_min": 6.39
+      },
+      "node_name": "node-23",
+      "node_id": "00000000-0000-0000-0000-002590A349CE",
+      "type": "node",
+      "id": "1bfaa804-8ea4-5ba2-990d-a6134958940e"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.31
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.94,
+        "scu_max": 0.65,
+        "memory": 34163948
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.18,
+        "vcpus": 110,
+        "scu_allocated_max": 115.15,
+        "memory_size": 61739236,
+        "scu_allocated_min": 60.15
+      },
+      "node_name": "node-33",
+      "node_id": "30343536-3138-584D-5134-313530304E50",
+      "type": "node",
+      "id": "ebfe6c27-0011-59d9-9116-de6e6347daa6"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.1
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.81,
+        "scu_max": 0.52,
+        "memory": 28904428
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.12,
+        "vcpus": 94,
+        "scu_allocated_max": 100.78,
+        "memory_size": 57554504,
+        "scu_allocated_min": 53.78
+      },
+      "node_name": "node-31",
+      "node_id": "00000000-0000-0000-0000-002590C98BCC",
+      "type": "node",
+      "id": "ead301c4-8417-5261-8901-856d25850ac7"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.79
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 2.48,
+        "scu_max": 1.64,
+        "memory": 30159460
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.45,
+        "vcpus": 102,
+        "scu_allocated_max": 107.47,
+        "memory_size": 59551076,
+        "scu_allocated_min": 56.47
+      },
+      "node_name": "node-27",
+      "node_id": "88888888-8887-8888-8888-878888888888",
+      "type": "node",
+      "id": "df65525a-e273-52c5-b658-7a03ab96daf8"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.45
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.84,
+        "scu_max": 0.56,
+        "memory": 21814208
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.16,
+        "vcpus": 64,
+        "scu_allocated_max": 69.32,
+        "memory_size": 33173212,
+        "scu_allocated_min": 37.32
+      },
+      "node_name": "node-25",
+      "node_id": "00000000-0000-0000-0000-00259088290A",
+      "type": "node",
+      "id": "17ecedfe-a87a-5d7e-8b54-a32f1a214c2a"
+    },
+    {
+      "status": {
+        "sla_status": 0,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 4,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.84
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 2.37,
+        "scu_max": 1.66,
+        "memory": 27973308
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.41,
+        "vcpus": 96,
+        "scu_allocated_max": 101.81,
+        "memory_size": 58063160,
+        "scu_allocated_min": 53.81
+      },
+      "node_name": "node-32",
+      "node_id": "4C4C4544-0035-4210-8030-C3C04F465A31",
+      "type": "node",
+      "id": "2cf36854-7be8-5869-b687-1c85f051abc8"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.72
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.72,
+        "scu_max": 0.46,
+        "memory": 19385760
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.13,
+        "vcpus": 64,
+        "scu_allocated_max": 69.36,
+        "memory_size": 33174244,
+        "scu_allocated_min": 37.36
+      },
+      "node_name": "node-26",
+      "node_id": "00000000-0000-0000-0000-00259088BDE2",
+      "type": "node",
+      "id": "bfc6e38d-dad2-5e2e-9af2-a685fb1e6a00"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.22
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.49,
+        "scu_max": 0.27,
+        "memory": 16914360
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.09,
+        "vcpus": 46,
+        "scu_allocated_max": 51.32,
+        "memory_size": 28460284,
+        "scu_allocated_min": 28.32
+      },
+      "node_name": "node-30",
+      "node_id": "00000000-0000-0000-0000-002590A15FE6",
+      "type": "node",
+      "id": "f621af8f-e4b5-5ab2-936d-123e7f2e95d9"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.02
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 1.13,
+        "scu_max": 0.84,
+        "memory": 33644972
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.24,
+        "vcpus": 116,
+        "scu_allocated_max": 120.74,
+        "memory_size": 63249840,
+        "scu_allocated_min": 62.74
+      },
+      "node_name": "node-38",
+      "node_id": "46C88255-2DD7-E111-A174-001E673AF5EC",
+      "type": "node",
+      "id": "4c13f55f-a06a-5a4c-bad2-a7e1a16db0c9"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.19
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.87,
+        "scu_max": 0.6,
+        "memory": 30920524
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.18,
+        "vcpus": 106,
+        "scu_allocated_max": 110.74,
+        "memory_size": 60639588,
+        "scu_allocated_min": 57.74
+      },
+      "node_name": "node-37",
+      "node_id": "91FC966D-2CD7-E111-A174-001E673AF878",
+      "type": "node",
+      "id": "eb289f74-279f-54e3-bc85-279512bba95b"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 0.85
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": null,
+        "scu_current": 0.16,
+        "scu_max": 0.16,
+        "memory": 4476004
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 1.0,
+        "vcpus": 0,
+        "scu_allocated_max": 4.74,
+        "memory_size": 32888176,
+        "scu_allocated_min": 4.74
+      },
+      "node_name": "node-39",
+      "node_id": "1E2822B0-8BD7-E111-A174-001E673AF544",
+      "type": "node",
+      "id": "ed43dd2a-93bf-5421-bd48-685d0ab2988f"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 3.66
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 0.85,
+        "scu_max": 0.54,
+        "memory": 21659156
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.16,
+        "vcpus": 72,
+        "scu_allocated_max": 77.32,
+        "memory_size": 35262812,
+        "scu_allocated_min": 41.32
+      },
+      "node_name": "node-24",
+      "node_id": "00000000-0000-0000-0000-0025908828FE",
+      "type": "node",
+      "id": "ffd14797-dc21-54f6-942a-04d77184ffd5"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 1,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 1.71
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 1.08,
+        "scu_max": 0.8,
+        "memory": 35214444
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.23,
+        "vcpus": 112,
+        "scu_allocated_max": 116.68,
+        "memory_size": 62212516,
+        "scu_allocated_min": 60.68
+      },
+      "node_name": "node-29",
+      "node_id": "1B2822B0-8BD7-E111-A174-001E673AF928",
+      "type": "node",
+      "id": "86839903-6665-5f60-9853-33c66c7f5152"
+    },
+    {
+      "status": {
+        "sla_status": 1,
+        "aggressor": 1,
+        "operational": 2,
+        "health": 4,
+        "victim": 1,
+        "trust": 3
+      },
+      "contention": {
+        "system": {
+          "llc": {
+            "value": 2.59
+          }
+        }
+      },
+      "utilization": {
+        "scu_burst": 0.0,
+        "scu_current": 1.95,
+        "scu_max": 1.37,
+        "memory": 30892596
+      },
+      "cgroups_data": null,
+      "capabilities": {
+        "cores": 0.4,
+        "vcpus": 110,
+        "scu_allocated_max": 110.91,
+        "memory_size": 94740236,
+        "scu_allocated_min": 57.91
+      },
+      "node_name": "node-28",
+      "node_id": "8068D1D5-FE5A-E211-80A2-001E6734460C",
+      "type": "node",
+      "id": "34ab7646-35ff-5288-9255-8d9991930821"
     }
   ]
 }

@@ -64,7 +64,7 @@
           {{#if hasCores}}{{cores}}{{/if}}
           {{#if hasVcpus}}{{vcpus}}{{/if}}
         {{else}}
-          <span class="label label-success">{{vms.length}} VMs</span>
+          {{!-- <span class="label label-success">{{vms.length}} VMs</span> --}}
           {{n-a capabilities.scu_allocated_min}} allocated SCUs
         {{/if}}
       </div>

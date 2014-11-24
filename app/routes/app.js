@@ -2,7 +2,7 @@ import Ember from 'ember';
 import authenticatedRoute from './authenticated';
 
 export default authenticatedRoute.extend({
-  refreshInterval: 15, // in seconds
+  refreshInterval: 60, // in seconds
   model: function() {
     return this.loadModels();
   },
@@ -12,7 +12,7 @@ export default authenticatedRoute.extend({
   loadModels: function() {
     return Ember.RSVP.all([
       this.store.find('node'),
-      this.store.find('vm'),
+      //this.store.find('vm'),
       this.store.find('cgroup')
     ]);
   },

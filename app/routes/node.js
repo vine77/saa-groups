@@ -12,6 +12,8 @@ export default Ember.Route.extend({
     return node;
   },
   afterModel: function(node) {
-    this.store.find('vm', {'node_id': node.get('id')});
+    Ember.run.later(this, function() {
+      this.store.find('vm', {'node_id': node.get('id')});
+    }, 50);
   }
 });

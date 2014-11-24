@@ -35,18 +35,6 @@ export default Ember.ArrayController.extend({
     var type = cgroup.get('type');
     return type !== 'node' && type !== 'os' && type !== 'vm' && type !== 'vms';
   }),
-  firstColumnNodes: function() {
-    return this.get('nodeCgroups').filter(function(item, index, enumerable) {
-      //return index < (enumerable.get('length') / 2);
-      return index % 2 === 0;
-    });
-  }.property('nodeCgroups.@each'),
-  secondColumnNodes: function() {
-    return this.get('nodeCgroups').filter(function(item, index, enumerable) {
-      //return index >= (enumerable.get('length') / 2);
-      return index % 2 !== 0;
-    });
-  }.property('nodeCgroups.@each'),
   actions: {
     toggleAscending: function() {
       this.set('sortAscending', !this.get('sortAscending'));

@@ -1,120 +1,129 @@
-<div {{bind-attr class=":box :box-solid :box-primary :component isExpanded::collapsed-box"}}>
-  <div class="box-header" {{action "toggleCollapsed" this}}>
-    {{!--
-    <div class="box-tools exclude pull-right">
-      <button class="btn btn-primary btn-sm" type="button" {{action "details" bubbles=false}}>
-        Details
-        <i class="fa fa-toggle-right"></i>
-      </button>
-      <div {{bind-attr class=":dropdown :inline-block isActionsVisible:open"}}>
-        <button class="btn btn-default btn-sm dropdown-toggle" type="button" {{action "toggleActions" bubbles=false}}>
-          Actions
+<div id="nodes" class="wrapper skin-blue">
+  <aside class="right-side strech">
+    <section class="content-header">
+      <h1>
+        Host Services
+        <small>VMs and cgroups aggregated by node</small>
+      </h1>
+      {{!--
+      <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default" {{action "toggleAscending"}}>
+          <i {{bind-attr class=":fa sortAscending:fa-sort-amount-asc:fa-sort-amount-desc"}}></i>
+        </button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Sort by:
+          {{sortedProperty.title}}
           <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
-          <li><a>Action 1</a></li>
-          <li><a>Action 2</a></li>
-          <li><a>Action 3</a></li>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          {{#each sortableProperties}}
+            <li><a {{action "setSortedProperty" this}}>{{title}}</a></li>
+          {{/each}}
         </ul>
       </div>
-    </div>
-    --}}
-    <div class="box-expand pull-left">
-      {{#if isExpanded}}
-        <button class="btn btn-primary btn-sm"><i class="fa fa-minus-square-o"></i></button>
-      {{else}}
-        <button class="btn btn-primary btn-sm"><i class="fa fa-plus-square-o"></i></button>
-      {{/if}}
-    </div>
-    <h3 class="box-title">
-      {{nodeName}}
-    </h3>
-  </div>
-  <div class="box-subheader clearfix">
-    <div class="component-status">
-      <div class="component-status-state">
-        <span class="hint--top" {{bind-attr data-hint="healthMessage"}}>
-          <i {{bind-attr class=":fa :fa-fw healthIconClass"}}></i>
-        </span>
-        <span class="hint--top" {{bind-attr data-hint="operationalMessage"}}>
-          <i {{bind-attr class=":fa :fa-fw operationalIconClass"}}></i>
-        </span>
-        {{#if isAggressor}}
-          <span class="hint--top" data-hint="Contention: Aggressor">
-            <i class="fa fa-fw fa-bullhorn error"></i>
-          </span>
-        {{/if}}
-      </div>
-      <div class="component-status-other">
-        <span class="hint--top" {{bind-attr data-hint="slaMessage"}}>
-          <i {{bind-attr class=":fa :fa-fw slaIconClass"}}></i>
-        </span>
-        <span class="hint--top" {{bind-attr data-hint="trustMessage"}}>
-          <i {{bind-attr class=":fa :fa-fw trustIconClass"}}></i>
-        </span>
-        {{#if isVictim}}
-          <span class="hint--top" data-hint="Contention: Victim">
-            <i class="fa fa-fw fa-headphones warning"></i>
-          </span>
-        {{/if}}
-      </div>
-    </div><div class="component-capacity">
-      <div>
-        {{#if isAssuredCoresPhysical}}
-          {{#if hasCores}}{{cores}}{{/if}}
-          {{#if hasVcpus}}{{vcpus}}{{/if}}
-        {{else}}
-          {{!-- <span class="label label-success">{{vms.length}} VMs</span> --}}
-          {{n-a capabilities.scu_allocated_min}} allocated SCUs
-        {{/if}}
-      </div>
-      <div class="chart-bar-horizontal">
-        <div class="clearfix">
-          <small class="pull-left">Memory (GiB)</small>
-          <small class="pull-right">{{memoryPercent}}</small>
-        </div>
-        <div class="progress xs">
-          <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
-        </div>
-        <div class="clearfix">
-          <small class="pull-left">{{to-fixed memoryCurrent 2}}</small>
-          <small class="pull-right">{{to-fixed memoryMax 2}}</small>
-        </div>
-      </div>
-    </div>
-    <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>
-      <div class="chart-bar-horizontal">
-        <div class="allocation">
-          {{#if hasCompute}}
-            <span class="hint--top" {{bind-attr data-hint="allocationMessage"}}>
-              <small>SCU Allocation</small>
-              <div {{bind-attr class=":allocation-bar isRange"}}>
-                <div class="allocation-range"></div> {{! light orange dashed }}
-                <div class="allocation-min" {{bind-attr style="allocationMinWidth"}}></div> {{! light green solid }}
-                <div class="allocation-current">
-                  <div class="allocation-current-warning" {{bind-attr style="utilizationBurstStyle"}}></div> {{! orange }}
-                  <div class="allocation-current-success" {{bind-attr style=" "}}></div> {{! green }}
+      --}}
+    </section>
+    <section class="content">
+      <div class="row">
+        <section class="col-lg-12">
+          <div class="box box-solid box-primary component">
+            <div class="box-header" {{action "goToNodes"}}>
+              <div class="box-expand pull-left">
+                <button class="btn btn-primary btn-sm"><i class="fa fa-minus-square-o"></i></button>
+              </div>
+              <h3 class="box-title">
+                {{nodeName}}
+              </h3>
+            </div>
+            <div class="box-subheader clearfix">
+              <div class="component-status">
+                <div class="component-status-state">
+                  <span class="hint--top" {{bind-attr data-hint="healthMessage"}}>
+                    <i {{bind-attr class=":fa :fa-fw healthIconClass"}}></i>
+                  </span>
+                  <span class="hint--top" {{bind-attr data-hint="operationalMessage"}}>
+                    <i {{bind-attr class=":fa :fa-fw operationalIconClass"}}></i>
+                  </span>
+                  {{#if isAggressor}}
+                    <span class="hint--top" data-hint="Contention: Aggressor">
+                      <i class="fa fa-fw fa-bullhorn error"></i>
+                    </span>
+                  {{/if}}
+                </div>
+                <div class="component-status-other">
+                  <span class="hint--top" {{bind-attr data-hint="slaMessage"}}>
+                    <i {{bind-attr class=":fa :fa-fw slaIconClass"}}></i>
+                  </span>
+                  <span class="hint--top" {{bind-attr data-hint="trustMessage"}}>
+                    <i {{bind-attr class=":fa :fa-fw trustIconClass"}}></i>
+                  </span>
+                  {{#if isVictim}}
+                    <span class="hint--top" data-hint="Contention: Victim">
+                      <i class="fa fa-fw fa-headphones warning"></i>
+                    </span>
+                  {{/if}}
+                </div>
+              </div><div class="component-capacity">
+                <div>
+                  {{#if isAssuredCoresPhysical}}
+                    {{#if hasCores}}{{cores}}{{/if}}
+                    {{#if hasVcpus}}{{vcpus}}{{/if}}
+                  {{else}}
+                    {{n-a capabilities.scu_allocated_min}} allocated SCUs
+                  {{/if}}
+                </div>
+                <div class="chart-bar-horizontal">
+                  <div class="clearfix">
+                    <small class="pull-left">Memory (GiB)</small>
+                    <small class="pull-right">{{memoryPercent}}</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
+                  </div>
+                  <div class="clearfix">
+                    <small class="pull-left">{{to-fixed memoryCurrent 2}}</small>
+                    <small class="pull-right">{{to-fixed memoryMax 2}}</small>
+                  </div>
                 </div>
               </div>
-              {{n-a utilizationTotal}}
-            </span>
-          {{else}}
-            SCU Utilization: {{n-a utilizationTotal}} SCUs
-          {{/if}}
-        </div>
+              <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>
+                <div class="chart-bar-horizontal">
+                  <div class="allocation">
+                    {{#if hasCompute}}
+                      <span class="hint--top" {{bind-attr data-hint="allocationMessage"}}>
+                        <small>SCU Allocation</small>
+                        <div {{bind-attr class=":allocation-bar isRange"}}>
+                          <div class="allocation-range"></div> {{! light orange dashed }}
+                          <div class="allocation-min" {{bind-attr style="allocationMinWidth"}}></div> {{! light green solid }}
+                          <div class="allocation-current">
+                            <div class="allocation-current-warning" {{bind-attr style="utilizationBurstStyle"}}></div> {{! orange }}
+                            <div class="allocation-current-success" {{bind-attr style=" "}}></div> {{! green }}
+                          </div>
+                        </div>
+                        {{n-a utilizationTotal}}
+                      </span>
+                    {{else}}
+                      SCU Utilization: {{n-a utilizationTotal}} SCUs
+                    {{/if}}
+                  </div>
+                </div>
+                <div class="chart-bar-horizontal">
+                  <div class="clearfix">
+                    <small class="pull-left">Cache Contention</small>
+                    <small class="pull-right">{{contentionCurrent}}</small>
+                  </div>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-body">
+              {{partial "cgroups"}}
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="chart-bar-horizontal">
-        <div class="clearfix">
-          <small class="pull-left">Cache Contention</small>
-          <small class="pull-right">{{contentionCurrent}}</small>
-        </div>
-        <div class="progress xs">
-          <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="box-body">
-    {{partial "cgroups"}}
-  </div>
+    </section>
+  </aside>
 </div>

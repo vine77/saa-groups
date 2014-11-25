@@ -1,7 +1,5 @@
 .component.box.box-solid {
   margin-bottom: 20px;
-  transition-property: box-shadow;
-  transition-duration: .5s;
   &:not(.collapsed-box) {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     .component.box.box-solid {
@@ -52,17 +50,9 @@
     > .box-expand {
       > .btn {
         > i {
-          transition-property: transform;
-          transform: rotate(0deg);
           font-size: 20px;
           line-height: 16px;
           vertical-align: middle;
-          &.fa-plus-square-o {
-            transition-duration: 0.4s;
-          }
-          &.fa-minus-square-o {
-            transition-duration: 0.8s;
-          }
         }
       }
     }
@@ -175,8 +165,6 @@
     border-bottom-left-radius: 3px;
   }
   > .box-body {
-    transition-property: max-height, padding-top, padding-bottom;
-    transition-duration: 0.3s;
     box-shadow: inset 0px 1px 6px 1px rgba(0, 0, 0, 0.15);
     background-color: rgba(0, 0, 0, 0.14);
     .box-body {

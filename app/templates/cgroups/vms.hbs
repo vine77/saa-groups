@@ -1,5 +1,5 @@
-<div {{bind-attr class=":box :box-solid :box-success :component isVmsExpanded::collapsed-box"}}>
-  <div class="box-header" {{action toggleVmsCollapsed this}}>
+<div {{bind-attr class=":box :box-solid :box-success :component"}}>
+  <div class="box-header" {{action "toggleVmsCollapsed" this}}>
     <div class="box-expand pull-left">
       {{#if isVmsExpanded}}
         <button class="btn btn-success btn-sm"><i class="fa fa-caret-down"></i></button>
@@ -94,7 +94,9 @@
   {{/with}}
   <div class="box-body">
     {{#each vms itemController="cgroups/vm"}}
-      {{partial "cgroups/vm"}}
+      <div class="col-lg-4 col-md-6">
+        {{partial "cgroups/vm"}}
+      </div>
     {{/each}}
   </div>
 </div>

@@ -1,10 +1,9 @@
 <div id="nodes" class="wrapper skin-blue">
   <aside class="right-side strech">
     <section class="content-header">
-      <h1>
-        Host Services
-        <small>VMs and cgroups aggregated by node</small>
-      </h1>
+      <ol class="breadcrumb">
+        <li>{{#link-to "nodes"}}<i class="fa fa-dashboard"></i> Host Services{{/link-to}}</li>
+      </ol>
       <div class="btn-group pull-right">
         <button type="button" class="btn btn-default" {{action "toggleAscending"}}>
           <i {{bind-attr class=":fa sortAscending:fa-sort-amount-asc:fa-sort-amount-desc"}}></i>

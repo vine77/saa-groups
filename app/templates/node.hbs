@@ -1,10 +1,15 @@
 <div id="node" class="wrapper skin-blue">
   <aside class="right-side strech">
     <section class="content-header">
-      <h1>
-        Host Services
-        <small>VMs and cgroups aggregated by node</small>
-      </h1>
+      <ol class="breadcrumb">
+        <li>{{#link-to "nodes"}}<i class="fa fa-dashboard"></i> Host Services{{/link-to}}</li>
+        {{#unless isVmsRoute}}
+          <li class="active">{{nodeName}}</li>
+        {{else}}
+          <li>{{#link-to "node"}}{{nodeName}}{{/link-to}}</li>
+          <li class="active">VMs</li>
+        {{/unless}}
+      </ol>
     </section>
     <section class="content">
       <div class="row">

@@ -1,28 +1,30 @@
 import Ember from 'ember';
+import naturalSort from '../../../bower_components/natural-sort/naturalSort';
 
 export default Ember.ArrayController.extend({
   itemController: 'node',
+  sortFunction: naturalSort,
   sortableProperties: [{
-    property: 'name',
+    property: 'node.name',
     title: 'Name'
   }, {
-    property: 'status.operational',
+    property: 'node.status.operational',
     title: 'Operational status'
   }, {
-    property: 'status.health',
+    property: 'node.status.health',
     title: 'Health status'
   }, {
-    property: 'utilization.scu_current',
+    property: 'node.utilization.scu_current',
     title: 'SCUs'
   }, {
-    property: 'contention.system.llc.value',
+    property: 'node.contention.system.llc.value',
     title: 'LLC cache contention'
   }, {
-    property: 'capabilities.memory_size',
+    property: 'node.capabilities.memory_size',
     title: 'Memory'
   }],
   sortedProperty: {
-    property: 'name',
+    property: 'node.name',
     title: 'Name'
   },
   sortProperties: function() {

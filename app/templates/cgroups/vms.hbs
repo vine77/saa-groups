@@ -1,4 +1,4 @@
-<div {{bind-attr class=":box :box-solid :box-success :component isVmsExpanded::collapsed-box"}}>
+<div {{bind-attr class=":vms :box :box-solid :box-success :component isVmsExpanded::collapsed-box"}}>
   <div class="box-header" {{action "toggleVmsCollapsed" this}}>
     <div class="box-expand pull-left">
       {{#if isVmsExpanded}}
@@ -41,9 +41,8 @@
           {{/if}}
         </div>
       </div><div class="component-capacity">
-        {{!-- <div>2 vCPUs &times; 0.5-1.0 SCU = 1.0-2.0 SCUs</div> --}}
         <div>
-          <span class="label label-success">{{vms.length}} VMs</span>
+          <span class="label label-success">{{node.vmInfo.count}} VMs</span>
           {{#if hasCores}}{{cores}}{{/if}}
           {{#if hasVcpus}}{{vcpus}}{{/if}}
         </div>

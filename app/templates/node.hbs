@@ -1,27 +1,10 @@
-<div id="nodes" class="wrapper skin-blue">
+<div id="node" class="wrapper skin-blue">
   <aside class="right-side strech">
     <section class="content-header">
       <h1>
         Host Services
         <small>VMs and cgroups aggregated by node</small>
       </h1>
-      {{!--
-      <div class="btn-group pull-right">
-        <button type="button" class="btn btn-default" {{action "toggleAscending"}}>
-          <i {{bind-attr class=":fa sortAscending:fa-sort-amount-asc:fa-sort-amount-desc"}}></i>
-        </button>
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Sort by:
-          {{sortedProperty.title}}
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          {{#each sortableProperties}}
-            <li><a {{action "setSortedProperty" this}}>{{title}}</a></li>
-          {{/each}}
-        </ul>
-      </div>
-      --}}
     </section>
     <section class="content">
       <div class="row">
@@ -65,6 +48,7 @@
                 </div>
               </div><div class="component-capacity">
                 <div>
+                  <span class="label label-success">{{node.vmInfo.count}} VMs</span>
                   {{#if isAssuredCoresPhysical}}
                     {{#if hasCores}}{{cores}}{{/if}}
                     {{#if hasVcpus}}{{vcpus}}{{/if}}

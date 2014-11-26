@@ -29,6 +29,14 @@ export default Ember.Route.extend({
   actions: {
     goToNodes: function() {
       this.transitionTo('nodes');
+    },
+    toggleVmsCollapsed: function(model) {
+      console.log(model.get('id'));
+      if (this.controllerFor('node').get('isVmsExpanded')) {
+        this.transitionTo('node', model);
+      } else {
+        this.transitionTo('node.vms');
+      }
     }
   }
 });

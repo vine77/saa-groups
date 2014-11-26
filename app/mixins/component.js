@@ -168,7 +168,5 @@ export default Ember.Mixin.create({
   }.property('isRange', 'capabilities.scu_allocated_max', 'utilizationCurrent'),
   utilizationBurstStyle: function() {
     return this.get('utilizationBurstWidth') + this.get('utilizationBurstLeft');
-  }.property('utilizationBurstWidth', 'utilizationBurstLeft'),
-
-
+  }.property('utilizationBurstWidth', 'utilizationBurstLeft')
 });

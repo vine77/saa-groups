@@ -5,31 +5,47 @@ export default Ember.ArrayController.extend({
   itemController: 'node',
   sortFunction: naturalSort,
   sortableProperties: [{
-    property: 'node.name',
-    title: 'Name'
+    title: 'Name',
+    property: 'nodeName',
+    sortAscending: true
   }, {
-    property: 'node.status.operational',
-    title: 'Operational status'
+    title: 'VM Count',
+    property: 'node.vmInfo.count',
+    sortAscending: false
   }, {
-    property: 'node.status.health',
-    title: 'Health status'
+    title: 'Operational Status',
+    property: 'status.operational',
+    sortAscending: false
   }, {
-    property: 'node.utilization.scu_current',
-    title: 'SCUs'
+    title: 'Health Status',
+    property: 'status.health',
+    sortAscending: false
   }, {
-    property: 'node.contention.system.llc.value',
-    title: 'LLC cache contention'
+    title: 'SCU Utilization',
+    property: 'utilization.scu_current',
+    sortAscending: false
   }, {
-    property: 'node.capabilities.memory_size',
-    title: 'Memory'
+    title: 'LLC Cache Contention',
+    property: 'contention.system.llc.value',
+    sortAscending: false
+  }, {
+    title: 'Memory Used',
+    property: 'utilization.memory',
+    sortAscending: false
+  }, {
+    title: 'RAM',
+    property: 'capabilities.memory_size',
+    sortAscending: false
   }],
   sortedProperty: {
-    property: 'node.name',
-    title: 'Name'
+    title: 'Name',
+    property: 'nodeName',
+    sortAscending: true
   },
   sortProperties: function() {
     return [this.get('sortedProperty.property')];
   }.property('sortedProperty'),
+  sortAscending: Ember.computed.alias('sortedProperty.sortAscending'),
   aggregatedOses: Ember.computed.filterBy('aggregatedItems', 'type', 'os'),
   aggregatedVms: Ember.computed.filterBy('aggregatedItems', 'type', 'vm'),
   aggregatedCgroups: Ember.computed.filter('aggregatedItems', function(cgroup) {

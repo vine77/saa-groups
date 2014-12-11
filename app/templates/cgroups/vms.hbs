@@ -42,7 +42,9 @@
         </div>
       </div><div class="component-capacity">
         <div>
-          <span class="label label-success">{{node.vmInfo.count}} VMs</span>
+          {{#if node.vmInfo.count}}
+            <span class="label label-success">{{node.vmInfo.count}} VMs</span>
+          {{/if}}
           {{#if hasCores}}{{cores}}{{/if}}
           {{#if hasVcpus}}{{vcpus}}{{/if}}
         </div>

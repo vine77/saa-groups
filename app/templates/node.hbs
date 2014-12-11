@@ -58,7 +58,7 @@
                   {{/if}}
                   {{#if isAssuredCoresPhysical}}
                     <ul class="comma-separated">
-                      <li>{{#if hasCores}}{{cores}}{{/if}}</li>
+                      <li>{{#if hasCores}}{{capabilities.cores}} of {{node.utilization.cores.system.max}} cores{{/if}}</li>
                       <li>{{#if hasVcpus}}{{vcpus}}{{/if}}</li>
                     </ul>
                   {{else}}

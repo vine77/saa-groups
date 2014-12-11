@@ -67,8 +67,10 @@
                       <span class="label label-success">{{node.vmInfo.count}} VMs</span>
                     {{/if}}
                     {{#if isAssuredCoresPhysical}}
-                      {{#if hasCores}}{{cores}}{{/if}}
-                      {{#if hasVcpus}}{{vcpus}}{{/if}}
+                      <ul class="comma-separated">
+                        <li>{{#if hasCores}}{{capabilities.cores}} of {{node.utilization.cores.system.max}} cores{{/if}}</li>
+                        <li>{{#if hasVcpus}}{{vcpus}}{{/if}}</li>
+                      </ul>
                     {{else}}
                       {{n-a capabilities.scu_allocated_min}} allocated SCUs
                     {{/if}}

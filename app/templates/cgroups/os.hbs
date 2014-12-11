@@ -35,8 +35,10 @@
       </div>
     </div><div class="component-capacity">
       <div>
-        {{#if hasCores}}{{cores}}{{/if}}
-        {{#if hasVcpus}}{{vcpus}}{{/if}}
+        <ul class="comma-separated">
+          <li>{{#if hasCores}}{{cores}}{{/if}}</li>
+          <li>{{#if hasVcpus}}{{vcpus}}{{/if}}</li>
+        </ul>
       </div>
       <div class="clearfix">
         <small class="pull-left">Memory (GiB)</small>

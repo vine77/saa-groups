@@ -45,8 +45,10 @@
           {{#if node.vmInfo.count}}
             <span class="label label-success">{{node.vmInfo.count}} VMs</span>
           {{/if}}
-          {{#if hasCores}}{{cores}}{{/if}}
-          {{#if hasVcpus}}{{vcpus}}{{/if}}
+          <ul class="comma-separated">
+            <li>{{#if hasCores}}{{cores}}{{/if}}</li>
+            <li>{{#if hasVcpus}}{{vcpus}}{{/if}}</li>
+          </ul>
         </div>
         <hr>
         <div>{{#if memoryCurrent}}{{to-fixed memoryCurrent 2}} GiB memory{{/if}}</div>

@@ -20,10 +20,5 @@ export default Ember.ObjectController.extend(ComponentMixin, {
     } else {
       return 'Socket and core data was not found';
     }
-  }.property('utilization.cores.system.used.@each'),
-  cores: function() {
-    var cores = this.get('capabilities.cores');
-    if (Ember.isEmpty(cores)) return Strings.NA;
-    return cores + ((cores === 1) ? ' allocated SCU' : ' allocated SCUs');
-  }.property('capabilities.cores'),
+  }.property('utilization.cores.system.used.@each')
 });

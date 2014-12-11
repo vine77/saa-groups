@@ -45,10 +45,9 @@
       <div>
         {{#if hasCores}}
           <span class="hint--top" {{bind-attr data-hint="socketCorePinningMessage"}}>
-            {{cores}}
+            {{pluralize capabilities.cores "vCPU"}}
           </span>
         {{/if}}
-        {{#if hasVcpus}}{{vcpus}}{{/if}}
       </div>
       <hr>
       <div>{{#if memoryCurrent}}{{to-fixed memoryCurrent 2}} GiB memory{{/if}}</div>

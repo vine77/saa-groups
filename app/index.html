@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/saa-groups.css">
+
+    {{content-for 'head-footer'}}
   </head>
   <body>
   <!--[if lt IE 10]>
@@ -28,5 +30,6 @@
     <script src="assets/saa-groups.js"></script>
 
   <!--<![endif]-->
+    {{content-for 'body-footer'}}
   </body>
 </html>

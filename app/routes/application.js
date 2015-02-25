@@ -27,7 +27,7 @@ export default Ember.Route.extend({
       this.controllerFor('login').set('isLoggedIn', false);
       this.controllerFor('login').get('model').unloadRecord();
       this.controllerFor('login').set('model', this.store.createRecord('session', {id: 'current_session'}));
-      Ember.$.ajax('/api/v2/sessions/current_session.json', {type: 'DELETE'}).always(function() {
+      Ember.$.ajax('/api/v3/sessions/current_session.json', {type: 'DELETE'}).always(function() {
         self.removeCookies();
         self.transitionTo('login').then(function() {
           window.location.reload(true);

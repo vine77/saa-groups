@@ -1,722 +1,94 @@
 {
   "nodes": [
     {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "1B2822B0-8BD7-E111-A174-001E673AF928",
-        "mac": "aa:48:e6:22:e0:42",
-        "ip_address": "192.168.0.13",
-        "cloud_id": "1B2822B0-8BD7-E111-A174-001E673AF928"
-      },
       "scheduler_persistent": false,
       "links": {
-        "logs": "/api/v2/logs?node=1B2822B0-8BD7-E111-A174-001E673AF928",
-        "vms": "/api/v2/vms?ids=c83ed85b-9aac-4e6a-86ed-8dd3bc872a4c,dc3e4c79-44e9-4ad9-ba90-386652ffc599,7e782e1f-a4f9-4a97-9e8f-9e1b389cfd19,c0eef06d-e1bb-4ffc-ba70-f73b48c88e95,ce3e7bca-0635-43f0-8447-ff0e7ee1d619,1d75d6a9-7523-4d35-9747-0f799b6c1d67,bafb74e6-fe27-48b8-82df-5de767a6ca88,47222ca3-ade6-4cbf-95d0-12a544f091b6,61baed95-6d1f-4675-8300-4323bf0956d1,5c92ea34-f33c-4e77-8a86-8c639119a9d1,0fb215d1-bde2-44aa-b4ba-f18b60331951,4add21be-b533-4f1c-a9e1-975b79a1e38e,dd59d5dc-14e2-4b28-83a1-5f023f670452,257934f5-a582-4758-b38c-15362f582d6a,0edadad7-d39a-4ab7-addb-ef2cd00726f8,f52b86c3-ea7a-4681-bf0e-26ba51f1d13d,68a801b1-dcd6-42f2-835e-b7400123b864,ea707be4-f03b-47ef-a7d1-4c2e79dd81e1,2920f91e-5d50-4dd7-93d0-8cc8e28ad0bb,19fc825f-74cc-4112-bb81-62a8012a57ad,bb102492-5c16-46ed-a2b9-11ac0fd31c50,60d598c2-5205-4a9d-9514-a3f68e48106e,0d14191f-7d7f-411a-aabe-1b3cc401947f,532e6108-0bb2-407f-a850-554e2a7bbc5b,d5158171-ce3d-4357-bc61-ca8153d6655f,13000e77-3899-4188-9a6b-e12687c70cab,82aaf07d-f2b1-433a-8d44-97e3bdeb38d0,75f9f2d2-a448-4860-9791-f991211e6b6d,7b57d1f3-c179-4201-91be-9bcec76615df,36857fa2-a9e1-4c3b-baac-eb93e58a4a97,a50db35b-5a3c-41e6-8411-4ec2da01fd53,04ecf3cf-32ae-4918-afef-c58ffb7adebe,038145cb-2137-4a65-819e-49c38d73a891,a55f1d4c-f419-44f2-bdf2-322c2a3ef7be,8eee1d15-1d43-4513-850f-12d8a83e6863,e474e8b8-60b5-4922-83b9-31172a434d6c,157ff046-7efe-47aa-bc06-f51628ae35ad,3c8cd4d5-7f9f-45ad-bae1-8173e829bbb7,dbb11511-e0d4-48a9-b312-52eaf2b0f73d,7f7e091a-cfed-4dc9-bff2-970fa7e03c17,5f988d9d-9f1d-4183-bb14-bc1acc9d32fe,e4a661c4-68aa-4dff-a43f-858b82c7c4f5,422e216b-138a-4467-b2f6-010c0205644a,94a25742-26c0-4e7e-b3fa-f056e5d918f2,a95c27f0-f1e1-4aba-8775-0abbe7b5d423,45a8175b-f7da-42ee-b552-7e6535b9dcbc,4b044582-ed7c-497a-8d44-a638b9f7e54c,5aa1a443-9f73-45ed-b5ff-5a0cf35d00af,cce6c2dd-eb99-43b3-8cf3-c9953c53903a,a615c9ef-4471-4001-b8e5-6b9cbc94d81b,89f33ddd-e206-463c-9778-46821db72e18,21ee0a3d-2cda-4506-8929-4f24885a803e,1b983178-a4ea-4757-8691-ce2501793435,f97db407-623c-4f6f-afee-59702b7c744d,42c77dcf-969d-41cd-8d60-adf73a7553b7,94714ef5-0811-43e5-9ab0-3ff2f1ed18e9,3c96f53b-119a-499a-a0ea-955dac51b233,c8fbebe9-dc4f-47ab-8865-789ea3930659,6d5e0899-c828-4633-9506-1a9c3ba7dbf3",
-        "uri": "/api/v2/nodes/1B2822B0-8BD7-E111-A174-001E673AF928"
+        "logs": "/api/v3/logs?node=E6D94713-35D7-E111-A174-001E673AF50C",
+        "vms": "/api/v3/vms?ids=a3b3f51a-0adf-4662-9908-5ce8de2926bc,fc13ad16-cc55-4ac8-927f-0b04c0f7bd60",
+        "uri": "/api/v3/nodes/E6D94713-35D7-E111-A174-001E673AF50C"
       },
-      "utilization": {
-        "ipc": 0.7,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 9391.42,
-          "idle": 62923559.49,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 2239.63
-        },
-        "io": null,
-        "memory": {
-          "used": "9066084 KB",
-          "ksm_sharing": "3451996 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 4.68,
-              "type": "os",
-              "value": 0.8,
-              "min": 0.0
-            },
-            {
-              "max": 112.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 74.88,
-            "allocated": 60.68,
-            "value": 0.8,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 37.44,
-              "allocated": 24.68
-            },
-            {
-              "socket_number": 0,
-              "max": 37.44,
-              "allocated": 36.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "0"
-                },
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
-          }
-        },
-        "normalized_load": 0.14,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 118
-          },
-          "disk": {
-            "max": 454,
-            "used": 59
-          },
-          "memory": {
-            "max": 48123,
-            "used": 30208
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/1B2822B0-8BD7-E111-A174-001E673AF928",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2300 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.34,
-        "memory_size": "32768 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-29",
+      "logs_url": "/logs?node=E6D94713-35D7-E111-A174-001E673AF50C",
+      "uri": "/nodes/E6D94713-35D7-E111-A174-001E673AF50C",
       "scheduler_mark": null,
       "node_trust_report_id": null,
-      "vm_info": {
-        "count": 59,
-        "max": null
-      },
-      "logs_url": "/logs?node=1B2822B0-8BD7-E111-A174-001E673AF928",
-      "tier": null,
       "cloud_services": [
         {
-          "last_update": "2014-11-15T00:26:35+0000",
+          "last_update": "2015-03-12T08:21:37+0000",
           "health": 1,
           "name": "compute",
           "operational": 2
         }
       ],
-      "id": "1B2822B0-8BD7-E111-A174-001E673AF928",
-      "vm_ids": [
-        "c83ed85b-9aac-4e6a-86ed-8dd3bc872a4c",
-        "dc3e4c79-44e9-4ad9-ba90-386652ffc599",
-        "7e782e1f-a4f9-4a97-9e8f-9e1b389cfd19",
-        "c0eef06d-e1bb-4ffc-ba70-f73b48c88e95",
-        "ce3e7bca-0635-43f0-8447-ff0e7ee1d619",
-        "1d75d6a9-7523-4d35-9747-0f799b6c1d67",
-        "bafb74e6-fe27-48b8-82df-5de767a6ca88",
-        "47222ca3-ade6-4cbf-95d0-12a544f091b6",
-        "61baed95-6d1f-4675-8300-4323bf0956d1",
-        "5c92ea34-f33c-4e77-8a86-8c639119a9d1",
-        "0fb215d1-bde2-44aa-b4ba-f18b60331951",
-        "4add21be-b533-4f1c-a9e1-975b79a1e38e",
-        "dd59d5dc-14e2-4b28-83a1-5f023f670452",
-        "257934f5-a582-4758-b38c-15362f582d6a",
-        "0edadad7-d39a-4ab7-addb-ef2cd00726f8",
-        "f52b86c3-ea7a-4681-bf0e-26ba51f1d13d",
-        "68a801b1-dcd6-42f2-835e-b7400123b864",
-        "ea707be4-f03b-47ef-a7d1-4c2e79dd81e1",
-        "2920f91e-5d50-4dd7-93d0-8cc8e28ad0bb",
-        "19fc825f-74cc-4112-bb81-62a8012a57ad",
-        "bb102492-5c16-46ed-a2b9-11ac0fd31c50",
-        "60d598c2-5205-4a9d-9514-a3f68e48106e",
-        "0d14191f-7d7f-411a-aabe-1b3cc401947f",
-        "532e6108-0bb2-407f-a850-554e2a7bbc5b",
-        "d5158171-ce3d-4357-bc61-ca8153d6655f",
-        "13000e77-3899-4188-9a6b-e12687c70cab",
-        "82aaf07d-f2b1-433a-8d44-97e3bdeb38d0",
-        "75f9f2d2-a448-4860-9791-f991211e6b6d",
-        "7b57d1f3-c179-4201-91be-9bcec76615df",
-        "36857fa2-a9e1-4c3b-baac-eb93e58a4a97",
-        "a50db35b-5a3c-41e6-8411-4ec2da01fd53",
-        "04ecf3cf-32ae-4918-afef-c58ffb7adebe",
-        "038145cb-2137-4a65-819e-49c38d73a891",
-        "a55f1d4c-f419-44f2-bdf2-322c2a3ef7be",
-        "8eee1d15-1d43-4513-850f-12d8a83e6863",
-        "e474e8b8-60b5-4922-83b9-31172a434d6c",
-        "157ff046-7efe-47aa-bc06-f51628ae35ad",
-        "3c8cd4d5-7f9f-45ad-bae1-8173e829bbb7",
-        "dbb11511-e0d4-48a9-b312-52eaf2b0f73d",
-        "7f7e091a-cfed-4dc9-bff2-970fa7e03c17",
-        "5f988d9d-9f1d-4183-bb14-bc1acc9d32fe",
-        "e4a661c4-68aa-4dff-a43f-858b82c7c4f5",
-        "422e216b-138a-4467-b2f6-010c0205644a",
-        "94a25742-26c0-4e7e-b3fa-f056e5d918f2",
-        "a95c27f0-f1e1-4aba-8775-0abbe7b5d423",
-        "45a8175b-f7da-42ee-b552-7e6535b9dcbc",
-        "4b044582-ed7c-497a-8d44-a638b9f7e54c",
-        "5aa1a443-9f73-45ed-b5ff-5a0cf35d00af",
-        "cce6c2dd-eb99-43b3-8cf3-c9953c53903a",
-        "a615c9ef-4471-4001-b8e5-6b9cbc94d81b",
-        "89f33ddd-e206-463c-9778-46821db72e18",
-        "21ee0a3d-2cda-4506-8929-4f24885a803e",
-        "1b983178-a4ea-4757-8691-ce2501793435",
-        "f97db407-623c-4f6f-afee-59702b7c744d",
-        "42c77dcf-969d-41cd-8d60-adf73a7553b7",
-        "94714ef5-0811-43e5-9ab0-3ff2f1ed18e9",
-        "3c96f53b-119a-499a-a0ea-955dac51b233",
-        "c8fbebe9-dc4f-47ab-8865-789ea3930659",
-        "6d5e0899-c828-4633-9506-1a9c3ba7dbf3"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 1.69,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "vm",
-              "value": 3.38,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.32,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.18,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 1.71,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "8068D1D5-FE5A-E211-80A2-001E6734460C",
-        "mac": "d2:70:95:70:09:4d",
-        "ip_address": "192.168.0.12",
-        "cloud_id": "8068D1D5-FE5A-E211-80A2-001E6734460C"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=8068D1D5-FE5A-E211-80A2-001E6734460C",
-        "vms": "/api/v2/vms?ids=caf2c521-104e-4aad-87c5-a910336bd704,b3a89fd4-88cf-4351-b47d-91f051f87007,663157a6-6307-4ba8-b0f4-9252de2e64c7,bbae48fb-ce48-40bb-b776-52f9882b6423,34f8b24f-e2c3-4cc6-9203-06b253d5ba4c,d53055f2-3695-407c-86c0-e50e917edf91,438220c8-9445-452e-ac76-65f8fcd30a33,067f0874-62e4-40a5-9897-ab73db099b23,9b9c1963-7f9a-468e-b6bb-75ff24f0d32a,739e004f-8e7b-4858-804b-02c4b5815a83,35c30dc9-a93d-4bd9-964a-40b0dd70bdad,7def8f2d-a5c2-4055-95d7-cd50aca5b4ee,93edf926-c4dd-44dc-bd5d-12aad782c2fe,f5806a97-eb9d-4caa-abc4-e1c52cc25a14,606b70f7-54b9-4607-aaac-723b4c3cc684,dfe329cc-fb79-42ef-abcf-b8ef05af7389,ee9c5b08-c062-4d4e-9f93-c054cf649b87,292cb705-fa32-4d1e-b7c7-5a17edca5d83,16ca6b73-108d-47af-b6ec-6786f1ad2995,18a04b1e-aef4-4f39-ad63-88c08039707d,29ee3061-845f-461e-8219-1fb234efb965,bf557d4c-afe0-48d7-985e-78fc3a0f542a,6349f3c1-dfd5-49a9-824a-5d88b947267f,b319e563-3e2a-4810-ab67-8525cb675179,dff42f1d-7a51-4b40-9891-f6766e0815ef,6dd21d03-d702-45d1-9cfb-7f42728db3c1,2d042877-6dd3-4fac-bece-aef219d82acb,8e54dd90-109d-423b-8def-d1ec86539111,e6900520-e899-48c3-b40d-20c83542b646,729ed66f-09b1-420c-b325-af00d4e00d64,8106ae8d-20e9-40fd-92c8-e75e4800a9ce,0b5e37e5-a629-4c80-84e2-d52762212079,b653716a-f00e-4345-a808-0746d825ddc5,6fc4441d-4d05-4d74-9365-de31bd41bf54,53a80c4e-5cc2-4609-8f30-0436d31851b2,ae0d0c97-618b-4b77-bbb7-a467f5f0d65f,5d4b91b7-e76d-4924-ba46-87ca07ff66ac,424ad649-f0fa-4677-82c0-bb5c634e1689,9c3fd326-0e0e-466d-91f3-180b1ed32e80,d072e8ec-0af7-44b2-94b1-fc8597175356,51a4a1a5-404a-4646-8b3f-98c041fed2ca,189685a5-be69-4296-b4ad-3ec41b6eb232,a3673dcb-4ce4-48e1-9b65-74218b7fa21a,e4946c64-d632-444a-bcb7-5f9e25c7182c,f6b926a4-81a6-4e28-accb-5d92a87a211a,9385eb87-dd55-4506-ac77-77ad0f9bdd0b,1ce308cc-c2ce-4834-b667-cdfe70d6085e,fcbfbb6f-2f36-428a-9a23-818bc658a043,3e7e9462-7b95-4651-b7b3-3af23f6c87f3,dc69bae6-1354-4c5d-95ab-d77c5f95676d,2700ad2f-f193-4c5f-90a0-6520cff45985,6d18a3b4-54d1-4e4f-aa33-434464a31888,41a8c250-f1c6-404d-9fa4-6c96dc1d4956,ce7ea54b-881e-4350-bcbb-b3a5674ed87f,0aff3d78-a777-45ee-b3eb-4a4cf9bfc702,d2cfc951-08b9-4dab-98be-b1439bc7b628,c8f5786d-5b97-4320-acb5-3f30229ab0d1,4c527c6c-9ea1-445c-95f7-120e554388a8,314dcd04-0c02-441d-8ec2-b5c9cb3b9c2b,36397557-0b16-4827-ab88-7e8feed532bc,44da3a24-4f58-451d-a96e-68dca954b92e,38305abc-61f8-4547-a4eb-3e1adb381792,42013e87-5959-40dd-b641-c4543a334e11,d88a2e7a-a8bb-4fe7-ac3b-73b4e5a644d8,1e95ea22-e0e0-41ef-8fc7-7f2b823f243d,e9af4e98-7b25-4698-83d9-e8f4ce7a48ee,044bbbbb-a5f6-45ed-be0d-94b41b71ebeb,01a3989e-9718-4198-97f5-456bf3b2a1a0,6370a706-9aeb-4cc0-b5b4-9cef774d7587,945a0de3-bd08-4e55-9268-68d1b2e9be45,1d63cfba-529e-44b8-ad9d-769eaa66a0ee,e2b7461c-1260-4f4b-9c70-da0911bbebe7,a97321d8-b6b0-4bf4-b3a7-85fc7c5d483f,a9862cb7-4965-425b-9439-51ddb8ae508c,73f30202-cb53-457c-944f-ef24263ff2bf,b3c2f70c-7933-44b5-bbc8-3e1a07735b66,24b8c779-c7c7-4384-8a72-c451ffa5635b,1814577d-b33d-4d48-aa4b-3e1944e8f34f,a0b5591a-41d2-47b6-aa47-182ae2967592,3093b287-d66b-4402-8b0b-06b08d7d9a9d,ded1a82e-efd2-4143-b939-33602789c399,050246dd-f857-4fab-86ea-bf9140615091,75dc53cc-7e0c-467e-987b-41a98eaf1b6f,18c5744b-d66b-49c1-a302-36adf3f021cf,4597a10f-5755-4f9a-9d27-00affd6eaa38,c1317cc5-2460-4183-81a8-d5cf1f78e9a2,27ef9e0e-6a1e-4566-a2fd-2249a73d4ff7,00e02ba6-7449-42b8-b2a9-bb3b0b9f9976",
-        "uri": "/api/v2/nodes/8068D1D5-FE5A-E211-80A2-001E6734460C"
-      },
+      "id": "E6D94713-35D7-E111-A174-001E673AF50C",
       "utilization": {
-        "ipc": 0.56,
+        "ipc": 0.53,
         "network": null,
         "cpu_frequency_current": null,
         "cpu": {
-          "iowait": 7142.45,
-          "idle": 32631324.48,
-          "total": 0.0,
+          "iowait": 0.5052566279221627,
+          "idle": 3156.85,
+          "total": 3200.0,
           "steal": 0.0,
-          "guest": 3969.46
+          "guest": 0.0
         },
         "io": null,
         "memory": {
-          "used": "5735180 KB",
-          "ksm_sharing": "3244812 KB"
+          "used": "2658668 KB",
+          "ksm_sharing": "21108 KB"
         },
         "scu": {
           "cgroups": [
             {
-              "max": 106.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            },
-            {
-              "max": 4.91,
-              "type": "os",
-              "value": 1.37,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 117.84,
-            "allocated": 57.91,
-            "value": 1.37,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 29.46,
-              "allocated": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 29.46,
-              "allocated": 22.0
-            },
-            {
-              "socket_number": 3,
-              "max": 29.46,
-              "allocated": 22.0
-            },
-            {
-              "socket_number": 2,
-              "max": 29.46,
-              "allocated": 13.91
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "3"
-                },
-                {
-                  "core": "-1",
-                  "socket": "0"
-                },
-                {
-                  "core": "-1",
-                  "socket": "2"
-                }
-              ],
+              "compute": 0.04,
+              "min": 0.5,
+              "max": 1.0,
+              "misc": 0.02,
+              "io_wait": 0.0,
               "type": "vm"
             },
             {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "2"
-                }
-              ],
+              "compute": 0.0,
+              "min": 0.99,
+              "max": 0.99,
+              "misc": 0.17,
+              "io_wait": 0.0,
               "type": "os"
             }
           ],
           "system": {
-            "max": 24,
-            "used": null
-          }
-        },
-        "normalized_load": 0.37,
-        "cloud": {
-          "vcpus": {
-            "max": 768,
-            "used": 176
-          },
-          "disk": {
-            "max": 454,
-            "used": 88
-          },
-          "memory": {
-            "max": 96538,
-            "used": 45056
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/8068D1D5-FE5A-E211-80A2-001E6734460C",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 6,
-        "cpu_frequency": "2400 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.46,
-        "memory_size": "65536 MB",
-        "cpu_type": "",
-        "cache_size": "15360 kB",
-        "sockets": 4
-      },
-      "node_name": "node-28",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 88,
-        "max": null
-      },
-      "logs_url": "/logs?node=8068D1D5-FE5A-E211-80A2-001E6734460C",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:33+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "8068D1D5-FE5A-E211-80A2-001E6734460C",
-      "vm_ids": [
-        "caf2c521-104e-4aad-87c5-a910336bd704",
-        "b3a89fd4-88cf-4351-b47d-91f051f87007",
-        "663157a6-6307-4ba8-b0f4-9252de2e64c7",
-        "bbae48fb-ce48-40bb-b776-52f9882b6423",
-        "34f8b24f-e2c3-4cc6-9203-06b253d5ba4c",
-        "d53055f2-3695-407c-86c0-e50e917edf91",
-        "438220c8-9445-452e-ac76-65f8fcd30a33",
-        "067f0874-62e4-40a5-9897-ab73db099b23",
-        "9b9c1963-7f9a-468e-b6bb-75ff24f0d32a",
-        "739e004f-8e7b-4858-804b-02c4b5815a83",
-        "35c30dc9-a93d-4bd9-964a-40b0dd70bdad",
-        "7def8f2d-a5c2-4055-95d7-cd50aca5b4ee",
-        "93edf926-c4dd-44dc-bd5d-12aad782c2fe",
-        "f5806a97-eb9d-4caa-abc4-e1c52cc25a14",
-        "606b70f7-54b9-4607-aaac-723b4c3cc684",
-        "dfe329cc-fb79-42ef-abcf-b8ef05af7389",
-        "ee9c5b08-c062-4d4e-9f93-c054cf649b87",
-        "292cb705-fa32-4d1e-b7c7-5a17edca5d83",
-        "16ca6b73-108d-47af-b6ec-6786f1ad2995",
-        "18a04b1e-aef4-4f39-ad63-88c08039707d",
-        "29ee3061-845f-461e-8219-1fb234efb965",
-        "bf557d4c-afe0-48d7-985e-78fc3a0f542a",
-        "6349f3c1-dfd5-49a9-824a-5d88b947267f",
-        "b319e563-3e2a-4810-ab67-8525cb675179",
-        "dff42f1d-7a51-4b40-9891-f6766e0815ef",
-        "6dd21d03-d702-45d1-9cfb-7f42728db3c1",
-        "2d042877-6dd3-4fac-bece-aef219d82acb",
-        "8e54dd90-109d-423b-8def-d1ec86539111",
-        "e6900520-e899-48c3-b40d-20c83542b646",
-        "729ed66f-09b1-420c-b325-af00d4e00d64",
-        "8106ae8d-20e9-40fd-92c8-e75e4800a9ce",
-        "0b5e37e5-a629-4c80-84e2-d52762212079",
-        "b653716a-f00e-4345-a808-0746d825ddc5",
-        "6fc4441d-4d05-4d74-9365-de31bd41bf54",
-        "53a80c4e-5cc2-4609-8f30-0436d31851b2",
-        "ae0d0c97-618b-4b77-bbb7-a467f5f0d65f",
-        "5d4b91b7-e76d-4924-ba46-87ca07ff66ac",
-        "424ad649-f0fa-4677-82c0-bb5c634e1689",
-        "9c3fd326-0e0e-466d-91f3-180b1ed32e80",
-        "d072e8ec-0af7-44b2-94b1-fc8597175356",
-        "51a4a1a5-404a-4646-8b3f-98c041fed2ca",
-        "189685a5-be69-4296-b4ad-3ec41b6eb232",
-        "a3673dcb-4ce4-48e1-9b65-74218b7fa21a",
-        "e4946c64-d632-444a-bcb7-5f9e25c7182c",
-        "f6b926a4-81a6-4e28-accb-5d92a87a211a",
-        "9385eb87-dd55-4506-ac77-77ad0f9bdd0b",
-        "1ce308cc-c2ce-4834-b667-cdfe70d6085e",
-        "fcbfbb6f-2f36-428a-9a23-818bc658a043",
-        "3e7e9462-7b95-4651-b7b3-3af23f6c87f3",
-        "dc69bae6-1354-4c5d-95ab-d77c5f95676d",
-        "2700ad2f-f193-4c5f-90a0-6520cff45985",
-        "6d18a3b4-54d1-4e4f-aa33-434464a31888",
-        "41a8c250-f1c6-404d-9fa4-6c96dc1d4956",
-        "ce7ea54b-881e-4350-bcbb-b3a5674ed87f",
-        "0aff3d78-a777-45ee-b3eb-4a4cf9bfc702",
-        "d2cfc951-08b9-4dab-98be-b1439bc7b628",
-        "c8f5786d-5b97-4320-acb5-3f30229ab0d1",
-        "4c527c6c-9ea1-445c-95f7-120e554388a8",
-        "314dcd04-0c02-441d-8ec2-b5c9cb3b9c2b",
-        "36397557-0b16-4827-ab88-7e8feed532bc",
-        "44da3a24-4f58-451d-a96e-68dca954b92e",
-        "38305abc-61f8-4547-a4eb-3e1adb381792",
-        "42013e87-5959-40dd-b641-c4543a334e11",
-        "d88a2e7a-a8bb-4fe7-ac3b-73b4e5a644d8",
-        "1e95ea22-e0e0-41ef-8fc7-7f2b823f243d",
-        "e9af4e98-7b25-4698-83d9-e8f4ce7a48ee",
-        "044bbbbb-a5f6-45ed-be0d-94b41b71ebeb",
-        "01a3989e-9718-4198-97f5-456bf3b2a1a0",
-        "6370a706-9aeb-4cc0-b5b4-9cef774d7587",
-        "945a0de3-bd08-4e55-9268-68d1b2e9be45",
-        "1d63cfba-529e-44b8-ad9d-769eaa66a0ee",
-        "e2b7461c-1260-4f4b-9c70-da0911bbebe7",
-        "a97321d8-b6b0-4bf4-b3a7-85fc7c5d483f",
-        "a9862cb7-4965-425b-9439-51ddb8ae508c",
-        "73f30202-cb53-457c-944f-ef24263ff2bf",
-        "b3c2f70c-7933-44b5-bbc8-3e1a07735b66",
-        "24b8c779-c7c7-4384-8a72-c451ffa5635b",
-        "1814577d-b33d-4d48-aa4b-3e1944e8f34f",
-        "a0b5591a-41d2-47b6-aa47-182ae2967592",
-        "3093b287-d66b-4402-8b0b-06b08d7d9a9d",
-        "ded1a82e-efd2-4143-b939-33602789c399",
-        "050246dd-f857-4fab-86ea-bf9140615091",
-        "75dc53cc-7e0c-467e-987b-41a98eaf1b6f",
-        "18c5744b-d66b-49c1-a302-36adf3f021cf",
-        "4597a10f-5755-4f9a-9d27-00affd6eaa38",
-        "c1317cc5-2460-4183-81a8-d5cf1f78e9a2",
-        "27ef9e0e-6a1e-4566-a2fd-2249a73d4ff7",
-        "00e02ba6-7449-42b8-b2a9-bb3b0b9f9976"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 2.59,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 2.87,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.0,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.63,
-              "min": 0.0
-            },
-            {
-              "socket_number": 3,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.66,
-              "min": 0.0
-            },
-            {
-              "socket_number": 2,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 2.17,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 2.59,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 1,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "4C4C4544-0035-4210-8030-C3C04F465A31",
-        "mac": "1e:02:c1:d5:db:4a",
-        "ip_address": "192.168.0.16",
-        "cloud_id": "4C4C4544-0035-4210-8030-C3C04F465A31"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=4C4C4544-0035-4210-8030-C3C04F465A31",
-        "vms": "/api/v2/vms?ids=a9e9d0e7-2e35-441d-b589-b0311f2a792d,d35c1a26-7861-4bf7-844e-fa9606ce349f,f5190626-0f98-4389-90ab-7dd9bbc55b02,09529311-8649-4223-a023-4ff9e2040256,ffb90272-9389-4d45-a7a1-1ed582946bcd,68e6b159-e87b-43fb-a872-f899a50192c6,ce3ce442-1230-41f1-a515-878dbee71532,f6cfd595-7989-4749-b658-dbc27a60534a,44b93ddc-d4a4-405d-a9d7-b9787a3e50b7,1734c278-38ba-4ece-b696-e01fd4a05b8f,8113505a-8157-4933-a842-1ded721bdade,a51415a9-b536-46f3-bcb7-8f69afdfa866,8d2619d6-1c27-4521-b0dd-eae7d22b076d,acd8c87e-8661-4dfd-85e1-0a2c606ef2a9,e54c7600-ceb7-45dc-bb93-563d226e7437,f90d9312-b3a9-411f-8f5d-180115792427,f01370d7-2e83-40d4-a3ec-e0e794856899,32d8938c-a921-42e3-89ca-ff3c0e3bcf75,f12314b7-a547-494a-b12d-bd8d811e7ed5,8a28daec-eb86-4dd6-bcf6-788919462e3d,d5d1b501-5640-4353-b48f-46ed59cd2b06,bb0321cf-2bcc-4fa9-980d-7502fabeba73,8f0fe57b-714f-4d95-9fb5-8d2c63a3425f,f96d537a-2203-4924-aa0f-ec37e8bff022,bcb47db2-da25-4a09-bbc0-90e3adb6cf53,9ce6f6df-0382-4224-ab93-182a2dc53478,0e6f95da-800c-442a-95ab-59b2881adff8,dfc848f4-c2cf-4fd9-bdbb-05389144b6d4,d3bcb6bc-3a2e-44eb-a92b-27949f8ae7f2,4498181f-dc65-4c7d-90e8-8d18d690f94a,6779e6e0-9a2b-47ac-9591-4c208ff3c80a,3026fac1-3f30-4c56-8d92-600eade524a4,1d023991-69e6-4492-ad18-dd0e749ac942,1197a1c5-39da-4014-b390-719e0ce24669,d75abd60-c537-4660-ab6a-cf9c6e32bce7,f639d3f4-9810-4ff8-ae72-42abcd53d908,a615093b-a837-4396-82b4-bcb293787ced,445beffe-a1c7-4f60-b870-938e5dfcf31a,0273d3d7-a7d6-4127-ab8b-1b72de0bc2d8,4afc6433-1ecd-4ebc-9f28-d1e66c3af219,fcd3d2c0-fe76-4251-a8bb-11d4ebe4b471,e61c26d4-a163-4c18-9842-6cfc12ded4b5,23a70132-df76-436c-bbbd-2d03eb52c0ba,d1dfc3da-feeb-456b-b039-3c62aff36310,c17aae41-c1c1-4942-ab0e-82d481f66343,71d594a3-cf24-4d44-a410-bf9924b54695,f978f713-918e-4b6a-bcc1-cfc4b6a0ff4f,54f9caf1-a1d7-4e11-9e0e-a25e19d82d61,cd217dc3-e9e2-4063-960a-0b5cf1e6e2ca,44dfa9a2-2f65-407d-88c8-20daf107a9ae,29d74573-b579-4519-bcaf-2e1ebde38069,a90ce940-a83e-457e-9a8c-c8331bc6e14c,db2e3763-0e1d-43d5-862b-df966839c252,06bfdf00-2598-4af2-a905-67004317a0ef,8ced8f19-f99a-45c0-ad03-447af22ddb8a",
-        "uri": "/api/v2/nodes/4C4C4544-0035-4210-8030-C3C04F465A31"
-      },
-      "utilization": {
-        "ipc": 0.57,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 12648.46,
-          "idle": 59540961.58,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 18223.01
-        },
-        "io": null,
-        "memory": {
-          "used": "5422080 KB",
-          "ksm_sharing": "2949072 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 5.81,
-              "type": "os",
-              "value": 1.66,
-              "min": 0.0
-            },
-            {
-              "max": 96.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 92.96,
-            "allocated": 53.81,
-            "value": 1.66,
-            "min": 0.0
+            "compute": 0.04,
+            "min": 0.0,
+            "max": 31.83,
+            "misc": 0.19,
+            "allocated": 31.83,
+            "io_wait": 0.0
           },
           "sockets": [
             {
               "socket_number": 1,
-              "max": 46.48,
-              "allocated": 14.0
+              "max": 15.91,
+              "allocated": 0.99
             },
             {
               "socket_number": 0,
-              "max": 46.48,
-              "allocated": 39.81
+              "max": 15.91,
+              "allocated": 0.5
             }
           ]
         },
         "cores": {
           "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "0"
-                }
-              ],
-              "type": "os"
-            },
             {
               "used": [
                 {
                   "core": "-1",
                   "socket": "1"
-                },
+                }
+              ],
+              "type": "os"
+            },
+            {
+              "used": [
                 {
                   "core": "-1",
                   "socket": "0"
@@ -727,1133 +99,94 @@
           ],
           "system": {
             "max": 16,
-            "used": null
+            "used": 0
           }
         },
-        "normalized_load": 0.24,
+        "normalized_load": 0.01,
         "cloud": {
           "vcpus": {
             "max": 512,
-            "used": 110
+            "used": 3
           },
           "disk": {
-            "max": 454,
-            "used": 55
+            "max": 372,
+            "used": 10
           },
           "memory": {
-            "max": 48189,
-            "used": 28160
+            "max": 23989,
+            "used": 1536
           }
         }
       },
       "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/4C4C4544-0035-4210-8030-C3C04F465A31",
       "capabilities": {
         "hyperthreading": true,
         "cores_per_socket": 8,
-        "cpu_frequency": "2600 MHz",
+        "cpu_frequency": "2100 MHz",
         "turbo_mode": true,
-        "max_scu_per_core": 2.9,
-        "memory_size": "32768 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-32",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 55,
-        "max": null
-      },
-      "logs_url": "/logs?node=4C4C4544-0035-4210-8030-C3C04F465A31",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:28+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "4C4C4544-0035-4210-8030-C3C04F465A31",
-      "vm_ids": [
-        "a9e9d0e7-2e35-441d-b589-b0311f2a792d",
-        "d35c1a26-7861-4bf7-844e-fa9606ce349f",
-        "f5190626-0f98-4389-90ab-7dd9bbc55b02",
-        "09529311-8649-4223-a023-4ff9e2040256",
-        "ffb90272-9389-4d45-a7a1-1ed582946bcd",
-        "68e6b159-e87b-43fb-a872-f899a50192c6",
-        "ce3ce442-1230-41f1-a515-878dbee71532",
-        "f6cfd595-7989-4749-b658-dbc27a60534a",
-        "44b93ddc-d4a4-405d-a9d7-b9787a3e50b7",
-        "1734c278-38ba-4ece-b696-e01fd4a05b8f",
-        "8113505a-8157-4933-a842-1ded721bdade",
-        "a51415a9-b536-46f3-bcb7-8f69afdfa866",
-        "8d2619d6-1c27-4521-b0dd-eae7d22b076d",
-        "acd8c87e-8661-4dfd-85e1-0a2c606ef2a9",
-        "e54c7600-ceb7-45dc-bb93-563d226e7437",
-        "f90d9312-b3a9-411f-8f5d-180115792427",
-        "f01370d7-2e83-40d4-a3ec-e0e794856899",
-        "32d8938c-a921-42e3-89ca-ff3c0e3bcf75",
-        "f12314b7-a547-494a-b12d-bd8d811e7ed5",
-        "8a28daec-eb86-4dd6-bcf6-788919462e3d",
-        "d5d1b501-5640-4353-b48f-46ed59cd2b06",
-        "bb0321cf-2bcc-4fa9-980d-7502fabeba73",
-        "8f0fe57b-714f-4d95-9fb5-8d2c63a3425f",
-        "f96d537a-2203-4924-aa0f-ec37e8bff022",
-        "bcb47db2-da25-4a09-bbc0-90e3adb6cf53",
-        "9ce6f6df-0382-4224-ab93-182a2dc53478",
-        "0e6f95da-800c-442a-95ab-59b2881adff8",
-        "dfc848f4-c2cf-4fd9-bdbb-05389144b6d4",
-        "d3bcb6bc-3a2e-44eb-a92b-27949f8ae7f2",
-        "4498181f-dc65-4c7d-90e8-8d18d690f94a",
-        "6779e6e0-9a2b-47ac-9591-4c208ff3c80a",
-        "3026fac1-3f30-4c56-8d92-600eade524a4",
-        "1d023991-69e6-4492-ad18-dd0e749ac942",
-        "1197a1c5-39da-4014-b390-719e0ce24669",
-        "d75abd60-c537-4660-ab6a-cf9c6e32bce7",
-        "f639d3f4-9810-4ff8-ae72-42abcd53d908",
-        "a615093b-a837-4396-82b4-bcb293787ced",
-        "445beffe-a1c7-4f60-b870-938e5dfcf31a",
-        "0273d3d7-a7d6-4127-ab8b-1b72de0bc2d8",
-        "4afc6433-1ecd-4ebc-9f28-d1e66c3af219",
-        "fcd3d2c0-fe76-4251-a8bb-11d4ebe4b471",
-        "e61c26d4-a163-4c18-9842-6cfc12ded4b5",
-        "23a70132-df76-436c-bbbd-2d03eb52c0ba",
-        "d1dfc3da-feeb-456b-b039-3c62aff36310",
-        "c17aae41-c1c1-4942-ab0e-82d481f66343",
-        "71d594a3-cf24-4d44-a410-bf9924b54695",
-        "f978f713-918e-4b6a-bcc1-cfc4b6a0ff4f",
-        "54f9caf1-a1d7-4e11-9e0e-a25e19d82d61",
-        "cd217dc3-e9e2-4063-960a-0b5cf1e6e2ca",
-        "44dfa9a2-2f65-407d-88c8-20daf107a9ae",
-        "29d74573-b579-4519-bcaf-2e1ebde38069",
-        "a90ce940-a83e-457e-9a8c-c8331bc6e14c",
-        "db2e3763-0e1d-43d5-862b-df966839c252",
-        "06bfdf00-2598-4af2-a905-67004317a0ef",
-        "8ced8f19-f99a-45c0-ad03-447af22ddb8a"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 1.79,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "vm",
-              "value": 4.62,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 2.65,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.08,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 1.84,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 1,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "00000000-0000-0000-0000-00259088290A",
-        "mac": "e6:a1:5d:d4:0b:45",
-        "ip_address": "192.168.0.9",
-        "cloud_id": "00000000-0000-0000-0000-00259088290A"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=00000000-0000-0000-0000-00259088290A",
-        "vms": "/api/v2/vms?ids=dfa6df7b-5788-4c90-8cbf-ac4f6c2740a2,f7f3df05-f4e8-4a95-8e14-b19f0f146fe5,8274daaf-7ada-4c3d-9641-ae46319a51d9,41b7b6d8-3286-4605-a0c2-0d32ee18f274,fb91baa8-7428-42b4-8da6-d287ac9708e8,4dcf2997-0847-4060-a808-8c9dd9ddf08f,69e82ad0-ecb9-4890-8c96-882be44c40ec,8e2e3bd2-2a35-4035-8ae0-9566d19ca487,3c385ecd-ca37-411f-a2a7-6aa95524baa0,f6533ba6-22b7-4e1d-9aa9-b402ee097e74,9afad2d8-932a-4b60-8f8e-ed097f56f9fe,5177ff99-50f2-49db-8aad-d983e95cd194,b87d7bd5-cdf5-4c24-9baa-b893c447e824,45c8cb36-85c4-48eb-9786-17e546b4fa60,1e09ec4b-ff91-4cc3-994e-15ef620d8a92,1efa9473-e87a-469b-bf98-8075ddec1ba3,9aa9fcc3-1245-4b4d-ba7b-79721b75a325,3fe70bde-d681-4ba4-b093-93ae7cf66f23,f4cb11c6-511d-4ccf-a603-535a49f7a933,025f590e-6475-4d42-99e4-48e7241a4b59,3bf3d45a-c1ac-43f5-b27d-d699a68b0aae,de42e69c-97fb-4bcf-b7e0-ab03f63e3bd9,9c992402-a747-4ce6-989d-f920d457dcf8,97a0216d-bc1b-4702-bf58-ec8eabbca579,92687fce-c3cf-4265-9cdc-9dc76f786b0e,95153535-5610-4f8a-91f8-cd8245d2c55c,200677af-2cae-4c18-9eb3-d55c5cbd1166,0bfd9d2b-3710-48d2-adfa-15633569c024,9bba08c2-3dd2-414c-a7aa-df4336a334c6,f838eedc-251a-4bc2-b083-7397a82e4d37,daa128bc-7dca-4d80-8d26-0f7d07f6de60,51b6e92b-b5df-44bf-9ff3-5ef099fdbe85",
-        "uri": "/api/v2/nodes/00000000-0000-0000-0000-00259088290A"
-      },
-      "utilization": {
-        "ipc": 0.63,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 6791.09,
-          "idle": 62503949.51,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 739355.77
-        },
-        "io": null,
-        "memory": {
-          "used": "6924560 KB",
-          "ksm_sharing": "1899776 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 5.32,
-              "type": "os",
-              "value": 0.56,
-              "min": 0.0
-            },
-            {
-              "max": 64.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 85.12,
-            "allocated": 37.32,
-            "value": 0.56,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 42.56,
-              "allocated": 13.32
-            },
-            {
-              "socket_number": 0,
-              "max": 42.56,
-              "allocated": 24.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "0"
-                },
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
-          }
-        },
-        "normalized_load": 0.11,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 64
-          },
-          "disk": {
-            "max": 454,
-            "used": 32
-          },
-          "memory": {
-            "max": 24016,
-            "used": 16384
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/00000000-0000-0000-0000-00259088290A",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2600 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.66,
-        "memory_size": "16400 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-25",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 32,
-        "max": null
-      },
-      "logs_url": "/logs?node=00000000-0000-0000-0000-00259088290A",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:38+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "00000000-0000-0000-0000-00259088290A",
-      "vm_ids": [
-        "dfa6df7b-5788-4c90-8cbf-ac4f6c2740a2",
-        "f7f3df05-f4e8-4a95-8e14-b19f0f146fe5",
-        "8274daaf-7ada-4c3d-9641-ae46319a51d9",
-        "41b7b6d8-3286-4605-a0c2-0d32ee18f274",
-        "fb91baa8-7428-42b4-8da6-d287ac9708e8",
-        "4dcf2997-0847-4060-a808-8c9dd9ddf08f",
-        "69e82ad0-ecb9-4890-8c96-882be44c40ec",
-        "8e2e3bd2-2a35-4035-8ae0-9566d19ca487",
-        "3c385ecd-ca37-411f-a2a7-6aa95524baa0",
-        "f6533ba6-22b7-4e1d-9aa9-b402ee097e74",
-        "9afad2d8-932a-4b60-8f8e-ed097f56f9fe",
-        "5177ff99-50f2-49db-8aad-d983e95cd194",
-        "b87d7bd5-cdf5-4c24-9baa-b893c447e824",
-        "45c8cb36-85c4-48eb-9786-17e546b4fa60",
-        "1e09ec4b-ff91-4cc3-994e-15ef620d8a92",
-        "1efa9473-e87a-469b-bf98-8075ddec1ba3",
-        "9aa9fcc3-1245-4b4d-ba7b-79721b75a325",
-        "3fe70bde-d681-4ba4-b093-93ae7cf66f23",
-        "f4cb11c6-511d-4ccf-a603-535a49f7a933",
-        "025f590e-6475-4d42-99e4-48e7241a4b59",
-        "3bf3d45a-c1ac-43f5-b27d-d699a68b0aae",
-        "de42e69c-97fb-4bcf-b7e0-ab03f63e3bd9",
-        "9c992402-a747-4ce6-989d-f920d457dcf8",
-        "97a0216d-bc1b-4702-bf58-ec8eabbca579",
-        "92687fce-c3cf-4265-9cdc-9dc76f786b0e",
-        "95153535-5610-4f8a-91f8-cd8245d2c55c",
-        "200677af-2cae-4c18-9eb3-d55c5cbd1166",
-        "0bfd9d2b-3710-48d2-adfa-15633569c024",
-        "9bba08c2-3dd2-414c-a7aa-df4336a334c6",
-        "f838eedc-251a-4bc2-b083-7397a82e4d37",
-        "daa128bc-7dca-4d80-8d26-0f7d07f6de60",
-        "51b6e92b-b5df-44bf-9ff3-5ef099fdbe85"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 1.45,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 1.5,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.38,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.18,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 1.45,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "00000000-0000-0000-0000-0025908828FE",
-        "mac": "aa:50:a8:b8:ba:43",
-        "ip_address": "192.168.0.8",
-        "cloud_id": "00000000-0000-0000-0000-0025908828FE"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=00000000-0000-0000-0000-0025908828FE",
-        "vms": "/api/v2/vms?ids=5cabce71-d5c4-4b01-a94d-4a544f3a82f9,204740eb-82db-4e39-aed3-e4121cb7948c,b1441561-a5a0-4759-9ded-f7b49eacef03,b0518471-783f-46aa-bf30-8cf231e25986,d74f4133-fa5d-4301-95a1-a84532c4c07c,189ea713-1ccc-4f78-bd5e-2e9536e7bf7d,a3f195ee-0e04-4cc6-b42e-cc488dcd3295,991a87ec-75f4-4a33-aa35-2e78ff2f8a43,5bdd47ca-3d96-49d2-bbf8-782357478cc7,db958409-e9fa-4f4f-bff1-b56fb13b2750,e81bf0b0-ad67-46cd-bfba-2dc056eb6914,7ff37052-c6e5-4e35-9094-805f45e0875e,414b4432-ff1b-44ce-bc4e-c1ad819bb48e,6e8e3ea9-081d-4130-9e81-7e8e2ad23a65,e65dddd4-4cd5-46bd-b67d-21928d9ff681,731ca329-90f2-4ddc-94f2-d0d4a55b4562,66ad5ee9-e7e6-41ab-822d-a8de15b6549f,05c69d59-1117-4ce0-9cc8-055b4426c38b,120439f9-b4d0-48ad-b8e7-9cd688ad1f7c,6f83cee9-f5ca-4022-8db9-7973fdaf1a2a,bc127501-39c8-47ec-a6f6-c5d135da62b8,404f46f1-0ea4-421c-a74e-05e97d2575cb,f58aab85-2f79-4e23-99b5-35b0399eba0d,572a7134-604d-4ccf-95a0-52e492d802c7,ba463137-3e0c-416b-b880-1f4c6c1c86ca,654c3f0f-927d-4c55-ac9f-6824f7d5bd0c,d48bb97b-5a0d-4501-a450-e2247eb74159,c646054a-b086-4314-b37c-b0a8ebab6a4d,f4866c22-0c64-4a66-86c7-30a0b964fd4b,7699dd5f-5afc-4949-aad7-dd428c9f8a4b,443eac14-6b77-40ba-bc7f-38b2a205ce2e,2f029460-6257-40a4-bf63-8fe252072e75,092b531c-3405-4875-bb97-0be17dfa5367,b5c70bec-754e-432e-b0b3-c5074bd9a7ad,322544ce-8f81-4def-a740-0e0177537aea,987abeb3-bd6e-4a47-b649-4b61f0cad80f",
-        "uri": "/api/v2/nodes/00000000-0000-0000-0000-0025908828FE"
-      },
-      "utilization": {
-        "ipc": 0.64,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 6583.53,
-          "idle": 62826624.88,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 7104.19
-        },
-        "io": null,
-        "memory": {
-          "used": "4762432 KB",
-          "ksm_sharing": "2201248 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 5.32,
-              "type": "os",
-              "value": 0.54,
-              "min": 0.0
-            },
-            {
-              "max": 72.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 85.12,
-            "allocated": 41.32,
-            "value": 0.54,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 42.56,
-              "allocated": 15.32
-            },
-            {
-              "socket_number": 0,
-              "max": 42.56,
-              "allocated": 26.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "0"
-                },
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
-          }
-        },
-        "normalized_load": 0.1,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 72
-          },
-          "disk": {
-            "max": 454,
-            "used": 36
-          },
-          "memory": {
-            "max": 24006,
-            "used": 18432
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/00000000-0000-0000-0000-0025908828FE",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2600 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.66,
+        "max_scu_per_core": 0.99,
         "memory_size": "16384 MB",
         "cpu_type": "",
         "cache_size": "20480 kB",
         "sockets": 2
       },
-      "node_name": "node-24",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
       "vm_info": {
-        "count": 36,
+        "count": 2,
         "max": null
       },
-      "logs_url": "/logs?node=00000000-0000-0000-0000-0025908828FE",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:28+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "00000000-0000-0000-0000-0025908828FE",
       "vm_ids": [
-        "5cabce71-d5c4-4b01-a94d-4a544f3a82f9",
-        "204740eb-82db-4e39-aed3-e4121cb7948c",
-        "b1441561-a5a0-4759-9ded-f7b49eacef03",
-        "b0518471-783f-46aa-bf30-8cf231e25986",
-        "d74f4133-fa5d-4301-95a1-a84532c4c07c",
-        "189ea713-1ccc-4f78-bd5e-2e9536e7bf7d",
-        "a3f195ee-0e04-4cc6-b42e-cc488dcd3295",
-        "991a87ec-75f4-4a33-aa35-2e78ff2f8a43",
-        "5bdd47ca-3d96-49d2-bbf8-782357478cc7",
-        "db958409-e9fa-4f4f-bff1-b56fb13b2750",
-        "e81bf0b0-ad67-46cd-bfba-2dc056eb6914",
-        "7ff37052-c6e5-4e35-9094-805f45e0875e",
-        "414b4432-ff1b-44ce-bc4e-c1ad819bb48e",
-        "6e8e3ea9-081d-4130-9e81-7e8e2ad23a65",
-        "e65dddd4-4cd5-46bd-b67d-21928d9ff681",
-        "731ca329-90f2-4ddc-94f2-d0d4a55b4562",
-        "66ad5ee9-e7e6-41ab-822d-a8de15b6549f",
-        "05c69d59-1117-4ce0-9cc8-055b4426c38b",
-        "120439f9-b4d0-48ad-b8e7-9cd688ad1f7c",
-        "6f83cee9-f5ca-4022-8db9-7973fdaf1a2a",
-        "bc127501-39c8-47ec-a6f6-c5d135da62b8",
-        "404f46f1-0ea4-421c-a74e-05e97d2575cb",
-        "f58aab85-2f79-4e23-99b5-35b0399eba0d",
-        "572a7134-604d-4ccf-95a0-52e492d802c7",
-        "ba463137-3e0c-416b-b880-1f4c6c1c86ca",
-        "654c3f0f-927d-4c55-ac9f-6824f7d5bd0c",
-        "d48bb97b-5a0d-4501-a450-e2247eb74159",
-        "c646054a-b086-4314-b37c-b0a8ebab6a4d",
-        "f4866c22-0c64-4a66-86c7-30a0b964fd4b",
-        "7699dd5f-5afc-4949-aad7-dd428c9f8a4b",
-        "443eac14-6b77-40ba-bc7f-38b2a205ce2e",
-        "2f029460-6257-40a4-bf63-8fe252072e75",
-        "092b531c-3405-4875-bb97-0be17dfa5367",
-        "b5c70bec-754e-432e-b0b3-c5074bd9a7ad",
-        "322544ce-8f81-4def-a740-0e0177537aea",
-        "987abeb3-bd6e-4a47-b649-4b61f0cad80f"
+        "a3b3f51a-0adf-4662-9908-5ce8de2926bc",
+        "fc13ad16-cc55-4ac8-927f-0b04c0f7bd60"
       ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "os",
-              "value": 3.68,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 2.9,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 2.03,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.17,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "MEDIUM",
-            "value": 3.66,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
       "status": {
         "uptime": null,
         "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 1,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
+        "ipmi": true,
+        "agent_version": "1.1.7.511",
+        "operational": 2,
+        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled.  IPMI is reporting sensors in error.",
         "health": 1,
         "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "00000000-0000-0000-0000-002590A15FE6",
-        "mac": "5e:70:6d:15:ec:40",
-        "ip_address": "192.168.0.14",
-        "cloud_id": "00000000-0000-0000-0000-002590A15FE6"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=00000000-0000-0000-0000-002590A15FE6",
-        "vms": "/api/v2/vms?ids=7bd75d0e-4eec-4f71-a801-5ab3b67832d2,f7b06978-a23c-447e-817b-3268cdebe1b3,fab4bf43-cedb-4b6a-8231-5988e53ae066,c386e318-385a-44cb-8bb4-3ecdf5c1f9e9,33cfad19-5ba3-4183-9960-b417e82c7b1c,f61dd916-72eb-4d87-80fc-65799d02f727,4393b012-4abd-425b-b119-2895baa8bee5,7136f98f-2e94-43b1-ae9e-f434090ee07d,38bbf018-db3d-4ce3-bd4d-e25b98df30ae,62237392-655a-4a85-b25c-d02567832fd4,bed394cf-a064-4d47-b6d5-babc55bba7e6,0be38af0-f026-4361-99ca-1ee81bd50787,1ca04f86-3876-4cfc-8798-e57d771275fe,626b0712-1dae-4ef1-9322-92370a694dd9,63010c24-b96c-4266-bb97-d596b1878c61,ce28d3a0-6da8-4116-85e5-6d998401acfd,1404a21d-8d88-43f9-ab8a-81e631c52a3c,7fe9d8d9-ebfc-43b4-a653-0453df6f4c14,750144bc-3cb3-49cf-8e80-84ce36a0b117,3139d84f-f5b5-4abc-8f23-ab3ae701f9e4,cd5734a3-24c7-43bf-b910-e922d0905397,80f0db5f-83b5-4822-9aaa-271b01c344d7,b4fb5c07-17d1-47d3-8462-06aeb9e1b081,a0b3789b-cab1-429b-95a8-a0de7d6b6fb1,d7a24031-7b6c-4ccf-93e4-df6bf179463a,842ca571-2c90-4ce7-8cf5-388d3d80f9d8,8d95a064-fbe0-4e98-9862-84cccdc4eaad,e2aae43f-258b-41b1-a019-56d4e268072b",
-        "uri": "/api/v2/nodes/00000000-0000-0000-0000-002590A15FE6"
-      },
-      "utilization": {
-        "ipc": 0.66,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 15921.49,
-          "idle": 63312187.37,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 1215.31
-        },
-        "io": null,
-        "memory": {
-          "used": "6501884 KB",
-          "ksm_sharing": "1381708 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 5.32,
-              "type": "os",
-              "value": 0.27,
-              "min": 0.0
-            },
-            {
-              "max": 46.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 85.12,
-            "allocated": 28.32,
-            "value": 0.27,
-            "min": 0.0
+        "health_details": {
+          "ipmi": {
+            "sensors_in_error": [
+              "SSB Temp"
+            ],
+            "health": 1
           },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 42.56,
-              "allocated": 10.32
-            },
-            {
-              "socket_number": 0,
-              "max": 42.56,
-              "allocated": 18.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "0"
-                },
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
+          "paging": {
+            "health": 1,
+            "value": 0.0
+          },
+          "io_wait": {
+            "health": 1,
+            "value": 0.03
+          },
+          "swap": {
+            "health": 1,
+            "value": 0.0
           }
         },
-        "normalized_load": 0.07,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 56
-          },
-          "disk": {
-            "max": 454,
-            "used": 28
-          },
-          "memory": {
-            "max": 24025,
-            "used": 14336
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/00000000-0000-0000-0000-002590A15FE6",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2600 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.66,
-        "memory_size": "16400 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-30",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 28,
-        "max": null
-      },
-      "logs_url": "/logs?node=00000000-0000-0000-0000-002590A15FE6",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:30+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "00000000-0000-0000-0000-002590A15FE6",
-      "vm_ids": [
-        "7bd75d0e-4eec-4f71-a801-5ab3b67832d2",
-        "f7b06978-a23c-447e-817b-3268cdebe1b3",
-        "fab4bf43-cedb-4b6a-8231-5988e53ae066",
-        "c386e318-385a-44cb-8bb4-3ecdf5c1f9e9",
-        "33cfad19-5ba3-4183-9960-b417e82c7b1c",
-        "f61dd916-72eb-4d87-80fc-65799d02f727",
-        "4393b012-4abd-425b-b119-2895baa8bee5",
-        "7136f98f-2e94-43b1-ae9e-f434090ee07d",
-        "38bbf018-db3d-4ce3-bd4d-e25b98df30ae",
-        "62237392-655a-4a85-b25c-d02567832fd4",
-        "bed394cf-a064-4d47-b6d5-babc55bba7e6",
-        "0be38af0-f026-4361-99ca-1ee81bd50787",
-        "1ca04f86-3876-4cfc-8798-e57d771275fe",
-        "626b0712-1dae-4ef1-9322-92370a694dd9",
-        "63010c24-b96c-4266-bb97-d596b1878c61",
-        "ce28d3a0-6da8-4116-85e5-6d998401acfd",
-        "1404a21d-8d88-43f9-ab8a-81e631c52a3c",
-        "7fe9d8d9-ebfc-43b4-a653-0453df6f4c14",
-        "750144bc-3cb3-49cf-8e80-84ce36a0b117",
-        "3139d84f-f5b5-4abc-8f23-ab3ae701f9e4",
-        "cd5734a3-24c7-43bf-b910-e922d0905397",
-        "80f0db5f-83b5-4822-9aaa-271b01c344d7",
-        "b4fb5c07-17d1-47d3-8462-06aeb9e1b081",
-        "a0b3789b-cab1-429b-95a8-a0de7d6b6fb1",
-        "d7a24031-7b6c-4ccf-93e4-df6bf179463a",
-        "842ca571-2c90-4ce7-8cf5-388d3d80f9d8",
-        "8d95a064-fbe0-4e98-9862-84cccdc4eaad",
-        "e2aae43f-258b-41b1-a019-56d4e268072b"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 1.21,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 2.32,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.1,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.2,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 1.22,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
         "trust_status": {
           "trust_details": {
             "bios": 3,
             "vmm": 3
           },
           "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
+            "tagent_installed": 2,
+            "tagent_actual_version": "2.0.4",
+            "tagent_running": 2,
             "tpm_enabled": 2,
             "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
+            "tagent_expected_version": "2.0.4",
             "tboot_measured_launch": 1
           },
           "trust_config": 1,
           "trust": 3
         },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
+        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled.  IPMI is reporting sensors in error."
       },
       "trust_node_id": null,
-      "ids": {
-        "platform_id": "46C88255-2DD7-E111-A174-001E673AF5EC",
-        "mac": "9a:c5:6b:8f:8f:46",
-        "ip_address": "192.168.0.19",
-        "cloud_id": "46C88255-2DD7-E111-A174-001E673AF5EC"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=46C88255-2DD7-E111-A174-001E673AF5EC",
-        "vms": "/api/v2/vms?ids=743ec66a-9aff-44cd-b098-9b38b3e48918,bd6c015a-da23-4034-a675-9c2e0aa4ae95,ffa2429c-cab4-4d82-8677-4c90c2717461,7703cf79-646c-4b70-9801-30af1c0755f8,d11ce90f-c626-436a-b91a-1ab0333287bf,a650bd1f-e792-421e-9ed3-d5575ec40a13,a10ec417-476d-488c-add9-84192bfa9a0e,a57ffeb6-a38a-40ed-adf7-5b590f421c80,49a887d1-0fc5-4851-8b0f-ac15d3666916,bc580e5f-d958-46ad-b6fa-765c53ab926d,14f3c471-ff86-4ca8-88ba-cb0f8d1e5fca,e0c800fe-a0a3-4b20-93fa-1015fde4b91a,d7ba3ae5-f4c4-4676-b74c-d6b7c5860c68,12287da3-c364-4b46-a8f0-2a66dd99a241,38633fe3-c957-4a93-b0d9-2a9b193281a5,89fb889b-9b26-463e-90b9-6eb4d6db9469,ba2292bc-4a95-43f3-952f-fbae3591f693,69006ec2-b8ff-45f6-860d-c77d54f1273d,f96fdd91-e71c-4d7f-afd1-62892ab59020,6c6566d8-c320-43ab-a70a-1ed7251403e0,6a052e65-adcc-46e4-a341-d71325ac449c,9ee568a3-0b28-47f4-8a20-afb8570562a6,0e67c82f-8348-4ce1-82e1-4b4828abfb99,1ea861ca-ff7a-4de9-8b8b-3daa9d073862,b4ab2fd1-dab1-4434-9140-c4805f412fb9,2b3dea8e-3707-4d19-b1c4-df5ee03cda6c,f9ced285-02bc-48a8-9050-4ce58d9f958d,e69e6b8d-9f98-4024-ac55-b62c5a5bafff,3fd50d4d-162c-43c5-8108-f4c32369a152,1d6b8153-bcb3-421e-ba53-686532ed9a32,bb915de9-e1ee-483d-83d6-0c320b844468,d2111764-c392-4185-a1b3-e6717f162055,6a0f35c9-00a2-462a-b8fa-82fbec32981d,69fd11b8-518b-4017-a669-fc8440e88fd5,2327d936-edc2-4271-80ec-62154e184747,2e73a1c3-17fb-4373-8c76-946ccfe7f330,4593a8a1-30f9-433e-801d-f8f4284a5dd6,30a037c3-87be-4200-a5ee-3a74ecbe93e2,61785d62-76b1-49ae-858f-ef0c17abb7d1,c880e045-bbd4-4d8d-9a37-948ca3776284,a061c2a0-8307-4684-90fe-77bd1ffe5513,6421de2e-f29c-49c3-9b11-f4e7c62318f5,05c74975-d334-46da-8950-13cf96b603d3,8918d7d5-6336-4264-bf68-3297f5ca2a3c,15fb67b1-7f6a-4bef-95f9-4eec15d41955,e6d0e55a-070d-477d-a746-4be1a2333124,4fbee900-bb1e-4fa1-9399-cdb52d4e739e,bb31656a-9b9d-4bef-9d6f-bce507c931a4,7b0cfacc-c09a-49ca-a0d9-69e0c15d8dee,e165857b-7a6e-4982-a191-729f5b4b4c65,7cc97fb4-7244-4a6c-9c59-239e2c05dfd4,befc7be6-7961-426c-b97e-d46f9c8237d0,d46a1865-4949-4058-b335-54bd9b9a8541,1158af33-59b7-49f3-ac7d-2333f5ea6974,11542fed-cb24-43b5-aae7-1309df2c7737,3622bf86-dec8-431e-8baa-04b09d1fe4ae,a388a428-377d-4631-88c8-ea200d06fa2a,be30f8dd-e4a5-4f9d-9238-115117aab72d,ad0c35df-89e4-4399-91df-19278685116d",
-        "uri": "/api/v2/nodes/46C88255-2DD7-E111-A174-001E673AF5EC"
-      },
-      "utilization": {
-        "ipc": 0.66,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 9477.03,
-          "idle": 62345508.88,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 2049.66
-        },
-        "io": null,
-        "memory": {
-          "used": "7023436 KB",
-          "ksm_sharing": "3571760 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 116.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            },
-            {
-              "max": 4.74,
-              "type": "os",
-              "value": 0.84,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 75.84,
-            "allocated": 62.74,
-            "value": 0.84,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 37.92,
-              "allocated": 25.74
-            },
-            {
-              "socket_number": 0,
-              "max": 37.92,
-              "allocated": 37.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                },
-                {
-                  "core": "-1",
-                  "socket": "0"
-                }
-              ],
-              "type": "vm"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
-          }
-        },
-        "normalized_load": 0.17,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 118
-          },
-          "disk": {
-            "max": 454,
-            "used": 59
-          },
-          "memory": {
-            "max": 48106,
-            "used": 30208
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/46C88255-2DD7-E111-A174-001E673AF5EC",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2300 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.37,
-        "memory_size": "32768 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-38",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 59,
-        "max": null
-      },
-      "logs_url": "/logs?node=46C88255-2DD7-E111-A174-001E673AF5EC",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:29+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "46C88255-2DD7-E111-A174-001E673AF5EC",
-      "vm_ids": [
-        "743ec66a-9aff-44cd-b098-9b38b3e48918",
-        "bd6c015a-da23-4034-a675-9c2e0aa4ae95",
-        "ffa2429c-cab4-4d82-8677-4c90c2717461",
-        "7703cf79-646c-4b70-9801-30af1c0755f8",
-        "d11ce90f-c626-436a-b91a-1ab0333287bf",
-        "a650bd1f-e792-421e-9ed3-d5575ec40a13",
-        "a10ec417-476d-488c-add9-84192bfa9a0e",
-        "a57ffeb6-a38a-40ed-adf7-5b590f421c80",
-        "49a887d1-0fc5-4851-8b0f-ac15d3666916",
-        "bc580e5f-d958-46ad-b6fa-765c53ab926d",
-        "14f3c471-ff86-4ca8-88ba-cb0f8d1e5fca",
-        "e0c800fe-a0a3-4b20-93fa-1015fde4b91a",
-        "d7ba3ae5-f4c4-4676-b74c-d6b7c5860c68",
-        "12287da3-c364-4b46-a8f0-2a66dd99a241",
-        "38633fe3-c957-4a93-b0d9-2a9b193281a5",
-        "89fb889b-9b26-463e-90b9-6eb4d6db9469",
-        "ba2292bc-4a95-43f3-952f-fbae3591f693",
-        "69006ec2-b8ff-45f6-860d-c77d54f1273d",
-        "f96fdd91-e71c-4d7f-afd1-62892ab59020",
-        "6c6566d8-c320-43ab-a70a-1ed7251403e0",
-        "6a052e65-adcc-46e4-a341-d71325ac449c",
-        "9ee568a3-0b28-47f4-8a20-afb8570562a6",
-        "0e67c82f-8348-4ce1-82e1-4b4828abfb99",
-        "1ea861ca-ff7a-4de9-8b8b-3daa9d073862",
-        "b4ab2fd1-dab1-4434-9140-c4805f412fb9",
-        "2b3dea8e-3707-4d19-b1c4-df5ee03cda6c",
-        "f9ced285-02bc-48a8-9050-4ce58d9f958d",
-        "e69e6b8d-9f98-4024-ac55-b62c5a5bafff",
-        "3fd50d4d-162c-43c5-8108-f4c32369a152",
-        "1d6b8153-bcb3-421e-ba53-686532ed9a32",
-        "bb915de9-e1ee-483d-83d6-0c320b844468",
-        "d2111764-c392-4185-a1b3-e6717f162055",
-        "6a0f35c9-00a2-462a-b8fa-82fbec32981d",
-        "69fd11b8-518b-4017-a669-fc8440e88fd5",
-        "2327d936-edc2-4271-80ec-62154e184747",
-        "2e73a1c3-17fb-4373-8c76-946ccfe7f330",
-        "4593a8a1-30f9-433e-801d-f8f4284a5dd6",
-        "30a037c3-87be-4200-a5ee-3a74ecbe93e2",
-        "61785d62-76b1-49ae-858f-ef0c17abb7d1",
-        "c880e045-bbd4-4d8d-9a37-948ca3776284",
-        "a061c2a0-8307-4684-90fe-77bd1ffe5513",
-        "6421de2e-f29c-49c3-9b11-f4e7c62318f5",
-        "05c74975-d334-46da-8950-13cf96b603d3",
-        "8918d7d5-6336-4264-bf68-3297f5ca2a3c",
-        "15fb67b1-7f6a-4bef-95f9-4eec15d41955",
-        "e6d0e55a-070d-477d-a746-4be1a2333124",
-        "4fbee900-bb1e-4fa1-9399-cdb52d4e739e",
-        "bb31656a-9b9d-4bef-9d6f-bce507c931a4",
-        "7b0cfacc-c09a-49ca-a0d9-69e0c15d8dee",
-        "e165857b-7a6e-4982-a191-729f5b4b4c65",
-        "7cc97fb4-7244-4a6c-9c59-239e2c05dfd4",
-        "befc7be6-7961-426c-b97e-d46f9c8237d0",
-        "d46a1865-4949-4058-b335-54bd9b9a8541",
-        "1158af33-59b7-49f3-ac7d-2333f5ea6974",
-        "11542fed-cb24-43b5-aae7-1309df2c7737",
-        "3622bf86-dec8-431e-8baa-04b09d1fe4ae",
-        "a388a428-377d-4631-88c8-ea200d06fa2a",
-        "be30f8dd-e4a5-4f9d-9238-115117aab72d",
-        "ad0c35df-89e4-4399-91df-19278685116d"
-      ],
       "contention": {
         "llc": {
           "cgroups": [
@@ -1861,373 +194,123 @@
               "max": 50.0,
               "label": "LOW",
               "type": "os",
-              "value": 2.0,
+              "value": 0.72,
               "min": 0.0
             },
             {
+              "max": 50.0,
+              "label": "LOW",
+              "type": "vm",
+              "value": 0.25,
+              "min": 0.0
+            }
+          ],
+          "sockets": [
+            {
+              "socket_number": 1,
+              "max": 50.0,
+              "label": "LOW",
+              "value": 1.56,
+              "min": 0.0
+            },
+            {
+              "socket_number": 0,
               "max": 50.0,
               "label": "MEDIUM",
-              "type": "vm",
-              "value": 3.94,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.41,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.18,
+              "value": 3.61,
               "min": 0.0
             }
           ],
           "system": {
             "max": 50.0,
             "label": "LOW",
-            "value": 2.02,
+            "value": 1.6,
             "min": 0.0
           }
         }
-      }
+      },
+      "user_ids": [
+        "ef66eccc78fe40a8824b2e4f04cdd338"
+      ],
+      "aggregate_ids": [
+        "TEST"
+      ],
+      "tier": null,
+      "tenant_ids": [
+        "74fb550455354c6b8815d6b0f5d3ac6f"
+      ],
+      "ids": {
+        "platform_id": "E6D94713-35D7-E111-A174-001E673AF50C",
+        "mac": "f2:5c:aa:f0:d4:4c",
+        "ip_address": "192.168.0.2",
+        "cloud_id": "E6D94713-35D7-E111-A174-001E673AF50C"
+      },
+      "node_name": "node-14"
     },
     {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 1,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "00000000-0000-0000-0000-00259088BDE2",
-        "mac": "7a:ef:84:c0:37:49",
-        "ip_address": "192.168.0.10",
-        "cloud_id": "00000000-0000-0000-0000-00259088BDE2"
-      },
       "scheduler_persistent": false,
       "links": {
-        "logs": "/api/v2/logs?node=00000000-0000-0000-0000-00259088BDE2",
-        "vms": "/api/v2/vms?ids=abf396b0-86d2-46ed-b3e7-f9cf5f7a1e03,5636ef6d-6afa-49cd-8bfb-74a744f44a78,f43c7bef-1c1c-45c2-b35f-1408677cb6d3,af306737-40ad-4b2a-aa50-d5c109bf44cc,779647b4-8da1-40b4-b58b-5dcbd0a7c391,718cbbe9-a4b5-4eaa-8d9a-16cd874e1ffe,18f5d533-b815-4e56-bd4c-d4c34704deb4,0b42659c-5b70-4421-ab83-7e61d9f2f8fc,9edbe645-c495-43ad-a1df-4e301f367d9e,45a75e05-a275-4939-aaee-4de742e7225e,faff1256-d420-46d1-bb8f-8be1ba38e9d2,b0b3d4f4-1477-4811-96e5-8c0e9e7e34fc,1a546e06-f016-4e5b-a267-69210b6a01b6,6804e8b6-7345-4bf4-9948-c0083e71e544,f65f69bb-83e6-4795-b55f-f076eb6d6d87,62e63d51-6321-42eb-832d-63e541a66b8a,e49363e6-b864-4400-a80d-469318873dad,98b0f699-c201-4957-a218-c69820222fa5,5b4aaa39-1fc5-4169-a444-7cb3ef633ab6,1d31e647-7c56-4d74-8636-ce302be17514,264c5622-90d5-47aa-b8e9-dc8fc0ba8c99,04590d11-7dc3-4fcb-b257-9a5b147f68e5,6d020cc0-f6e6-401d-baae-0c96420b1649,437f9e69-8a27-4bee-9042-54813f67da35,7907a1a7-b824-47aa-9690-7a4db073cc5b,33e717f9-c235-4d28-837b-7d9249ecbc38,3336152d-31bd-4450-8595-7c7e98d94e2b,e8e8f2f1-4dd6-4609-9353-e56dead90140,751bdf2d-9acf-4fef-8d4b-fae27e5bd73b,360e5c30-824f-488f-a5d0-e1c4ca4db4bb,c5e4df1d-68be-4e10-a11c-d378abf78098,c2a61150-7e48-4ab2-95f7-e53ee86f9867",
-        "uri": "/api/v2/nodes/00000000-0000-0000-0000-00259088BDE2"
+        "uri": "/api/v3/nodes/3334E689-B7D6-E111-A174-001E673AFC08",
+        "logs": "/api/v3/logs?node=3334E689-B7D6-E111-A174-001E673AFC08"
       },
-      "utilization": {
-        "ipc": 0.67,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 6471.44,
-          "idle": 62758217.11,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 1907.2
-        },
-        "io": null,
-        "memory": {
-          "used": "4560156 KB",
-          "ksm_sharing": "1951568 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 5.36,
-              "type": "os",
-              "value": 0.46,
-              "min": 0.0
-            },
-            {
-              "max": 64.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 85.76,
-            "allocated": 37.36,
-            "value": 0.46,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 42.88,
-              "allocated": 15.36
-            },
-            {
-              "socket_number": 0,
-              "max": 42.88,
-              "allocated": 22.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "0"
-                },
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
-          }
-        },
-        "normalized_load": 0.11,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 64
-          },
-          "disk": {
-            "max": 454,
-            "used": 32
-          },
-          "memory": {
-            "max": 24018,
-            "used": 16384
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/00000000-0000-0000-0000-00259088BDE2",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2600 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.68,
-        "memory_size": "16400 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-26",
+      "logs_url": "/logs?node=3334E689-B7D6-E111-A174-001E673AFC08",
+      "uri": "/nodes/3334E689-B7D6-E111-A174-001E673AFC08",
       "scheduler_mark": null,
       "node_trust_report_id": null,
-      "vm_info": {
-        "count": 32,
-        "max": null
-      },
-      "logs_url": "/logs?node=00000000-0000-0000-0000-00259088BDE2",
-      "tier": null,
       "cloud_services": [
         {
-          "last_update": "2014-11-15T00:26:37+0000",
+          "last_update": "2015-03-12T08:21:36+0000",
           "health": 1,
           "name": "compute",
           "operational": 2
         }
       ],
-      "id": "00000000-0000-0000-0000-00259088BDE2",
-      "vm_ids": [
-        "abf396b0-86d2-46ed-b3e7-f9cf5f7a1e03",
-        "5636ef6d-6afa-49cd-8bfb-74a744f44a78",
-        "f43c7bef-1c1c-45c2-b35f-1408677cb6d3",
-        "af306737-40ad-4b2a-aa50-d5c109bf44cc",
-        "779647b4-8da1-40b4-b58b-5dcbd0a7c391",
-        "718cbbe9-a4b5-4eaa-8d9a-16cd874e1ffe",
-        "18f5d533-b815-4e56-bd4c-d4c34704deb4",
-        "0b42659c-5b70-4421-ab83-7e61d9f2f8fc",
-        "9edbe645-c495-43ad-a1df-4e301f367d9e",
-        "45a75e05-a275-4939-aaee-4de742e7225e",
-        "faff1256-d420-46d1-bb8f-8be1ba38e9d2",
-        "b0b3d4f4-1477-4811-96e5-8c0e9e7e34fc",
-        "1a546e06-f016-4e5b-a267-69210b6a01b6",
-        "6804e8b6-7345-4bf4-9948-c0083e71e544",
-        "f65f69bb-83e6-4795-b55f-f076eb6d6d87",
-        "62e63d51-6321-42eb-832d-63e541a66b8a",
-        "e49363e6-b864-4400-a80d-469318873dad",
-        "98b0f699-c201-4957-a218-c69820222fa5",
-        "5b4aaa39-1fc5-4169-a444-7cb3ef633ab6",
-        "1d31e647-7c56-4d74-8636-ce302be17514",
-        "264c5622-90d5-47aa-b8e9-dc8fc0ba8c99",
-        "04590d11-7dc3-4fcb-b257-9a5b147f68e5",
-        "6d020cc0-f6e6-401d-baae-0c96420b1649",
-        "437f9e69-8a27-4bee-9042-54813f67da35",
-        "7907a1a7-b824-47aa-9690-7a4db073cc5b",
-        "33e717f9-c235-4d28-837b-7d9249ecbc38",
-        "3336152d-31bd-4450-8595-7c7e98d94e2b",
-        "e8e8f2f1-4dd6-4609-9353-e56dead90140",
-        "751bdf2d-9acf-4fef-8d4b-fae27e5bd73b",
-        "360e5c30-824f-488f-a5d0-e1c4ca4db4bb",
-        "c5e4df1d-68be-4e10-a11c-d378abf78098",
-        "c2a61150-7e48-4ab2-95f7-e53ee86f9867"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 1.71,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 2.07,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.34,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.19,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 1.72,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 4,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "1E2822B0-8BD7-E111-A174-001E673AF544",
-        "mac": "d6:e1:d4:88:24:42",
-        "ip_address": "192.168.0.21",
-        "cloud_id": "1E2822B0-8BD7-E111-A174-001E673AF544"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "uri": "/api/v2/nodes/1E2822B0-8BD7-E111-A174-001E673AF544",
-        "logs": "/api/v2/logs?node=1E2822B0-8BD7-E111-A174-001E673AF544"
-      },
+      "id": "3334E689-B7D6-E111-A174-001E673AFC08",
       "utilization": {
-        "ipc": 0.23,
+        "ipc": 0.34,
         "network": null,
         "cpu_frequency_current": null,
         "cpu": {
-          "iowait": 9503.79,
-          "idle": 62053119.36,
-          "total": 0.0,
+          "iowait": 0.10351966873706003,
+          "idle": 2367.67,
+          "total": 2400.0,
           "steal": 0.0,
-          "guest": 766969.26
+          "guest": 0.0
         },
         "io": null,
         "memory": {
-          "used": "5404448 KB",
+          "used": "2731056 KB",
           "ksm_sharing": "0 KB"
         },
         "scu": {
           "cgroups": [
             {
-              "max": 4.74,
-              "type": "os",
-              "value": 0.16,
-              "min": 0.0
+              "compute": 0.0,
+              "min": 1.04,
+              "max": 1.04,
+              "misc": 0.43,
+              "io_wait": 0.0,
+              "type": "os"
             }
           ],
           "system": {
-            "max": 75.84,
-            "allocated": 4.74,
-            "value": 0.16,
-            "min": 0.0
+            "compute": 0.0,
+            "min": 0.0,
+            "max": 25.01,
+            "misc": 0.43,
+            "allocated": 25.01,
+            "io_wait": 0.0
           },
           "sockets": [
             {
               "socket_number": 1,
-              "max": null,
-              "allocated": null
+              "max": 12.51,
+              "allocated": 1.04
             },
             {
               "socket_number": 0,
-              "max": null,
-              "allocated": null
+              "max": 12.51,
+              "allocated": 0.0
             }
           ]
         },
@@ -2236,7 +319,7 @@
             {
               "used": [
                 {
-                  "core": "1",
+                  "core": "11",
                   "socket": "1"
                 }
               ],
@@ -2244,108 +327,530 @@
             }
           ],
           "system": {
-            "max": 16,
+            "max": 12,
             "used": 1
+          }
+        },
+        "normalized_load": 0.01,
+        "cloud": {
+          "vcpus": {
+            "max": 384,
+            "used": 0
+          },
+          "disk": {
+            "max": 372,
+            "used": 0
+          },
+          "memory": {
+            "max": 36010,
+            "used": 0
+          }
+        }
+      },
+      "graphite_url": "/render?target=stats.SAM",
+      "capabilities": {
+        "hyperthreading": true,
+        "cores_per_socket": 6,
+        "cpu_frequency": "2200 MHz",
+        "turbo_mode": true,
+        "max_scu_per_core": 1.04,
+        "memory_size": "24576 MB",
+        "cpu_type": "",
+        "cache_size": "15360 kB",
+        "sockets": 2
+      },
+      "vm_info": {
+        "count": 0,
+        "max": null
+      },
+      "vm_ids": [],
+      "status": {
+        "uptime": null,
+        "locked": false,
+        "ipmi": true,
+        "agent_version": "1.1.7.511",
+        "operational": 2,
+        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
+        "health": 1,
+        "mode": 4,
+        "health_details": {
+          "ipmi": {
+            "sensors_in_error": null,
+            "health": 1
+          },
+          "paging": {
+            "health": 1,
+            "value": 0.0
+          },
+          "io_wait": {
+            "health": 1,
+            "value": 0.02
+          },
+          "swap": {
+            "health": 1,
+            "value": 0.0
+          }
+        },
+        "trust_status": {
+          "trust_details": {
+            "bios": 3,
+            "vmm": 3
+          },
+          "trust_config_details": {
+            "tagent_installed": 1,
+            "tagent_actual_version": "",
+            "tagent_running": 1,
+            "tpm_enabled": 2,
+            "tagent_paired": 1,
+            "tagent_expected_version": "2.0.4",
+            "tboot_measured_launch": 1
+          },
+          "trust_config": 1,
+          "trust": 3
+        },
+        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
+      },
+      "trust_node_id": null,
+      "contention": {
+        "llc": {
+          "cgroups": [
+            {
+              "max": 50.0,
+              "label": "LOW",
+              "type": "os",
+              "value": 0.84,
+              "min": 0.0
+            },
+            {
+              "max": 50.0,
+              "label": "LOW",
+              "type": "vm",
+              "value": 0.0,
+              "min": 0.0
+            }
+          ],
+          "sockets": [
+            {
+              "socket_number": 1,
+              "max": 50.0,
+              "label": "MEDIUM",
+              "value": 9.23,
+              "min": 0.0
+            },
+            {
+              "socket_number": 0,
+              "max": 50.0,
+              "label": "LOW",
+              "value": 1.2,
+              "min": 0.0
+            }
+          ],
+          "system": {
+            "max": 50.0,
+            "label": "LOW",
+            "value": 1.21,
+            "min": 0.0
+          }
+        }
+      },
+      "user_ids": [],
+      "aggregate_ids": [
+        "artur-test"
+      ],
+      "tier": null,
+      "tenant_ids": [],
+      "ids": {
+        "platform_id": "3334E689-B7D6-E111-A174-001E673AFC08",
+        "mac": "0e:8b:a3:f3:f0:4d",
+        "ip_address": "192.168.0.3",
+        "cloud_id": "3334E689-B7D6-E111-A174-001E673AFC08"
+      },
+      "node_name": "node-15"
+    },
+    {
+      "scheduler_persistent": false,
+      "links": {
+        "logs": "/api/v3/logs?node=B7E1E400-0000-E400-E1B7-000000E4E1B7",
+        "vms": "/api/v3/vms?ids=268ec324-b338-4e78-89c2-01665a67ea8d",
+        "uri": "/api/v3/nodes/B7E1E400-0000-E400-E1B7-000000E4E1B7"
+      },
+      "logs_url": "/logs?node=B7E1E400-0000-E400-E1B7-000000E4E1B7",
+      "uri": "/nodes/B7E1E400-0000-E400-E1B7-000000E4E1B7",
+      "scheduler_mark": null,
+      "node_trust_report_id": null,
+      "cloud_services": [
+        {
+          "last_update": "2015-03-12T08:21:41+0000",
+          "health": 1,
+          "name": "compute",
+          "operational": 2
+        }
+      ],
+      "id": "B7E1E400-0000-E400-E1B7-000000E4E1B7",
+      "utilization": {
+        "ipc": 0.54,
+        "network": null,
+        "cpu_frequency_current": null,
+        "cpu": {
+          "iowait": 0.30415854959411204,
+          "idle": 3177.13,
+          "total": 3200.0,
+          "steal": 0.0,
+          "guest": 0.0
+        },
+        "io": null,
+        "memory": {
+          "used": "3399460 KB",
+          "ksm_sharing": "0 KB"
+        },
+        "scu": {
+          "cgroups": [
+            {
+              "compute": 0.0,
+              "min": 1.28,
+              "max": 1.28,
+              "misc": 0.21,
+              "io_wait": 0.0,
+              "type": "os"
+            },
+            {
+              "max": 1.0,
+              "io_wait": 0.0,
+              "type": "vm",
+              "misc": 0.0,
+              "min": 0.0
+            }
+          ],
+          "system": {
+            "compute": 0.0,
+            "min": 0.0,
+            "max": 40.92,
+            "misc": 0.21,
+            "allocated": 40.92,
+            "io_wait": 0.0
+          },
+          "sockets": [
+            {
+              "socket_number": 1,
+              "max": 20.46,
+              "allocated": 1.28
+            },
+            {
+              "socket_number": 0,
+              "max": 20.46,
+              "allocated": 0.0
+            }
+          ]
+        },
+        "cores": {
+          "cgroups": [
+            {
+              "used": [
+                {
+                  "core": "-1",
+                  "socket": "1"
+                }
+              ],
+              "type": "os"
+            },
+            {
+              "used": [
+                {
+                  "core": "-1",
+                  "socket": "1"
+                }
+              ],
+              "type": "vm"
+            }
+          ],
+          "system": {
+            "max": 16,
+            "used": 0
+          }
+        },
+        "normalized_load": 0.01,
+        "cloud": {
+          "vcpus": {
+            "max": 512,
+            "used": 2
+          },
+          "disk": {
+            "max": 372,
+            "used": 5
+          },
+          "memory": {
+            "max": 54262,
+            "used": 1024
+          }
+        }
+      },
+      "graphite_url": "/render?target=stats.SAM",
+      "capabilities": {
+        "hyperthreading": true,
+        "cores_per_socket": 8,
+        "cpu_frequency": "2700 MHz",
+        "turbo_mode": true,
+        "max_scu_per_core": 1.28,
+        "memory_size": "36864 MB",
+        "cpu_type": "",
+        "cache_size": "20480 kB",
+        "sockets": 2
+      },
+      "vm_info": {
+        "count": 1,
+        "max": null
+      },
+      "vm_ids": [
+        "268ec324-b338-4e78-89c2-01665a67ea8d"
+      ],
+      "status": {
+        "uptime": null,
+        "locked": false,
+        "ipmi": true,
+        "agent_version": "1.1.7.511",
+        "operational": 2,
+        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled.  IPMI is reporting sensors in error.",
+        "health": 1,
+        "mode": 3,
+        "health_details": {
+          "ipmi": {
+            "sensors_in_error": [
+              "SSB Temp"
+            ],
+            "health": 1
+          },
+          "paging": {
+            "health": 1,
+            "value": 0.0
+          },
+          "io_wait": {
+            "health": 1,
+            "value": 0.02
+          },
+          "swap": {
+            "health": 1,
+            "value": 0.0
+          }
+        },
+        "trust_status": {
+          "trust_details": {
+            "bios": 3,
+            "vmm": 3
+          },
+          "trust_config_details": {
+            "tagent_installed": 2,
+            "tagent_actual_version": "2.0.4",
+            "tagent_running": 2,
+            "tpm_enabled": 2,
+            "tagent_paired": 1,
+            "tagent_expected_version": "2.0.4",
+            "tboot_measured_launch": 2
+          },
+          "trust_config": 1,
+          "trust": 3
+        },
+        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled.  IPMI is reporting sensors in error."
+      },
+      "trust_node_id": null,
+      "contention": {
+        "llc": {
+          "cgroups": [
+            {
+              "max": 50.0,
+              "label": "LOW",
+              "type": "os",
+              "value": 0.92,
+              "min": 0.0
+            },
+            {
+              "max": 50.0,
+              "label": "LOW",
+              "type": "vm",
+              "value": 0.0,
+              "min": 0.0
+            }
+          ],
+          "sockets": [
+            {
+              "socket_number": 1,
+              "max": 50.0,
+              "label": "LOW",
+              "value": 1.26,
+              "min": 0.0
+            },
+            {
+              "socket_number": 0,
+              "max": 50.0,
+              "label": "MEDIUM",
+              "value": 4.83,
+              "min": 0.0
+            }
+          ],
+          "system": {
+            "max": 50.0,
+            "label": "LOW",
+            "value": 1.28,
+            "min": 0.0
+          }
+        }
+      },
+      "user_ids": [
+        "ef66eccc78fe40a8824b2e4f04cdd338"
+      ],
+      "aggregate_ids": [
+        "st-test-trust"
+      ],
+      "tier": null,
+      "tenant_ids": [
+        "74fb550455354c6b8815d6b0f5d3ac6f"
+      ],
+      "ids": {
+        "platform_id": "B7E1E400-0000-E400-E1B7-000000E4E1B7",
+        "mac": "fe:3f:a6:ee:a0:48",
+        "ip_address": "192.168.0.9",
+        "cloud_id": "B7E1E400-0000-E400-E1B7-000000E4E1B7"
+      },
+      "node_name": "node-18"
+    },
+    {
+      "scheduler_persistent": false,
+      "links": {
+        "uri": "/api/v3/nodes/8040FFE2-B48B-E311-903B-001E674D11E1",
+        "logs": "/api/v3/logs?node=8040FFE2-B48B-E311-903B-001E674D11E1"
+      },
+      "logs_url": "/logs?node=8040FFE2-B48B-E311-903B-001E674D11E1",
+      "uri": "/nodes/8040FFE2-B48B-E311-903B-001E674D11E1",
+      "scheduler_mark": null,
+      "node_trust_report_id": null,
+      "cloud_services": [
+        {
+          "last_update": "2015-03-12T08:21:35+0000",
+          "health": 1,
+          "name": "compute",
+          "operational": 2
+        }
+      ],
+      "id": "8040FFE2-B48B-E311-903B-001E674D11E1",
+      "utilization": {
+        "ipc": 0.82,
+        "network": null,
+        "cpu_frequency_current": null,
+        "cpu": {
+          "iowait": 0.4100470997206804,
+          "idle": 781.06,
+          "total": 800.0,
+          "steal": 0.0,
+          "guest": 0.0
+        },
+        "io": null,
+        "memory": {
+          "used": "2185504 KB",
+          "ksm_sharing": "0 KB"
+        },
+        "scu": {
+          "cgroups": [
+            {
+              "compute": 0.0,
+              "min": 5.66,
+              "max": 5.66,
+              "misc": 3.84,
+              "io_wait": 0.0,
+              "type": "os"
+            }
+          ],
+          "system": {
+            "compute": 0.0,
+            "min": 0.0,
+            "max": 45.26,
+            "misc": 3.84,
+            "allocated": 45.26,
+            "io_wait": 0.0
+          },
+          "sockets": [
+            {
+              "socket_number": 0,
+              "max": 45.26,
+              "allocated": 5.66
+            }
+          ]
+        },
+        "cores": {
+          "cgroups": [
+            {
+              "used": [
+                {
+                  "core": "-1",
+                  "socket": "0"
+                }
+              ],
+              "type": "os"
+            }
+          ],
+          "system": {
+            "max": 4,
+            "used": 0
           }
         },
         "normalized_load": 0.03,
         "cloud": {
           "vcpus": {
-            "max": 512,
+            "max": 128,
             "used": 0
           },
           "disk": {
-            "max": 454,
+            "max": 372,
             "used": 0
           },
           "memory": {
-            "max": 48175,
+            "max": 23980,
             "used": 0
           }
         }
       },
       "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/1E2822B0-8BD7-E111-A174-001E673AF544",
       "capabilities": {
         "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2300 MHz",
+        "cores_per_socket": 4,
+        "cpu_frequency": "3500 MHz",
         "turbo_mode": true,
-        "max_scu_per_core": 2.37,
-        "memory_size": "32768 MB",
+        "max_scu_per_core": 5.66,
+        "memory_size": "16384 MB",
         "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
+        "cache_size": "8192 kB",
+        "sockets": 1
       },
-      "node_name": "node-39",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
       "vm_info": {
         "count": 0,
         "max": null
       },
-      "logs_url": "/logs?node=1E2822B0-8BD7-E111-A174-001E673AF544",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:34+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "1E2822B0-8BD7-E111-A174-001E673AF544",
       "vm_ids": [],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 0.85,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.64,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 0.85,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
       "status": {
         "uptime": null,
         "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
+        "ipmi": true,
+        "agent_version": "1.1.7.511",
+        "operational": 2,
+        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
+        "health": 1,
+        "mode": 3,
+        "health_details": {
+          "ipmi": {
+            "sensors_in_error": null,
+            "health": 1
+          },
+          "paging": {
+            "health": 1,
+            "value": 0.0
+          },
+          "io_wait": {
+            "health": 1,
+            "value": 0.03
+          },
+          "swap": {
+            "health": 1,
+            "value": 0.03
+          }
+        },
         "trust_status": {
           "trust_details": {
             "bios": 3,
@@ -2353,621 +858,136 @@
           },
           "trust_config_details": {
             "tagent_installed": 1,
-            "tagent_actual_version": null,
+            "tagent_actual_version": "",
             "tagent_running": 1,
             "tpm_enabled": 1,
             "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
+            "tagent_expected_version": "2.0.4",
             "tboot_measured_launch": 1
           },
           "trust_config": 1,
           "trust": 3
         },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
         "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
       },
       "trust_node_id": null,
-      "ids": {
-        "platform_id": "88888888-8887-8888-8888-878888888888",
-        "mac": "ba:e6:cd:6c:c8:4b",
-        "ip_address": "192.168.0.11",
-        "cloud_id": "88888888-8887-8888-8888-878888888888"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=88888888-8887-8888-8888-878888888888",
-        "vms": "/api/v2/vms?ids=e79764bb-6592-49e6-984d-f96a99c96efe,114e760b-c926-4be4-85ed-8d8f8d61c405,318b78dd-0e37-4a0e-9634-beba1c8006de,54dca3e7-74eb-4b2d-befd-ba739f07d833,ea676918-937e-4908-b294-7401584963e7,e51bec19-0d84-4e37-9e13-8516df7e28b8,9aa28f9e-4f30-44a5-9443-e304d44ff435,e79a8870-7ed1-4778-bc39-fd783b087400,e597920f-3354-41e2-82c9-900d7d16a5b1,dbc3c536-41d8-4285-ae0c-dd1e1320dd83,1c443095-3c7e-4355-8b6c-acc8c6caf840,b3f47b7b-4293-45c4-9bb2-46b1e62e00c1,5170e1c3-c7b4-4fb4-b55c-89c4dca83886,17a81a2c-c2d3-4305-93de-a909cddfa783,6bfbbc6d-d016-4872-8947-7075d179c212,91b9e7c1-e1c0-4a6a-a765-98c7d988cff9,ad05fb03-dec3-4d01-9ec4-ce5e887391d6,c73c9b22-36be-4fee-920a-13f368791b4c,b6a62778-9b7d-48e0-a753-d2987146817e,ecdd1e9d-6aab-415b-88fe-b950cbd07e5d,1aff80c1-694d-4e8e-9d39-56bb0e24be85,3b65f8b9-292b-4565-81ff-084a6a3e5341,3300ad64-88e8-4c66-a0cb-9b5bc7005071,c53cb82e-a0a3-4021-bd30-82bc36ef568c,db91237e-567a-404e-80f2-c8cec31226fc,6297e4f9-37ca-4b21-9182-d3384e7c2705,f0654d41-74d8-4c80-9c9e-291a73a9f95b,46b3b38e-ed8e-4fe7-bb96-055f4808af1e,3eca0a62-a9dc-40c8-adec-cf83ad9e0760,571bb46e-849b-4be2-85b2-fbb496caf622,0647840e-28a4-48da-bf75-f967043b7a66,46d8fbc8-6161-4f8a-88c3-48aa6b9e3745,26a92bea-86d7-4605-9ae5-0e2da5d72f73,1529a15e-3146-4ab4-af4b-8d61cdc1a673,9e4e86f6-4efd-4263-99d6-7f7f4d1e47cc,6dc70d20-44fb-44f7-8552-23bbccecce30,f7a539d2-32b7-4ff9-9dd2-0c486774e009,709d573d-37b1-4dc6-bb5f-7e71c104f38e,4e13aa3b-6680-434f-962f-dcecf5f4450e,710eb15d-9f59-4233-8277-688ea1a9ad2c,a3830e8f-5310-46af-b140-82f1419b8413,71863e2b-6ae9-4328-b5ff-2ca4fbab77d7,44dbeea0-0615-4750-9350-8c47987cd1a7,5f69112b-6139-44a0-a4e9-191c3ac8f05f,697288db-dc94-4348-8b3b-7799afaa396e,d3b1d07f-1d08-4e3f-b89b-31db4d979d55,27221c86-1d54-4658-abe5-8a9900dbecc9,9b42aac4-7e23-491c-a094-704b0b08e0f8,b56708e1-ec9d-48d4-9cfe-6c93b9c55bb6,8fbeef19-b119-4bb8-9719-ca1bab08b90a,fed8787e-95d1-43e9-8e74-7390cc5b5519,5ddb9e46-2626-4237-bb1b-5c3645439121,ce449375-8e22-4d96-8795-de105573f8cd,b7356c34-7b07-4377-a136-267e26b89dea,0ed5060e-3ef8-4745-be84-9d0c25ed7236,fca46d43-2828-4618-a187-a1755aeef6e8,a99f2a86-8d9e-40f8-8775-d2875459813e,e90fc85f-05bb-4e60-aadf-ed85ed9ab0c7,233c7893-1851-412d-be91-a52709ef1003,081abf48-598b-4260-8995-2b25fd761311,95c79d8f-ad30-46fa-985a-331d6caae355,4d845a1e-511d-4f32-97d4-4c3f31c3f6ec",
-        "uri": "/api/v2/nodes/88888888-8887-8888-8888-878888888888"
-      },
-      "utilization": {
-        "ipc": 0.68,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 10217.92,
-          "idle": 110475306.23,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 3346.0
-        },
-        "io": null,
-        "memory": {
-          "used": "6739424 KB",
-          "ksm_sharing": "3100120 KB"
-        },
-        "scu": {
+      "contention": {
+        "llc": {
           "cgroups": [
             {
-              "max": 5.47,
+              "max": 50.0,
+              "label": "LOW",
               "type": "os",
-              "value": 1.64,
+              "value": 1.49,
               "min": 0.0
             },
             {
-              "max": 102.0,
+              "max": 50.0,
+              "label": "LOW",
               "type": "vm",
               "value": 0.0,
               "min": 0.0
             }
           ],
-          "system": {
-            "max": 196.92,
-            "allocated": 56.47,
-            "value": 1.64,
-            "min": 0.0
-          },
           "sockets": [
             {
-              "socket_number": 1,
-              "max": 98.46,
-              "allocated": 18.47
-            },
-            {
               "socket_number": 0,
-              "max": 98.46,
-              "allocated": 38.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                },
-                {
-                  "core": "-1",
-                  "socket": "0"
-                }
-              ],
-              "type": "vm"
+              "max": 50.0,
+              "label": "LOW",
+              "value": null,
+              "min": 0.0
             }
           ],
           "system": {
-            "max": 36,
-            "used": null
-          }
-        },
-        "normalized_load": 0.12,
-        "cloud": {
-          "vcpus": {
-            "max": 1152,
-            "used": 124
-          },
-          "disk": {
-            "max": 454,
-            "used": 62
-          },
-          "memory": {
-            "max": 48064,
-            "used": 31744
+            "max": 50.0,
+            "label": "LOW",
+            "value": null,
+            "min": 0.0
           }
         }
       },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/88888888-8887-8888-8888-878888888888",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 18,
-        "cpu_frequency": "2300 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.73,
-        "memory_size": "32768 MB",
-        "cpu_type": "",
-        "cache_size": "46080 kB",
-        "sockets": 2
+      "user_ids": [],
+      "aggregate_ids": [
+        "ACP-hosts"
+      ],
+      "tier": null,
+      "tenant_ids": [],
+      "ids": {
+        "platform_id": "8040FFE2-B48B-E311-903B-001E674D11E1",
+        "mac": "5a:f0:62:0b:c6:47",
+        "ip_address": "192.168.0.4",
+        "cloud_id": "8040FFE2-B48B-E311-903B-001E674D11E1"
       },
-      "node_name": "node-27",
+      "node_name": "node-16"
+    },
+    {
+      "scheduler_persistent": false,
+      "links": {
+        "logs": "/api/v3/logs?node=80EBACF7-568B-E311-8DAC-001E674D112D",
+        "vms": "/api/v3/vms?ids=4c6fa0ca-172c-4a9e-b09e-8384b2c2158f",
+        "uri": "/api/v3/nodes/80EBACF7-568B-E311-8DAC-001E674D112D"
+      },
+      "logs_url": "/logs?node=80EBACF7-568B-E311-8DAC-001E674D112D",
+      "uri": "/nodes/80EBACF7-568B-E311-8DAC-001E674D112D",
       "scheduler_mark": null,
       "node_trust_report_id": null,
-      "vm_info": {
-        "count": 62,
-        "max": null
-      },
-      "logs_url": "/logs?node=88888888-8887-8888-8888-878888888888",
-      "tier": null,
       "cloud_services": [
         {
-          "last_update": "2014-11-15T00:26:34+0000",
+          "last_update": "2015-03-12T08:21:39+0000",
           "health": 1,
           "name": "compute",
           "operational": 2
         }
       ],
-      "id": "88888888-8887-8888-8888-878888888888",
-      "vm_ids": [
-        "e79764bb-6592-49e6-984d-f96a99c96efe",
-        "114e760b-c926-4be4-85ed-8d8f8d61c405",
-        "318b78dd-0e37-4a0e-9634-beba1c8006de",
-        "54dca3e7-74eb-4b2d-befd-ba739f07d833",
-        "ea676918-937e-4908-b294-7401584963e7",
-        "e51bec19-0d84-4e37-9e13-8516df7e28b8",
-        "9aa28f9e-4f30-44a5-9443-e304d44ff435",
-        "e79a8870-7ed1-4778-bc39-fd783b087400",
-        "e597920f-3354-41e2-82c9-900d7d16a5b1",
-        "dbc3c536-41d8-4285-ae0c-dd1e1320dd83",
-        "1c443095-3c7e-4355-8b6c-acc8c6caf840",
-        "b3f47b7b-4293-45c4-9bb2-46b1e62e00c1",
-        "5170e1c3-c7b4-4fb4-b55c-89c4dca83886",
-        "17a81a2c-c2d3-4305-93de-a909cddfa783",
-        "6bfbbc6d-d016-4872-8947-7075d179c212",
-        "91b9e7c1-e1c0-4a6a-a765-98c7d988cff9",
-        "ad05fb03-dec3-4d01-9ec4-ce5e887391d6",
-        "c73c9b22-36be-4fee-920a-13f368791b4c",
-        "b6a62778-9b7d-48e0-a753-d2987146817e",
-        "ecdd1e9d-6aab-415b-88fe-b950cbd07e5d",
-        "1aff80c1-694d-4e8e-9d39-56bb0e24be85",
-        "3b65f8b9-292b-4565-81ff-084a6a3e5341",
-        "3300ad64-88e8-4c66-a0cb-9b5bc7005071",
-        "c53cb82e-a0a3-4021-bd30-82bc36ef568c",
-        "db91237e-567a-404e-80f2-c8cec31226fc",
-        "6297e4f9-37ca-4b21-9182-d3384e7c2705",
-        "f0654d41-74d8-4c80-9c9e-291a73a9f95b",
-        "46b3b38e-ed8e-4fe7-bb96-055f4808af1e",
-        "3eca0a62-a9dc-40c8-adec-cf83ad9e0760",
-        "571bb46e-849b-4be2-85b2-fbb496caf622",
-        "0647840e-28a4-48da-bf75-f967043b7a66",
-        "46d8fbc8-6161-4f8a-88c3-48aa6b9e3745",
-        "26a92bea-86d7-4605-9ae5-0e2da5d72f73",
-        "1529a15e-3146-4ab4-af4b-8d61cdc1a673",
-        "9e4e86f6-4efd-4263-99d6-7f7f4d1e47cc",
-        "6dc70d20-44fb-44f7-8552-23bbccecce30",
-        "f7a539d2-32b7-4ff9-9dd2-0c486774e009",
-        "709d573d-37b1-4dc6-bb5f-7e71c104f38e",
-        "4e13aa3b-6680-434f-962f-dcecf5f4450e",
-        "710eb15d-9f59-4233-8277-688ea1a9ad2c",
-        "a3830e8f-5310-46af-b140-82f1419b8413",
-        "71863e2b-6ae9-4328-b5ff-2ca4fbab77d7",
-        "44dbeea0-0615-4750-9350-8c47987cd1a7",
-        "5f69112b-6139-44a0-a4e9-191c3ac8f05f",
-        "697288db-dc94-4348-8b3b-7799afaa396e",
-        "d3b1d07f-1d08-4e3f-b89b-31db4d979d55",
-        "27221c86-1d54-4658-abe5-8a9900dbecc9",
-        "9b42aac4-7e23-491c-a094-704b0b08e0f8",
-        "b56708e1-ec9d-48d4-9cfe-6c93b9c55bb6",
-        "8fbeef19-b119-4bb8-9719-ca1bab08b90a",
-        "fed8787e-95d1-43e9-8e74-7390cc5b5519",
-        "5ddb9e46-2626-4237-bb1b-5c3645439121",
-        "ce449375-8e22-4d96-8795-de105573f8cd",
-        "b7356c34-7b07-4377-a136-267e26b89dea",
-        "0ed5060e-3ef8-4745-be84-9d0c25ed7236",
-        "fca46d43-2828-4618-a187-a1755aeef6e8",
-        "a99f2a86-8d9e-40f8-8775-d2875459813e",
-        "e90fc85f-05bb-4e60-aadf-ed85ed9ab0c7",
-        "233c7893-1851-412d-be91-a52709ef1003",
-        "081abf48-598b-4260-8995-2b25fd761311",
-        "95c79d8f-ad30-46fa-985a-331d6caae355",
-        "4d845a1e-511d-4f32-97d4-4c3f31c3f6ec"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 0.78,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 1.59,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.78,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.31,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 0.79,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "91FC966D-2CD7-E111-A174-001E673AF878",
-        "mac": "1e:1a:69:ac:b7:45",
-        "ip_address": "192.168.0.18",
-        "cloud_id": "91FC966D-2CD7-E111-A174-001E673AF878"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=91FC966D-2CD7-E111-A174-001E673AF878",
-        "vms": "/api/v2/vms?ids=d9dec808-e3a0-4048-906f-c1c43e98aafc,232cd247-f8af-46f8-861a-3f3ea14b9e44,287c0ba8-aa34-4b8b-b599-03aa5c1f3c77,8bde7ead-b65c-4707-917c-affcbaab2d11,5d439cdc-19ae-4262-9c79-f81af8282244,6d7665ab-fe5c-4322-87d2-66cf2d8e4271,71778835-b9e1-4512-881f-b650761f28f4,1a0d30eb-9309-4eb1-b2e9-a36c7c112042,3355f4b1-211b-4c9b-83e0-63a5a60eaa17,c6070d2a-faee-4738-8570-a5b854f2c426,d65222fc-5448-4f36-9b7c-1c5a28519d26,3363d2e8-cce1-434a-a827-9d0e950cb4b4,564e8925-6007-453a-9ea6-25dcc6dd6961,5782d3e1-2a7f-4cf2-8a32-7bd716a77e9a,aaa8da35-78d5-4e73-a08a-bbe4eeff2870,0d885ef4-e781-4351-884e-da2a68ff30be,214ead0a-0f5a-4de0-86cf-eceaf8fa6c80,c8a746ff-f750-4fd9-ba9b-dab5782888c0,8ce26874-14f6-4897-996e-d8029116fef5,a6fca038-ce17-4f52-92b0-792de2f13b36,7e4d852d-31b2-45b0-854b-d90b1c87a0f8,59a933c5-bb95-40ea-99e2-cbf5937ea3dd,7318d1ab-e693-47db-ad4b-77d183d36d4e,41282e05-9cf0-4ba4-9b58-d692636b7e49,15a5dd5e-fa0b-4d9d-a209-cf731935f6c7,f8fee653-59d4-49b2-9a77-e36985c9719d,45a3a8af-af87-446a-b05e-37a9f3cfa934,05bc707c-8934-48ea-846b-793fc633042c,943c0261-d0bd-4e49-913a-499f570ae02d,9b35f487-3b5f-4cdc-b487-fc7807454089,314d9722-9b53-4276-8bc6-008ec4c4dffd,23275e5e-782f-412d-8c50-c8f49345ae20,4481fcfe-5651-40e9-9ce4-f521c76cfd15,84122763-cd42-4e47-96b8-fcef2f8d2e68,5dd585d7-9b84-4ca6-8ab5-026caa7acb8d,2727a4cf-d52f-4618-95fd-5a433b44f6fd,e14f2aad-b577-482c-b9a0-c179e5ba171c,a8c4a979-a5bc-416f-9490-1f101b1f6664,967bac4b-a757-4656-8c43-3871932ea36c,06b7922c-a216-4452-b23e-4b1e274b5b47,1bcf54b0-8471-4c98-95c5-2b23520850f5,716a0666-6772-4dc9-a345-debe20e7b5b1,dab2f0f9-f2f4-4cb8-9751-e75d0ddd2585,6d92676b-d4a9-45d2-8b53-a0b6f00fb412,701b6616-e64b-4d0d-933a-f3e21a455484,ba788892-9cb6-46f7-b96d-84bd98652ad9,72894e89-c150-4ca6-8847-b9b0572e46d5,8e0c0df1-0c45-448a-8e1e-032fc10275b9,92925d1b-5c9d-48f0-9484-d52a0feb7b79,8ad46d17-bba3-431e-9e3a-998c16e55218,f58b6906-2f83-4239-aa14-75463c25cab4,f053f9f7-0ec7-4d36-a0cc-95a11ec968ac,b12ffa3b-b17a-4220-84e7-c71e54cefebb,75871a46-e06e-4960-b0d5-f0bf7016ba16,3ad36da3-a5f5-4969-bbf2-ba03b23d1b00,791d12a1-1fd9-4dde-bfbe-8bc0117094d3",
-        "uri": "/api/v2/nodes/91FC966D-2CD7-E111-A174-001E673AF878"
-      },
+      "id": "80EBACF7-568B-E311-8DAC-001E674D112D",
       "utilization": {
-        "ipc": 0.67,
+        "ipc": 0.77,
         "network": null,
         "cpu_frequency_current": null,
         "cpu": {
-          "iowait": 9627.76,
-          "idle": 62659053.02,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 2504.53
-        },
-        "io": null,
-        "memory": {
-          "used": "6196672 KB",
-          "ksm_sharing": "3277092 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 4.74,
-              "type": "os",
-              "value": 0.6,
-              "min": 0.0
-            },
-            {
-              "max": 106.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 75.84,
-            "allocated": 57.74,
-            "value": 0.6,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 37.92,
-              "allocated": 20.74
-            },
-            {
-              "socket_number": 0,
-              "max": 37.92,
-              "allocated": 37.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                },
-                {
-                  "core": "-1",
-                  "socket": "0"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 16,
-            "used": null
-          }
-        },
-        "normalized_load": 0.16,
-        "cloud": {
-          "vcpus": {
-            "max": 512,
-            "used": 112
-          },
-          "disk": {
-            "max": 454,
-            "used": 56
-          },
-          "memory": {
-            "max": 48123,
-            "used": 28672
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/91FC966D-2CD7-E111-A174-001E673AF878",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "2300 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.37,
-        "memory_size": "32768 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 2
-      },
-      "node_name": "node-37",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 56,
-        "max": null
-      },
-      "logs_url": "/logs?node=91FC966D-2CD7-E111-A174-001E673AF878",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:30+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "91FC966D-2CD7-E111-A174-001E673AF878",
-      "vm_ids": [
-        "d9dec808-e3a0-4048-906f-c1c43e98aafc",
-        "232cd247-f8af-46f8-861a-3f3ea14b9e44",
-        "287c0ba8-aa34-4b8b-b599-03aa5c1f3c77",
-        "8bde7ead-b65c-4707-917c-affcbaab2d11",
-        "5d439cdc-19ae-4262-9c79-f81af8282244",
-        "6d7665ab-fe5c-4322-87d2-66cf2d8e4271",
-        "71778835-b9e1-4512-881f-b650761f28f4",
-        "1a0d30eb-9309-4eb1-b2e9-a36c7c112042",
-        "3355f4b1-211b-4c9b-83e0-63a5a60eaa17",
-        "c6070d2a-faee-4738-8570-a5b854f2c426",
-        "d65222fc-5448-4f36-9b7c-1c5a28519d26",
-        "3363d2e8-cce1-434a-a827-9d0e950cb4b4",
-        "564e8925-6007-453a-9ea6-25dcc6dd6961",
-        "5782d3e1-2a7f-4cf2-8a32-7bd716a77e9a",
-        "aaa8da35-78d5-4e73-a08a-bbe4eeff2870",
-        "0d885ef4-e781-4351-884e-da2a68ff30be",
-        "214ead0a-0f5a-4de0-86cf-eceaf8fa6c80",
-        "c8a746ff-f750-4fd9-ba9b-dab5782888c0",
-        "8ce26874-14f6-4897-996e-d8029116fef5",
-        "a6fca038-ce17-4f52-92b0-792de2f13b36",
-        "7e4d852d-31b2-45b0-854b-d90b1c87a0f8",
-        "59a933c5-bb95-40ea-99e2-cbf5937ea3dd",
-        "7318d1ab-e693-47db-ad4b-77d183d36d4e",
-        "41282e05-9cf0-4ba4-9b58-d692636b7e49",
-        "15a5dd5e-fa0b-4d9d-a209-cf731935f6c7",
-        "f8fee653-59d4-49b2-9a77-e36985c9719d",
-        "45a3a8af-af87-446a-b05e-37a9f3cfa934",
-        "05bc707c-8934-48ea-846b-793fc633042c",
-        "943c0261-d0bd-4e49-913a-499f570ae02d",
-        "9b35f487-3b5f-4cdc-b487-fc7807454089",
-        "314d9722-9b53-4276-8bc6-008ec4c4dffd",
-        "23275e5e-782f-412d-8c50-c8f49345ae20",
-        "4481fcfe-5651-40e9-9ce4-f521c76cfd15",
-        "84122763-cd42-4e47-96b8-fcef2f8d2e68",
-        "5dd585d7-9b84-4ca6-8ab5-026caa7acb8d",
-        "2727a4cf-d52f-4618-95fd-5a433b44f6fd",
-        "e14f2aad-b577-482c-b9a0-c179e5ba171c",
-        "a8c4a979-a5bc-416f-9490-1f101b1f6664",
-        "967bac4b-a757-4656-8c43-3871932ea36c",
-        "06b7922c-a216-4452-b23e-4b1e274b5b47",
-        "1bcf54b0-8471-4c98-95c5-2b23520850f5",
-        "716a0666-6772-4dc9-a345-debe20e7b5b1",
-        "dab2f0f9-f2f4-4cb8-9751-e75d0ddd2585",
-        "6d92676b-d4a9-45d2-8b53-a0b6f00fb412",
-        "701b6616-e64b-4d0d-933a-f3e21a455484",
-        "ba788892-9cb6-46f7-b96d-84bd98652ad9",
-        "72894e89-c150-4ca6-8847-b9b0572e46d5",
-        "8e0c0df1-0c45-448a-8e1e-032fc10275b9",
-        "92925d1b-5c9d-48f0-9484-d52a0feb7b79",
-        "8ad46d17-bba3-431e-9e3a-998c16e55218",
-        "f58b6906-2f83-4239-aa14-75463c25cab4",
-        "f053f9f7-0ec7-4d36-a0cc-95a11ec968ac",
-        "b12ffa3b-b17a-4220-84e7-c71e54cefebb",
-        "75871a46-e06e-4960-b0d5-f0bf7016ba16",
-        "3ad36da3-a5f5-4969-bbf2-ba03b23d1b00",
-        "791d12a1-1fd9-4dde-bfbe-8bc0117094d3"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 2.17,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "vm",
-              "value": 3.12,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.63,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.17,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 2.19,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 1,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 4,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "00000000-0000-0000-0000-002590A349CE",
-        "mac": "1a:1a:44:84:2b:41",
-        "ip_address": "192.168.0.3",
-        "cloud_id": "00000000-0000-0000-0000-002590A349CE"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "uri": "/api/v2/nodes/00000000-0000-0000-0000-002590A349CE",
-        "logs": "/api/v2/logs?node=00000000-0000-0000-0000-002590A349CE"
-      },
-      "utilization": {
-        "ipc": 0.23,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 24506.5,
-          "idle": 29678358.49,
-          "total": 0.0,
+          "iowait": 0.40761659537356204,
+          "idle": 755.53,
+          "total": 800.0,
           "steal": 0.0,
           "guest": 0.0
         },
         "io": null,
         "memory": {
-          "used": "2413704 KB",
-          "ksm_sharing": "0 KB"
+          "used": "1799044 KB",
+          "ksm_sharing": "21332 KB"
         },
         "scu": {
           "cgroups": [
             {
-              "max": 6.39,
-              "type": "os",
-              "value": 0.41,
-              "min": 0.0
+              "compute": 0.08,
+              "min": 0.5,
+              "max": 1.0,
+              "misc": 0.09,
+              "io_wait": 0.0,
+              "type": "vm"
+            },
+            {
+              "compute": 0.0,
+              "min": 1.81,
+              "max": 1.81,
+              "misc": 0.0,
+              "io_wait": 0.0,
+              "type": "os"
             }
           ],
           "system": {
-            "max": 51.12,
-            "allocated": 6.39,
-            "value": 0.41,
-            "min": 0.0
+            "compute": 0.08,
+            "min": 0.0,
+            "max": 14.49,
+            "misc": 0.09,
+            "allocated": 14.49,
+            "io_wait": 0.0
           },
           "sockets": [
             {
               "socket_number": 0,
-              "max": null,
-              "allocated": null
+              "max": 14.49,
+              "allocated": 2.31
             }
           ]
         },
@@ -2976,773 +996,161 @@
             {
               "used": [
                 {
-                  "core": "1",
+                  "core": "-1",
                   "socket": "0"
                 }
               ],
               "type": "os"
+            },
+            {
+              "used": [
+                {
+                  "core": "-1",
+                  "socket": "0"
+                }
+              ],
+              "type": "vm"
             }
           ],
           "system": {
-            "max": 8,
-            "used": 1
+            "max": 4,
+            "used": 0
           }
         },
         "normalized_load": 0.07,
         "cloud": {
           "vcpus": {
-            "max": 256,
-            "used": 0
+            "max": 128,
+            "used": 1
           },
           "disk": {
-            "max": 454,
-            "used": 0
+            "max": 372,
+            "used": 5
           },
           "memory": {
-            "max": 36124,
-            "used": 0
+            "max": 23977,
+            "used": 512
           }
         }
       },
       "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/00000000-0000-0000-0000-002590A349CE",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 8,
-        "cpu_frequency": "3100 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 3.19,
-        "memory_size": "24592 MB",
-        "cpu_type": "",
-        "cache_size": "20480 kB",
-        "sockets": 1
-      },
-      "node_name": "node-23",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 0,
-        "max": null
-      },
-      "logs_url": "/logs?node=00000000-0000-0000-0000-002590A349CE",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:32+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "00000000-0000-0000-0000-002590A349CE",
-      "vm_ids": [],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 0.62,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.83,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 0.62,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "30343536-3138-584D-5134-313530304E50",
-        "mac": "1a:02:dd:a4:ec:46",
-        "ip_address": "192.168.0.17",
-        "cloud_id": "30343536-3138-584D-5134-313530304E50"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=30343536-3138-584D-5134-313530304E50",
-        "vms": "/api/v2/vms?ids=1c9db298-2a3f-49dc-b91f-ef55f1f1742d,2e01a083-1151-4bd3-9dd8-d1b3513eeeb0,46404bf3-9d4c-46f7-b71d-344abef2b6d6,a6d555c6-7ed5-47cf-aff9-2189802cbbe3,e30e12ef-f4b5-4c50-a53f-5a5eb7037a9c,97d43848-f042-42af-9a14-3da8e6382969,e4741906-66e8-46e4-b97c-9d937442b5f5,b6835553-b4de-464b-8134-0946ca7fccd2,ec4dee10-67eb-4d66-8d88-7fa7bb9bd7da,3b123025-4449-4c80-b296-ab987b3662b3,bb58c165-448b-4655-bb3a-41f947e22f0c,8afbaeda-daed-4fa3-8ea3-829b4789b990,6f4990ab-95c8-4d22-854a-eab8a1b59df1,078a7634-ca44-46c0-bef2-163709279101,d16a5623-a8b1-4d7c-a318-2a1cb8c5d2b4,53e60fcf-c64d-44e7-b6cd-81bf791b307a,b80fe9a2-10a0-46d3-a2a7-ea26361e0d72,c4a7b3ba-f41b-4cdf-a60f-64f2c960455f,01adf52a-1ee2-496b-b5cb-73b43f06a5fe,28f3077e-c7a8-4b4d-8b31-b200c20d5ba7,8a23078d-0aa4-43b7-ab99-d588e4851585,b1096f4b-5d68-4cc9-bda0-b693fc313ef3,a7605ed7-c122-4336-a003-303f065694f5,2b83d347-e4b8-4dc1-9e44-0f8e06545923,bd6e3344-5a84-4790-9bdd-50753dc64206,979dc5b9-a433-4b9f-b51a-10cd47d84001,33d0a47d-8ac1-4d37-821c-cc5b797fbe94,edd791d4-5ba9-472c-9200-84e416fa84ac,f975e156-b94a-46b7-9653-dc72ba6522d1,846eaa30-e9c3-4824-bcd3-f8e6bf3b038d,98e2b916-104d-4f82-8e23-64038bd4c029,fddd293c-bb75-4af9-9fcc-4e64e749d9b5,b1b91f77-b991-406f-aa3e-03af9ee4564d,4d59fb8d-4c43-4618-94cb-92e9b9cc7d45,c2fa5337-b187-4d48-b20a-12e1b441fa21,0bd6cc04-9a55-4aab-8215-693191dbf7dd,cf2cee29-d084-4021-a6b8-7cec192dea86,32027d31-fcff-4739-94ca-50e21b49ad75,6fef0108-8d59-4913-980d-b6ce0500c1c4,6bb20f53-38f8-4bd0-ae18-05decb1d051b,bf135cfd-b3c4-4939-947e-442ba1238779,e97a0201-b7b8-4281-9355-f7d5a91763bd,fb8079d4-787b-4fc4-9331-664958b92c3d,23196619-bfe7-4480-b4c1-bb42fa567a26,14fcc133-a548-43b2-9d83-e7b122bc4798,855907e4-a77a-4f60-9a06-a32697d17def,071ebd55-65c2-4cbf-90fd-2ccd26c90e5d,d2a19aa3-71f9-4bfc-a4b1-170d5b8d79ba,b29631ed-ca06-42ac-acd4-47178fb2e677,33613650-0e43-49e9-b817-b43c79fdadf7,c32e654b-65e4-409d-86f6-362ffc6c938b,9ac54703-9894-4e9d-bcac-883905c86ac3,837d7de8-5554-4968-87d4-c78fedf94e33,d08254a0-84ad-416d-96dd-83f08733444a,8bffe725-7766-4a8a-bed0-a89aef50377d",
-        "uri": "/api/v2/nodes/30343536-3138-584D-5134-313530304E50"
-      },
-      "utilization": {
-        "ipc": 0.67,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 128.85,
-          "idle": 46564976.48,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 1487.96
-        },
-        "io": null,
-        "memory": {
-          "used": "8230532 KB",
-          "ksm_sharing": "3367264 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 5.15,
-              "type": "os",
-              "value": 0.65,
-              "min": 0.0
-            },
-            {
-              "max": 110.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 61.8,
-            "allocated": 60.15,
-            "value": 0.65,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 30.9,
-              "allocated": 30.15
-            },
-            {
-              "socket_number": 0,
-              "max": 30.9,
-              "allocated": 30.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                },
-                {
-                  "core": "-1",
-                  "socket": "0"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 12,
-            "used": null
-          }
-        },
-        "normalized_load": 0.21,
-        "cloud": {
-          "vcpus": {
-            "max": 384,
-            "used": 112
-          },
-          "disk": {
-            "max": 454,
-            "used": 56
-          },
-          "memory": {
-            "max": 48198,
-            "used": 28672
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/30343536-3138-584D-5134-313530304E50",
-      "capabilities": {
-        "hyperthreading": true,
-        "cores_per_socket": 6,
-        "cpu_frequency": "2500 MHz",
-        "turbo_mode": true,
-        "max_scu_per_core": 2.58,
-        "memory_size": "32768 MB",
-        "cpu_type": "",
-        "cache_size": "15360 kB",
-        "sockets": 2
-      },
-      "node_name": "node-33",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 55,
-        "max": null
-      },
-      "logs_url": "/logs?node=30343536-3138-584D-5134-313530304E50",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:30+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "30343536-3138-584D-5134-313530304E50",
-      "vm_ids": [
-        "1c9db298-2a3f-49dc-b91f-ef55f1f1742d",
-        "2e01a083-1151-4bd3-9dd8-d1b3513eeeb0",
-        "46404bf3-9d4c-46f7-b71d-344abef2b6d6",
-        "a6d555c6-7ed5-47cf-aff9-2189802cbbe3",
-        "e30e12ef-f4b5-4c50-a53f-5a5eb7037a9c",
-        "97d43848-f042-42af-9a14-3da8e6382969",
-        "e4741906-66e8-46e4-b97c-9d937442b5f5",
-        "b6835553-b4de-464b-8134-0946ca7fccd2",
-        "ec4dee10-67eb-4d66-8d88-7fa7bb9bd7da",
-        "3b123025-4449-4c80-b296-ab987b3662b3",
-        "bb58c165-448b-4655-bb3a-41f947e22f0c",
-        "8afbaeda-daed-4fa3-8ea3-829b4789b990",
-        "6f4990ab-95c8-4d22-854a-eab8a1b59df1",
-        "078a7634-ca44-46c0-bef2-163709279101",
-        "d16a5623-a8b1-4d7c-a318-2a1cb8c5d2b4",
-        "53e60fcf-c64d-44e7-b6cd-81bf791b307a",
-        "b80fe9a2-10a0-46d3-a2a7-ea26361e0d72",
-        "c4a7b3ba-f41b-4cdf-a60f-64f2c960455f",
-        "01adf52a-1ee2-496b-b5cb-73b43f06a5fe",
-        "28f3077e-c7a8-4b4d-8b31-b200c20d5ba7",
-        "8a23078d-0aa4-43b7-ab99-d588e4851585",
-        "b1096f4b-5d68-4cc9-bda0-b693fc313ef3",
-        "a7605ed7-c122-4336-a003-303f065694f5",
-        "2b83d347-e4b8-4dc1-9e44-0f8e06545923",
-        "bd6e3344-5a84-4790-9bdd-50753dc64206",
-        "979dc5b9-a433-4b9f-b51a-10cd47d84001",
-        "33d0a47d-8ac1-4d37-821c-cc5b797fbe94",
-        "edd791d4-5ba9-472c-9200-84e416fa84ac",
-        "f975e156-b94a-46b7-9653-dc72ba6522d1",
-        "846eaa30-e9c3-4824-bcd3-f8e6bf3b038d",
-        "98e2b916-104d-4f82-8e23-64038bd4c029",
-        "fddd293c-bb75-4af9-9fcc-4e64e749d9b5",
-        "b1b91f77-b991-406f-aa3e-03af9ee4564d",
-        "4d59fb8d-4c43-4618-94cb-92e9b9cc7d45",
-        "c2fa5337-b187-4d48-b20a-12e1b441fa21",
-        "0bd6cc04-9a55-4aab-8215-693191dbf7dd",
-        "cf2cee29-d084-4021-a6b8-7cec192dea86",
-        "32027d31-fcff-4739-94ca-50e21b49ad75",
-        "6fef0108-8d59-4913-980d-b6ce0500c1c4",
-        "6bb20f53-38f8-4bd0-ae18-05decb1d051b",
-        "bf135cfd-b3c4-4939-947e-442ba1238779",
-        "e97a0201-b7b8-4281-9355-f7d5a91763bd",
-        "fb8079d4-787b-4fc4-9331-664958b92c3d",
-        "23196619-bfe7-4480-b4c1-bb42fa567a26",
-        "14fcc133-a548-43b2-9d83-e7b122bc4798",
-        "855907e4-a77a-4f60-9a06-a32697d17def",
-        "071ebd55-65c2-4cbf-90fd-2ccd26c90e5d",
-        "d2a19aa3-71f9-4bfc-a4b1-170d5b8d79ba",
-        "b29631ed-ca06-42ac-acd4-47178fb2e677",
-        "33613650-0e43-49e9-b817-b43c79fdadf7",
-        "c32e654b-65e4-409d-86f6-362ffc6c938b",
-        "9ac54703-9894-4e9d-bcac-883905c86ac3",
-        "837d7de8-5554-4968-87d4-c78fedf94e33",
-        "d08254a0-84ad-416d-96dd-83f08733444a",
-        "8bffe725-7766-4a8a-bed0-a89aef50377d"
-      ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "LOW",
-              "type": "os",
-              "value": 2.29,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "vm",
-              "value": 3.56,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.1,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.19,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "LOW",
-            "value": 2.31,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
-      "status": {
-        "uptime": null,
-        "locked": false,
-        "agent_version": "1.1.6.40",
-        "ipmi_sensors_in_error": null,
-        "trust_status": {
-          "trust_details": {
-            "bios": 3,
-            "vmm": 3
-          },
-          "trust_config_details": {
-            "tagent_installed": 1,
-            "tagent_actual_version": null,
-            "tagent_running": 1,
-            "tpm_enabled": 2,
-            "tagent_paired": 1,
-            "tagent_expected_version": "1.2.4",
-            "tboot_measured_launch": 1
-          },
-          "trust_config": 1,
-          "trust": 3
-        },
-        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
-        "health": 1,
-        "mode": 3,
-        "ipmi": true,
-        "operational": 2,
-        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
-      },
-      "trust_node_id": null,
-      "ids": {
-        "platform_id": "00000000-0000-0000-0000-002590C98BCC",
-        "mac": "0e:1b:b1:ff:f3:4b",
-        "ip_address": "192.168.0.15",
-        "cloud_id": "00000000-0000-0000-0000-002590C98BCC"
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "logs": "/api/v2/logs?node=00000000-0000-0000-0000-002590C98BCC",
-        "vms": "/api/v2/vms?ids=d732e546-b808-4478-9a34-f8115dff33b4,8cd39f35-42a4-4f23-a061-714d7cb0c30a,2e78d0cd-93c2-436b-bc48-5c6567b4d9b1,c52cbd29-cefe-4d33-ada5-d13170e9c1ab,0167baec-d707-43ce-955d-9eb567f3655a,a3034fc3-6c08-489a-a21e-33e12886c2db,72d246b1-340c-43dc-af77-ca84a357b67f,336fed86-805c-433d-948f-b7fb76971034,d216804d-eb82-46da-8b18-e4e5e439b781,26afa2cc-c9d6-4fe0-9dff-d69bdc4be2bd,053f9e36-81bd-42b6-8b82-170a21b6f40b,dcd54691-2e4d-41cf-8b08-7bcbf086614d,ceeb2918-f647-445e-9c30-de87e79b91d6,597199d8-ebca-4e46-aa36-5ce711308e30,fb679aa7-c1a4-4c91-bb63-b7ad627e8aaf,88447bb1-7239-42f9-b454-f21ff9265a15,3b9371ba-1044-48a6-8ca3-f4c0cac2db3b,c2202a92-d503-483a-ab93-98e05a398b87,56b335e6-d492-40e4-8435-a479b1e0a575,1e494db5-df4c-4477-bca5-2dd899f618da,acdc2d59-b1a0-4c36-8306-fb913b33aec2,06b3d936-e165-4309-8f45-bea2b8117f9a,76992c3d-12e0-4e1b-86a8-bf9fc67a4ee6,e9ec1a73-9494-4d71-83cf-01d00176e7d2,712ef57a-bc17-42dc-bc74-3a7b52bf78af,49099161-843c-4938-b982-6cfa2ba2f974,dc01f3c5-6f4b-4163-88d1-28bb3c12ae19,aeb66457-aacf-497a-9ee9-ac4cb29f437a,a8a3cb46-53c1-4e54-a084-4bba121d5dee,30a3885b-6f90-45e2-b67d-792b811aefb1,e60dba30-a480-4885-b1f3-7a150557c281,7d54c893-8451-4dc3-9782-86ad6e01a26b,2f8f0746-7617-4975-aed4-e49fc45fb174,91b513f2-486b-49b8-9cd8-7e1a9ed879f8,4362f794-d48d-4d77-ae54-a82232e11648,203ee340-fda5-41c2-b864-0fc2297695e9,73c47153-153a-468b-b553-61062b5fe1a9,d353001e-f2e4-4ee1-9593-fdb828f26d0f,3d7527e2-3f86-4666-b880-5772cb5ed92a,9c840234-0ed2-4fef-9f4d-45d6bfe99811,95fc01ff-4293-4540-ae54-bff8b6d480a9,3bdabf2e-b328-4cbb-97ee-24a29e461221,38ef4229-7e0c-4759-a91f-594ec601450a,7215dbc1-5f51-47f3-83d0-f32d8a31a769,71f52679-f756-4998-8a61-a75fdc421494,7aa9ecf1-58f1-4034-9ad7-c799409c8275,d02d8986-dcbd-4858-a2a6-0cd3ce8ae444",
-        "uri": "/api/v2/nodes/00000000-0000-0000-0000-002590C98BCC"
-      },
-      "utilization": {
-        "ipc": 0.63,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 6180.27,
-          "idle": 31343765.15,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 2085.76
-        },
-        "io": null,
-        "memory": {
-          "used": "6679752 KB",
-          "ksm_sharing": "2903672 KB"
-        },
-        "scu": {
-          "cgroups": [
-            {
-              "max": 6.78,
-              "type": "os",
-              "value": 0.52,
-              "min": 0.0
-            },
-            {
-              "max": 94.0,
-              "type": "vm",
-              "value": 0.0,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 54.24,
-            "allocated": 53.78,
-            "value": 0.52,
-            "min": 0.0
-          },
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 27.12,
-              "allocated": 26.78
-            },
-            {
-              "socket_number": 0,
-              "max": 27.12,
-              "allocated": 27.0
-            }
-          ]
-        },
-        "cores": {
-          "cgroups": [
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                }
-              ],
-              "type": "os"
-            },
-            {
-              "used": [
-                {
-                  "core": "-1",
-                  "socket": "1"
-                },
-                {
-                  "core": "-1",
-                  "socket": "0"
-                }
-              ],
-              "type": "vm"
-            }
-          ],
-          "system": {
-            "max": 8,
-            "used": null
-          }
-        },
-        "normalized_load": 0.24,
-        "cloud": {
-          "vcpus": {
-            "max": 256,
-            "used": 94
-          },
-          "disk": {
-            "max": 454,
-            "used": 47
-          },
-          "memory": {
-            "max": 48211,
-            "used": 24064
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/00000000-0000-0000-0000-002590C98BCC",
       "capabilities": {
         "hyperthreading": true,
         "cores_per_socket": 4,
-        "cpu_frequency": "3300 MHz",
+        "cpu_frequency": "3500 MHz",
         "turbo_mode": true,
-        "max_scu_per_core": 3.39,
-        "memory_size": "32784 MB",
+        "max_scu_per_core": 1.81,
+        "memory_size": "16384 MB",
         "cpu_type": "",
-        "cache_size": "10240 kB",
-        "sockets": 2
+        "cache_size": "8192 kB",
+        "sockets": 1
       },
-      "node_name": "node-31",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
       "vm_info": {
-        "count": 47,
+        "count": 1,
         "max": null
       },
-      "logs_url": "/logs?node=00000000-0000-0000-0000-002590C98BCC",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-11-15T00:26:29+0000",
-          "health": 1,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "00000000-0000-0000-0000-002590C98BCC",
       "vm_ids": [
-        "d732e546-b808-4478-9a34-f8115dff33b4",
-        "8cd39f35-42a4-4f23-a061-714d7cb0c30a",
-        "2e78d0cd-93c2-436b-bc48-5c6567b4d9b1",
-        "c52cbd29-cefe-4d33-ada5-d13170e9c1ab",
-        "0167baec-d707-43ce-955d-9eb567f3655a",
-        "a3034fc3-6c08-489a-a21e-33e12886c2db",
-        "72d246b1-340c-43dc-af77-ca84a357b67f",
-        "336fed86-805c-433d-948f-b7fb76971034",
-        "d216804d-eb82-46da-8b18-e4e5e439b781",
-        "26afa2cc-c9d6-4fe0-9dff-d69bdc4be2bd",
-        "053f9e36-81bd-42b6-8b82-170a21b6f40b",
-        "dcd54691-2e4d-41cf-8b08-7bcbf086614d",
-        "ceeb2918-f647-445e-9c30-de87e79b91d6",
-        "597199d8-ebca-4e46-aa36-5ce711308e30",
-        "fb679aa7-c1a4-4c91-bb63-b7ad627e8aaf",
-        "88447bb1-7239-42f9-b454-f21ff9265a15",
-        "3b9371ba-1044-48a6-8ca3-f4c0cac2db3b",
-        "c2202a92-d503-483a-ab93-98e05a398b87",
-        "56b335e6-d492-40e4-8435-a479b1e0a575",
-        "1e494db5-df4c-4477-bca5-2dd899f618da",
-        "acdc2d59-b1a0-4c36-8306-fb913b33aec2",
-        "06b3d936-e165-4309-8f45-bea2b8117f9a",
-        "76992c3d-12e0-4e1b-86a8-bf9fc67a4ee6",
-        "e9ec1a73-9494-4d71-83cf-01d00176e7d2",
-        "712ef57a-bc17-42dc-bc74-3a7b52bf78af",
-        "49099161-843c-4938-b982-6cfa2ba2f974",
-        "dc01f3c5-6f4b-4163-88d1-28bb3c12ae19",
-        "aeb66457-aacf-497a-9ee9-ac4cb29f437a",
-        "a8a3cb46-53c1-4e54-a084-4bba121d5dee",
-        "30a3885b-6f90-45e2-b67d-792b811aefb1",
-        "e60dba30-a480-4885-b1f3-7a150557c281",
-        "7d54c893-8451-4dc3-9782-86ad6e01a26b",
-        "2f8f0746-7617-4975-aed4-e49fc45fb174",
-        "91b513f2-486b-49b8-9cd8-7e1a9ed879f8",
-        "4362f794-d48d-4d77-ae54-a82232e11648",
-        "203ee340-fda5-41c2-b864-0fc2297695e9",
-        "73c47153-153a-468b-b553-61062b5fe1a9",
-        "d353001e-f2e4-4ee1-9593-fdb828f26d0f",
-        "3d7527e2-3f86-4666-b880-5772cb5ed92a",
-        "9c840234-0ed2-4fef-9f4d-45d6bfe99811",
-        "95fc01ff-4293-4540-ae54-bff8b6d480a9",
-        "3bdabf2e-b328-4cbb-97ee-24a29e461221",
-        "38ef4229-7e0c-4759-a91f-594ec601450a",
-        "7215dbc1-5f51-47f3-83d0-f32d8a31a769",
-        "71f52679-f756-4998-8a61-a75fdc421494",
-        "7aa9ecf1-58f1-4034-9ad7-c799409c8275",
-        "d02d8986-dcbd-4858-a2a6-0cd3ce8ae444"
+        "4c6fa0ca-172c-4a9e-b09e-8384b2c2158f"
       ],
-      "contention": {
-        "llc": {
-          "cgroups": [
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "os",
-              "value": 3.06,
-              "min": 0.0
-            },
-            {
-              "max": 50.0,
-              "label": "MEDIUM",
-              "type": "vm",
-              "value": 5.12,
-              "min": 0.0
-            }
-          ],
-          "sockets": [
-            {
-              "socket_number": 1,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 1.36,
-              "min": 0.0
-            },
-            {
-              "socket_number": 0,
-              "max": 50.0,
-              "label": "LOW",
-              "value": 0.15,
-              "min": 0.0
-            }
-          ],
-          "system": {
-            "max": 50.0,
-            "label": "MEDIUM",
-            "value": 3.1,
-            "min": 0.0
-          }
-        }
-      }
-    },
-    {
       "status": {
         "uptime": null,
         "locked": false,
-        "agent_version": null,
-        "ipmi_sensors_in_error": null,
+        "ipmi": true,
+        "agent_version": "1.1.7.511",
+        "operational": 2,
+        "long_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. ",
+        "health": 1,
+        "mode": 3,
+        "health_details": {
+          "ipmi": {
+            "sensors_in_error": null,
+            "health": 1
+          },
+          "paging": {
+            "health": 1,
+            "value": 0.0
+          },
+          "io_wait": {
+            "health": 1,
+            "value": 0.06
+          },
+          "swap": {
+            "health": 1,
+            "value": 0.0
+          }
+        },
         "trust_status": {
           "trust_details": {
             "bios": 3,
             "vmm": 3
           },
           "trust_config_details": {
-            "tagent_installed": 0,
-            "tagent_actual_version": null,
-            "tagent_running": 0,
-            "tpm_enabled": 0,
-            "tagent_paired": 0,
-            "tagent_expected_version": null,
-            "tboot_measured_launch": 0
+            "tagent_installed": 1,
+            "tagent_actual_version": "",
+            "tagent_running": 1,
+            "tpm_enabled": 1,
+            "tagent_paired": 1,
+            "tagent_expected_version": "2.0.4",
+            "tboot_measured_launch": 1
           },
-          "trust_config": 0,
+          "trust_config": 1,
           "trust": 3
         },
-        "long_message": "Compute service is not reporting. SAA agent is not installed. Compute service is enabled. ",
-        "health": 4,
-        "mode": 0,
-        "ipmi": false,
-        "operational": 0,
-        "short_message": "Compute service is not reporting. "
+        "short_message": "SAA agent is installed. Node is powered on. SAA Agent reports success. Compute service is working. Compute service is enabled. "
       },
       "trust_node_id": null,
-      "ids": {
-        "platform_id": null,
-        "mac": null,
-        "ip_address": null,
-        "cloud_id": null
-      },
-      "scheduler_persistent": false,
-      "links": {
-        "uri": "/api/v2/nodes/38A5CDBA-B7E4-5F85-A353-B9874B65BFA0",
-        "logs": "/api/v2/logs?node=38A5CDBA-B7E4-5F85-A353-B9874B65BFA0"
-      },
-      "utilization": {
-        "ipc": null,
-        "network": null,
-        "cpu_frequency_current": null,
-        "cpu": {
-          "iowait": 0.0,
-          "idle": 0.0,
-          "total": 0.0,
-          "steal": 0.0,
-          "guest": 0.0
-        },
-        "io": null,
-        "memory": {
-          "used": null,
-          "ksm_sharing": null
-        },
-        "scu": {
-          "cgroups": [],
-          "system": {
-            "max": null,
-            "allocated": null,
-            "value": null,
-            "min": 0.0
-          },
-          "sockets": []
-        },
-        "cores": {
-          "cgroups": [],
-          "system": {
-            "max": null,
-            "used": null
-          }
-        },
-        "normalized_load": null,
-        "cloud": {
-          "vcpus": {
-            "max": 256,
-            "used": 0
-          },
-          "disk": {
-            "max": 454,
-            "used": 0
-          },
-          "memory": {
-            "max": 36124,
-            "used": 0
-          }
-        }
-      },
-      "graphite_url": "/render?target=stats.SAM",
-      "aggregate_ids": [],
-      "uri": "/nodes/38A5CDBA-B7E4-5F85-A353-B9874B65BFA0",
-      "capabilities": {
-        "hyperthreading": null,
-        "cores_per_socket": null,
-        "cpu_frequency": null,
-        "turbo_mode": null,
-        "max_scu_per_core": null,
-        "memory_size": null,
-        "cpu_type": null,
-        "cache_size": null,
-        "sockets": null
-      },
-      "node_name": "node-22",
-      "scheduler_mark": null,
-      "node_trust_report_id": null,
-      "vm_info": {
-        "count": 0,
-        "max": null
-      },
-      "logs_url": "/logs?node=None",
-      "tier": null,
-      "cloud_services": [
-        {
-          "last_update": "2014-10-24T22:57:20+0000",
-          "health": 4,
-          "name": "compute",
-          "operational": 2
-        }
-      ],
-      "id": "38A5CDBA-B7E4-5F85-A353-B9874B65BFA0",
-      "vm_ids": [],
       "contention": {
         "llc": {
-          "cgroups": [],
-          "sockets": [],
+          "cgroups": [
+            {
+              "max": 50.0,
+              "label": "LOW",
+              "type": "os",
+              "value": 1.31,
+              "min": 0.0
+            },
+            {
+              "max": 50.0,
+              "label": "MEDIUM",
+              "type": "vm",
+              "value": 13.03,
+              "min": 0.0
+            }
+          ],
+          "sockets": [
+            {
+              "socket_number": 0,
+              "max": 50.0,
+              "label": "LOW",
+              "value": null,
+              "min": 0.0
+            }
+          ],
           "system": {
             "max": 50.0,
             "label": "LOW",
-            "value": 0.0,
+            "value": null,
             "min": 0.0
           }
         }
-      }
+      },
+      "user_ids": [
+        "ef66eccc78fe40a8824b2e4f04cdd338"
+      ],
+      "aggregate_ids": [
+        "SAA"
+      ],
+      "tier": null,
+      "tenant_ids": [
+        "74fb550455354c6b8815d6b0f5d3ac6f"
+      ],
+      "ids": {
+        "platform_id": "80EBACF7-568B-E311-8DAC-001E674D112D",
+        "mac": "ca:53:ad:cb:17:43",
+        "ip_address": "192.168.0.5",
+        "cloud_id": "80EBACF7-568B-E311-8DAC-001E674D112D"
+      },
+      "node_name": "node-17"
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "tenants": [
+    {
+      "node_ids": null,
+      "enabled": true,
+      "name": "services",
+      "vm_ids": null,
+      "id": "52724a1e1b274a0bb9fb471fc5cec64d"
+    },
+    {
+      "node_ids": [
+        "B7E1E400-0000-E400-E1B7-000000E4E1B7",
+        "B7E1E400-0000-E400-E1B7-000000E4E1B7"
+      ],
+      "enabled": true,
+      "name": "admin",
+      "vm_ids": [
+        "a196af0b-3f2f-48b0-bcda-1b2c27480ed3",
+        "1b6dd918-f403-4284-b53a-f43d8f5f4c6d",
+        "adbe5077-6f41-49a7-9f74-b45aec68c961",
+        "7f0f969b-cab2-48da-a010-9fa52ace6cda",
+        "ab2976d9-ab87-49f4-aaee-bc3202c1f53c",
+        "978d2831-3058-4a20-b99b-03ea79bc5de7"
+      ],
+      "id": "74fb550455354c6b8815d6b0f5d3ac6f"
+    }
+  ]
+}

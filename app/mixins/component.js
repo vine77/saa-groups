@@ -90,7 +90,7 @@ export default Ember.Mixin.create({
   // Compute SCU allocation floor/ceiling computed properties
   hasCompute: function() {
     return !Ember.isEmpty(this.get('utilizationTotal')) && !Ember.isEmpty(this.get('suFloor'));
-  }.property('utilization.scu_total', 'suFloor'),
+  }.property('utilizationTotal', 'suFloor'),
   suFloor: Ember.computed.alias('capabilities.scu_allocated_min'),
   suCeiling: Ember.computed.alias('capabilities.scu_allocated_max'),
   isRange: function() {
@@ -127,10 +127,10 @@ export default Ember.Mixin.create({
     return message;
   }.property('isRange', 'utilizationTotal', 'utilizationCurrent', 'utilizationBurst', 'capabilities.scu_allocated_min', 'capabilities.scu_allocated_max'),
   utilizationBurst: function() {
-    var burst = this.get('utilization.scu_burst');
+    var burst =  this.get('capabilities.scu_allocated_min') - this.get('scuTotal');
     if (Ember.isEmpty(burst)) burst = 0;
-    return burst;
-  }.property('utilization.scu_burst'),
+    return burst.toFixed(2);
+  }.property('capabilities.scu_allocated_min', 'scuTotal'),
   utilizationTotal: function() {
     var utilization = this.get('utilization.scu_total');
     if (Ember.isEmpty(utilization)) utilization = this.get('utilization.scu_max');

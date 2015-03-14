@@ -1,4 +1,4 @@
-// Constants for trust
+// Constants for node mode
 export default {
   NOT_SAA: 0,
   MONITORED: 1,

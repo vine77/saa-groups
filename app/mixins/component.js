@@ -9,6 +9,7 @@ import slaToString from '../utils/convert/sla-to-string';
 import slaToIconClass from '../utils/convert/sla-to-icon-class';
 import trustToString from '../utils/convert/trust-to-string';
 import trustToIconClass from '../utils/convert/trust-to-icon-class';
+import stripFloat from '../utils/strip-float';
 
 export default Ember.Mixin.create({
   healthMessage: function() {
@@ -70,7 +71,7 @@ export default Ember.Mixin.create({
   cpuFrequency: function() {
     var cpuFrequency = parseInt(this.get('node.capabilities.cpu_frequency')) / 1000;
     if (isNaN(cpuFrequency)) return Strings.NA;
-    return cpuFrequency.toFixed(2) + ' GHz';
+    return stripFloat(cpuFrequency) + ' GHz';
   }.property('node.capabilities.cpu_frequency'),
   hasCores: Ember.computed.notEmpty('capabilities.cores'),
   cores: function() {
@@ -109,34 +110,34 @@ export default Ember.Mixin.create({
   allocationMessage: function() {
     var message = '';
     if (this.get('isRange')) {
-      message += 'Utilization: ' + this.get('utilizationTotal').toFixed(2) + '\n';
+      message += 'Utilization: ' + stripFloat(this.get('utilizationTotal')) + '\n';
       if (this.get('utilizationBurst')) {
-        message += 'Non-bursting: ' + this.get('utilizationCurrent').toFixed(2) + '\n';
+        message += 'Non-bursting: ' + stripFloat(this.get('utilizationCurrent')) + '\n';
         message += 'Bursting: ' + this.get('utilizationBurst').toFixed(2) + '\n';
       }
-      message += 'Min Allocated: ' + this.get('capabilities.scu_allocated_min').toFixed(2) + '\n';
-      message += 'Burst Allocated: ' + this.get('capabilities.scu_allocated_max').toFixed(2);
+      message += 'Min Allocated: ' + stripFloat(this.get('capabilities.scu_allocated_min')) + '\n';
+      message += 'Burst Allocated: ' + stripFloat(this.get('capabilities.scu_allocated_max'));
     } else {
-      message += 'Utilization: ' + this.get('utilizationTotal').toFixed(2) + '\n';
+      message += 'Utilization: ' + stripFloat(this.get('utilizationTotal')) + '\n';
       if (this.get('utilizationBurst')) {
-        message += 'Non-bursting: ' + this.get('utilizationCurrent').toFixed(2) + '\n';
-        message += 'Bursting: ' + this.get('utilizationBurst').toFixed(2) + '\n';
+        message += 'Non-bursting: ' + stripFloat(this.get('utilizationCurrent')) + '\n';
+        message += 'Bursting: ' + stripFloat(this.get('utilizationBurst')) + '\n';
       }
-      message += 'Allocated: ' + this.get('capabilities.scu_allocated_min').toFixed(2);
+      message += 'Allocated: ' + stripFloat(this.get('capabilities.scu_allocated_min'));
     }
     return message;
   }.property('isRange', 'utilizationTotal', 'utilizationCurrent', 'utilizationBurst', 'capabilities.scu_allocated_min', 'capabilities.scu_allocated_max'),
   utilizationBurst: function() {
     var burst =  this.get('capabilities.scu_allocated_min') - this.get('scuTotal');
     if (Ember.isEmpty(burst)) burst = 0;
-    return burst.toFixed(2);
+    return stripFloat(burst);
   }.property('capabilities.scu_allocated_min', 'scuTotal'),
   utilizationTotal: function() {
-    var utilization = this.get('utilization.scu_total');
+    var utilization = this.get('scuTotal');
     if (Ember.isEmpty(utilization)) utilization = this.get('utilization.scu_max');
     if (Ember.isEmpty(utilization) || !(utilization >= 0)) return null;
     return utilization;
-  }.property('utilization.scu_max', 'utilization.scu_total'),
+  }.property('scuTotal', 'utilization.scu_max'),
   utilizationCurrent: function() {
     var total = this.get('utilizationTotal');
     if (Ember.isEmpty(total)) total = 0;

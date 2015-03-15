@@ -36,8 +36,8 @@
     </div><div class="component-capacity">
       <div>
         <ul class="comma-separated">
-          <li>{{#if hasCores}}{{cores}}{{/if}}</li>
-          <li>{{#if hasVcpus}}{{vcpus}}{{/if}}</li>
+          {{#if hasCores}}<li>{{cores}}</li>{{/if}}
+          {{#if hasVcpus}}<li>{{vcpus}}</li>{{/if}}
         </ul>
       </div>
       <div class="clearfix">
@@ -69,7 +69,7 @@
               {{n-a utilizationTotal}}
             </span>
           {{else}}
-            SCU Utilization: {{n-a utilizationTotal}} SCUs
+            SCU Utilization: {{n-a utilizationTotal suffix=" SCUs"}}
           {{/if}}
         </div>
       </div>

@@ -68,11 +68,11 @@
                     {{/if}}
                     {{#if isAssuredCoresPhysical}}
                       <ul class="comma-separated">
-                        <li>{{#if hasCores}}{{capabilities.cores}} of {{node.utilization.cores.system.max}} cores{{/if}}</li>
-                        <li>{{#if hasVcpus}}{{vcpus}}{{/if}}</li>
+                        {{#if hasCores}}<li>{{capabilities.cores}} of {{node.utilization.cores.system.max}} cores</li>{{/if}}
+                        {{#if hasVcpus}}<li>{{vcpus}}</li>{{/if}}
                       </ul>
                     {{else}}
-                      {{n-a capabilities.scu_allocated_min}} allocated SCUs
+                      {{n-a capabilities.scu_allocated_min suffix=" allocated SCUs"}}
                     {{/if}}
                   </div>
                   <div class="chart-bar-horizontal">
@@ -106,7 +106,7 @@
                           {{n-a utilizationTotal}}
                         </span>
                       {{else}}
-                        SCU Utilization: {{n-a utilizationTotal}} SCUs
+                        SCU Utilization: {{n-a utilizationTotal suffix=" SCUs"}}
                       {{/if}}
                     </div>
                   </div>

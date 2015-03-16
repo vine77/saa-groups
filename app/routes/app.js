@@ -12,8 +12,8 @@ export default authenticatedRoute.extend({
   loadModels: function() {
     return Ember.RSVP.all([
       this.store.find('node'),
-      //this.store.find('vm'),
-      this.store.find('cgroup')
+      this.store.find('cgroup'),
+      this.store.find('tenant')
     ]);
   },
   reloadModels: function() {

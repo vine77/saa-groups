@@ -4,25 +4,28 @@
       <ol class="breadcrumb">
         <li>{{#link-to "nodes"}}<i class="fa fa-dashboard"></i> Host Services{{/link-to}}</li>
       </ol>
-      <div class="btn-group pull-right">
-        <button type="button" class="btn btn-default" {{action "toggleAscending"}}>
-          <i {{bind-attr class=":fa sortAscending:fa-sort-amount-asc:fa-sort-amount-desc"}}></i>
-        </button>
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Sort by:
-          {{sortedProperty.title}}
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          {{#each sortableProperties}}
-            <li><a {{action "setSortedProperty" this}}>{{title}}</a></li>
-          {{/each}}
-        </ul>
+      <div class="pull-right">
+        {{view "select" class="form-control inline input-medium" prompt="All tenants" content=tenants value=selectedTenant optionLabelPath="content.name"}}
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" {{action "toggleAscending"}}>
+            <i {{bind-attr class=":fa sortAscending:fa-sort-amount-asc:fa-sort-amount-desc"}}></i>
+          </button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Sort by:
+            {{sortedProperty.title}}
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            {{#each sortableProperties}}
+              <li><a {{action "setSortedProperty" this}}>{{title}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </section>
     <section class="content">
       <div class="row">
-        {{#each}}
+        {{#each filteredContent itemController="node"}}
           <section class="col-lg-4 col-md-6">
             <div class="box box-solid box-primary component collapsed-box">
               <div class="box-header" {{action "goToNode" this}}>

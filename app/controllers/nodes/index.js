@@ -2,6 +2,7 @@ import Ember from 'ember';
 import naturalSort from '../../../bower_components/natural-sort/naturalSort';
 
 export default Ember.ArrayController.extend({
+  needs: ['nodes'],
   itemController: 'node',
   sortFunction: naturalSort,
   sortableProperties: [{
@@ -45,6 +46,22 @@ export default Ember.ArrayController.extend({
   sortProperties: function() {
     return [this.get('sortedProperty.property')];
   }.property('sortedProperty'),
+  isMatch: function(item) {
+    var node = item.get('node');
+    if (!this.get('selectedTenant')) return true;
+    if (!Ember.isEmpty(node.get('tenants'))) {
+      console.log(node.get('name') + ' has tenants!');
+    } else {
+      console.log(node.get('name') + ' does not have tenants');
+    }
+    if (Ember.isEmpty(node.get('tenants'))) return false;
+    return node.get('tenants').contains(this.get('selectedTenant'));
+  },
+  filteredContent: function() {
+    return this.get('arrangedContent').filter(function(item) {
+      return this.get('isMatch').apply(this, [item]);
+    }, this);
+  }.property('arrangedContent', 'selectedTenant'),
   sortAscending: Ember.computed.alias('sortedProperty.sortAscending'),
   aggregatedOses: Ember.computed.filterBy('aggregatedItems', 'type', 'os'),
   aggregatedVms: Ember.computed.filterBy('aggregatedItems', 'type', 'vm'),
@@ -52,6 +69,8 @@ export default Ember.ArrayController.extend({
     var type = cgroup.get('type');
     return type !== 'node' && type !== 'os' && type !== 'vm' && type !== 'vms';
   }),
+  tenants: Ember.computed.alias('controllers.nodes.tenants'),
+  selectedTenant: null,
   actions: {
     toggleAscending: function() {
       this.set('sortAscending', !this.get('sortAscending'));

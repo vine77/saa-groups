@@ -12,6 +12,7 @@ export default DS.Model.extend({
   slaName: DS.attr('string'),
   status: DS.attr(),
   utilization: DS.attr(),
+  tenantName: DS.attr('string'),
 
   // Computed properties
   scuTotal: function() {
@@ -35,5 +36,6 @@ export default DS.Model.extend({
   //sla: DS.belongsTo('sla'),
   //vmInstantiationDetailed: DS.belongsTo('vmInstantiationDetailed'),
   //vmInstantiationSimple: DS.belongsTo('vmInstantiationSimple'),
-  //vmTrustReport: DS.belongsTo('vmTrustReport')
+  //vmTrustReport: DS.belongsTo('vmTrustReport'),
+  tenant: DS.belongsTo('tenant', {async: true})
 });

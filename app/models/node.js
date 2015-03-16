@@ -53,6 +53,7 @@ export default DS.Model.extend({
   //nodeTrustReport: DS.belongsTo('nodeTrustReport'),
   //trustNode: DS.belongsTo('trustNode'),
   vms: DS.hasMany('vm', {async: true}),
-  cgroups: DS.hasMany('cgroup')
+  cgroups: DS.hasMany('cgroup'),
+  tenants: DS.hasMany('tenant', {async: true})
 
 });

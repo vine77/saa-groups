@@ -56,7 +56,7 @@ export default Ember.Mixin.create({
   contentionCurrent: function() {
     var contention = this.get('contention.system.llc.value');
     if (Ember.isEmpty(contention) || !(contention >= 0)) return null;
-    return contention;
+    return contention.toFixed(2);
   }.property('contention.system.llc.value'),
   contentionPercent: function() {
     var contentionMax = 50;

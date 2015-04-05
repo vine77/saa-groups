@@ -19,3 +19,6 @@ Thumbs.db
 /libpeerconnection.log
 npm-debug.log
 testem.log
+
+# other
+/public/api

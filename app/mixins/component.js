@@ -60,6 +60,7 @@ export default Ember.Mixin.create({
     if (Ember.isEmpty(contention) || !(contention >= 0)) return null;
     return contention.toFixed(2);
   }.property('contention.system.llc.value'),
+  hasContention: Ember.computed.notEmpty('contentionCurrent'),
   contentionPercent: function() {
     var contentionMax = 50;
     if (Ember.isEmpty(this.get('contentionCurrent'))) return null;
@@ -130,8 +131,8 @@ export default Ember.Mixin.create({
     return message;
   }.property('isRange', 'utilizationTotal', 'utilizationCurrent', 'utilizationBurst', 'capabilities.scu_allocated_min', 'capabilities.scu_allocated_max'),
   utilizationBurst: function() {
-    var burst =  this.get('capabilities.scu_allocated_min') - this.get('scuTotal');
-    if (Ember.isEmpty(burst)) burst = 0;
+    if (Ember.isEmpty(this.get('scuTotal')) || Ember.isEmpty(this.get('capabilities.scu_allocated_min'))) return 0;
+    var burst = Math.max(0, this.get('scuTotal') - this.get('capabilities.scu_allocated_min'));
     return stripFloat(burst);
   }.property('capabilities.scu_allocated_min', 'scuTotal'),
   utilizationTotal: function() {

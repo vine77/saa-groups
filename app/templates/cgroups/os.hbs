@@ -69,19 +69,21 @@
               {{n-a utilizationTotal}}
             </span>
           {{else}}
-            SCU Utilization: {{n-a utilizationTotal suffix=" SCUs"}}
+            {{n-a utilizationTotal suffix=" SCUs" prefix="SCU Utilization: "}}
           {{/if}}
         </div>
       </div>
-      <div class="chart-bar-horizontal">
-        <div class="clearfix">
-          <small class="pull-left">Cache Contention</small>
-          <small class="pull-right">{{contentionCurrent}}</small>
+      {{#if hasContention}}
+        <div class="chart-bar-horizontal">
+          <div class="clearfix">
+            <small class="pull-left">Cache Contention</small>
+            <small class="pull-right">{{contentionCurrent}}</small>
+          </div>
+          <div class="progress xs">
+            <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>
+          </div>
         </div>
-        <div class="progress xs">
-          <div class="progress-bar progress-bar-green" {{bind-attr style="contentionStyle"}}></div>
-        </div>
-      </div>
+      {{/if}}
     </div>
   </div>
 </div>

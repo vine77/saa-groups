@@ -21,7 +21,13 @@ export default DS.Model.extend({
 
   // Computed properties
   scuTotal: function() {
-    return this.get('utilization.scu.system.compute') + this.get('utilization.scu.system.io_wait') + this.get('utilization.scu.system.misc');
+    var compute = this.get('utilization.scu.system.compute');
+    var ioWait = this.get('utilization.scu.system.io_wait');
+    var misc = this.get('utilization.scu.system.misc');
+    if (Ember.isEmpty(compute) && Ember.isEmpty(ioWait) && Ember.isEmpty(misc)) return null;
+    if ((compute === -1) || (ioWait === -1) || (misc === -1)) return -1;
+    var returnValue = (compute || 0) + (ioWait || 0) + (misc || 0);
+    return returnValue.toFixed(2);
   }.property('utilization.scu.system.compute', 'utilization.scu.system.io_wait', 'utilization.scu.system.misc'),
   isAssured: function() {
     return this.get('samControlled') == Mode.ASSURED_SCU_VCPU ||

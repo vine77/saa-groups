@@ -7,6 +7,7 @@ export default Ember.ObjectController.extend(ComponentMixin, {
   isVmsRoute: Ember.computed.equal('controllers.application.currentPath', 'app.nodes.node.vms'),
   isVmsExpanded: false,
   isActionsVisible: false,
+  isMonitored: Ember.computed.equal('node.status.mode', Mode.MONITORED),
   isAssuredCoresPhysical: Ember.computed.equal('node.status.mode', Mode.ASSURED_CORES_PHYSICAL),
   actions: {
     toggleActions: function() {

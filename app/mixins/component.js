@@ -28,6 +28,8 @@ export default Ember.Mixin.create({
     return 'SLA Status: ' + slaToString(this.get('status.sla_status')).capitalize();
   }.property('status.sla_status'),
   slaIconClass: function() {
+    if (this.get('isMonitored')) return 'fa-eye info';
+    if (this.get('isAssuredCoresPhysical')) return 'fa-thumb-tack success';
     return slaToIconClass(this.get('status.sla_status'));
   }.property('status.sla_status'),
   trustMessage: function() {

@@ -10,6 +10,7 @@ import slaToIconClass from '../utils/convert/sla-to-icon-class';
 import trustToString from '../utils/convert/trust-to-string';
 import trustToIconClass from '../utils/convert/trust-to-icon-class';
 import stripFloat from '../utils/strip-float';
+import readableSizeToBytes from '../utils/convert/readable-size-to-bytes';
 
 export default Ember.Mixin.create({
   healthMessage: function() {
@@ -39,15 +40,38 @@ export default Ember.Mixin.create({
     return trustToIconClass(this.get('status.trust'));
   }.property('status.trust'),
   memoryCurrent: function() {
-    var memoryCurrent = parseInt(this.get('utilization.memory'));
-    if (typeof memoryCurrent !== 'number') return null;
-    return (memoryCurrent / Math.pow(1024, 2));  // To GiB, assuming KiB
+    if (typeof this.get('utilization.memory') === 'number') {
+      var memoryCurrent = parseInt(this.get('utilization.memory'));
+      if (typeof memoryCurrent !== 'number') return null;
+      return memoryCurrent * 1024;  // Assume input is KiB (cgroups API)
+    } else if (typeof this.get('utilization.memory') === 'string') {
+      return readableSizeToBytes(this.get('utilization.memory'), false);
+    } else {
+      return null;
+    }
   }.property('utilization.memory'),
+  memoryCurrentInGib: function() {
+    if (Ember.isEmpty(this.get('memoryCurrent'))) return null;
+    return (this.get('memoryCurrent') / Math.pow(1024, 3));  // bytes to GiB
+  }.property('memoryCurrent'),
   memoryMax: function() {
-    var memoryMax = parseInt(this.get('capabilities.memory_size'));
-    if (typeof memoryMax !== 'number') return null;
-    return (memoryMax / Math.pow(1024, 2));  // To GiB, assuming KiB
+    if (typeof this.get('capabilities.memory_size') === 'number') {
+      var memoryMax = parseInt(this.get('capabilities.memory_size'));
+      if (typeof memoryMax !== 'number') return null;
+      return memoryMax * 1024;  // Assume input is KiB (cgroups API)
+    } else if (typeof this.get('capabilities.memory_size') === 'string') {
+      return readableSizeToBytes(this.get('capabilities.memory_size'), false);
+    } else {
+      return null;
+    }
   }.property('capabilities.memory_size'),
+  memoryMaxInGib: function() {
+    if (Ember.isEmpty(this.get('memoryMax'))) return null;
+    return (this.get('memoryMax') / Math.pow(1024, 3));  // bytes to GiB
+  }.property('memoryMax'),
+  hasMemoryRange: function() {
+    return !Ember.isEmpty(this.get('memoryCurrent')) && !Ember.isEmpty(this.get('memoryMax'));
+  }.property('memoryCurrent', 'memoryMax'),
   memoryPercent: function() {
     if (Ember.isEmpty(this.get('memoryCurrent')) || Ember.isEmpty(this.get('memoryMax'))) return null;
     return ((this.get('memoryCurrent') / this.get('memoryMax')) * 100).toFixed(0) + '%';

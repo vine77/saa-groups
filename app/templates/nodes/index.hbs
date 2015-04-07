@@ -79,17 +79,25 @@
                     {{/if}}
                   </div>
                   <div class="chart-bar-horizontal">
-                    <div class="clearfix">
-                      <small class="pull-left">Memory (GiB)</small>
-                      <small class="pull-right">{{memoryPercent}}</small>
-                    </div>
-                    <div class="progress xs">
-                      <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
-                    </div>
-                    <div class="clearfix">
-                      <small class="pull-left">{{to-fixed memoryCurrent 2}}</small>
-                      <small class="pull-right">{{to-fixed memoryMax 2}}</small>
-                    </div>
+                    {{#if hasMemoryRange}}
+                      <div class="clearfix">
+                        <small class="pull-left">Memory (GiB)</small>
+                        <small class="pull-right">{{memoryPercent}}</small>
+                      </div>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" {{bind-attr style="memoryStyle"}}></div>
+                      </div>
+                      <div class="clearfix">
+                        <small class="pull-left">{{to-fixed memoryCurrentInGib 2}}</small>
+                        <small class="pull-right">{{to-fixed memoryMaxInGib 2}}</small>
+                      </div>
+                    {{else}}
+                      {{#if memoryCurrent}}
+                        <div>
+                          {{readable-size memoryCurrent}} memory
+                        </div>
+                      {{/if}}
+                    {{/if}}
                   </div>
                 </div>
                 <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>

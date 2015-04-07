@@ -51,7 +51,11 @@
           </ul>
         </div>
         <hr>
-        <div>{{#if memoryCurrent}}{{to-fixed memoryCurrent 2}} GiB memory{{/if}}</div>
+        {{#if memoryCurrent}}
+          <div>
+            {{readable-size memoryCurrent}} memory
+          </div>
+        {{/if}}
       </div>
       <div {{bind-attr class=":component-charts utilizationMax:double-charts"}}>
         <div class="chart-bar-horizontal">

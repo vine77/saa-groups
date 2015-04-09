@@ -81,7 +81,8 @@ export default Ember.Mixin.create({
   }.property('memoryPercent'),
   contentionCurrent: function() {
     var contention = this.get('contention.system.llc.value');
-    if (Ember.isEmpty(contention) || !(contention >= 0)) return null;
+    if (Ember.isEmpty(contention)) contention = this.get('contention.llc.system.value');
+    if (Ember.isEmpty(contention) || contention < 0) return null;
     return contention.toFixed(2);
   }.property('contention.system.llc.value'),
   hasContention: Ember.computed.notEmpty('contentionCurrent'),
@@ -162,7 +163,7 @@ export default Ember.Mixin.create({
   utilizationTotal: function() {
     var utilization = this.get('scuTotal');
     if (Ember.isEmpty(utilization)) utilization = this.get('utilization.scu_max');
-    if (Ember.isEmpty(utilization) || !(utilization >= 0)) return null;
+    if (Ember.isEmpty(utilization) || utilization < 0) return null;
     return utilization;
   }.property('scuTotal', 'utilization.scu_max'),
   utilizationCurrent: function() {

@@ -30,9 +30,9 @@ export default DS.Model.extend({
     return returnValue.toFixed(2);
   }.property('utilization.scu.system.compute', 'utilization.scu.system.io_wait', 'utilization.scu.system.misc'),
   isAssured: function() {
-    return this.get('samControlled') == Mode.ASSURED_SCU_VCPU ||
-      this.get('samControlled') == Mode.ASSURED_SCU_VM ||
-      this.get('samControlled') == Mode.ASSURED_CORES_PHYSICAL;
+    return this.get('samControlled') === Mode.ASSURED_SCU_VCPU ||
+      this.get('samControlled') === Mode.ASSURED_SCU_VM ||
+      this.get('samControlled') === Mode.ASSURED_CORES_PHYSICAL;
   }.property('samControlled'),
   samRegistered: function() {
     return this.get('status.mode') === Mode.MONITORED || this.get('status.mode') === Mode.ASSURED;

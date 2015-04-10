@@ -49,11 +49,6 @@ export default Ember.ArrayController.extend({
   isMatch: function(item) {
     var node = item.get('node');
     if (!this.get('selectedTenant')) return true;
-    if (!Ember.isEmpty(node.get('tenants'))) {
-      console.log(node.get('name') + ' has tenants!');
-    } else {
-      console.log(node.get('name') + ' does not have tenants');
-    }
     if (Ember.isEmpty(node.get('tenants'))) return false;
     return node.get('tenants').contains(this.get('selectedTenant'));
   },
@@ -61,7 +56,7 @@ export default Ember.ArrayController.extend({
     return this.get('arrangedContent').filter(function(item) {
       return this.get('isMatch').apply(this, [item]);
     }, this);
-  }.property('arrangedContent', 'selectedTenant'),
+  }.property('arrangedContent', 'selectedTenant', 'sortAscending'),
   sortAscending: Ember.computed.alias('sortedProperty.sortAscending'),
   aggregatedOses: Ember.computed.filterBy('aggregatedItems', 'type', 'os'),
   aggregatedVms: Ember.computed.filterBy('aggregatedItems', 'type', 'vm'),

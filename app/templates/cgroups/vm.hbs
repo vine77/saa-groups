@@ -38,6 +38,7 @@
         {{#if hasCores}}
           <span class="hint--top" {{bind-attr data-hint="socketCorePinningMessage"}}>
             {{pluralize capabilities.cores "vCPU"}}
+            <a> <i class="fa fa-info-circle"></i> </a>
           </span>
         {{/if}}
       </div>
@@ -63,6 +64,7 @@
                 </div>
               </div>
               {{n-a utilizationTotal}}
+              <a> <i class="fa fa-info-circle"></i> </a>
             </span>
           {{else}}
             {{n-a utilizationTotal suffix=" SCUs" prefix="SCU Utilization: "}}

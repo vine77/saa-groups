@@ -6,6 +6,20 @@
     }
     > .content {
       margin-right: 20px;
+      > .row {
+        .col-md-6 {
+          @media (min-width: 910px) {
+            float: left;
+            width: 50%;
+          }
+        }
+        .col-lg-4 {
+          @media (min-width: 1340px) {
+            float: left;
+            width: 33.33333333%;
+          }
+        }
+      }
     }
   }
 }
